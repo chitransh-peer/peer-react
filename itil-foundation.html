@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITIL® Foundation | Peer Consulting Resources</title>
+    <style>
+        :root {
+            --primary-color: #004b87;
+            --secondary-color: #00a1e0;
+            --accent-color: #ff4500;
+            --text-dark: #333333;
+            --text-light: #f4f7f6;
+            --bg-light: #ffffff;
+            --bg-gray: #f8f9fa;
+            --border-color: #e0e0e0;
+            --purple-scheme: #8a5bbf;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background-color: var(--bg-light);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--secondary-color);
+        }
+
+        /* Header */
+        .page-header {
+            background-color: var(--bg-gray);
+            padding: 4rem 5% 2rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Version Toggle Tabs */
+        .version-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #888;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .tab-btn.active {
+            color: var(--primary-color);
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 4px 4px 0 0;
+        }
+
+        /* Content Sections */
+        .tab-content {
+            display: none;
+            padding: 3rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Grid Layouts */
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            align-items: center;
+        }
+
+        .intro-text h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .intro-text p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .highlight-item {
+            border-left: 3px solid var(--accent-color);
+            padding-left: 1rem;
+        }
+
+        .highlight-item h4 {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* At a Glance Cards */
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .glance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .glance-card {
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .glance-card strong {
+            display: block;
+            color: var(--accent-color);
+            margin-top: 0.5rem;
+        }
+
+        /* Learning Grid */
+        .learning-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .learning-card {
+            background: var(--bg-gray);
+            border-radius: 8px;
+            padding: 1.5rem;
+            border-top: 3px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .learning-card:hover {
+            border-top-color: var(--accent-color);
+        }
+
+        .learning-card h4 {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+        }
+
+        .learning-card p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* Skills & Careers */
+        .skills-careers-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .skill-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-item h4 {
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-item h4::before {
+            content: "✓";
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .career-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .career-tag {
+            background: var(--bg-gray);
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid var(--border-color);
+        }
+
+        .career-tag::before {
+            content: "◆";
+            color: var(--accent-color);
+            margin-right: 6px;
+        }
+
+        /* CTA */
+        .cta-container {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 3rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 10px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 1.5rem;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #e03e00;
+        }
+
+        /* AI Callout */
+        .ai-callout {
+            background: linear-gradient(135deg, #e6f1fb 0%, #ffffff 100%);
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.5rem;
+            margin-bottom: 3rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Peer Consulting Resources</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="itil-certification.html" class="active">ITIL® Certification</a></li>
+            <li><a href="devops-certification.html">DevOps Certification</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <h1>ITIL® Foundation</h1>
+        <p>Choose your certification path to begin your IT Service Management journey.</p>
+        
+        <div class="version-toggle">
+            <button class="tab-btn active" onclick="switchTab('v5')">ITIL Foundation (Version 5)</button>
+            <button class="tab-btn" onclick="switchTab('v4')">ITIL 4 Foundation</button>
+        </div>
+    </header>
+
+    <section id="v5" class="tab-content active">
+        
+        <div class="ai-callout">
+            <strong>Peer Consulting Exclusive:</strong> Our ITIL V5 Foundation courses are enhanced with our proprietary AI-based e-learning ecosystem, providing dynamic problem-solving scenarios and adaptive quizzes to ensure you pass your exam on the first try.
+        </div>
+
+        <div class="intro-grid">
+            <div class="intro-text">
+                <h2>Build a strong foundation in digital product and service management.</h2>
+                <p>Learn the core concepts and practices needed to deliver value across the full lifecycle in today's complex, AI-enabled environments.</p>
+                
+                <div class="highlights">
+                    <div class="highlight-item">
+                        <h4>An industry-recognized certification</h4>
+                        <p style="font-size:0.9rem;">Showcase your ability to effectively manage digital products and services in fast-moving environments.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h4>Employers' first choice</h4>
+                        <p style="font-size:0.9rem;">Certify your expertise in managing digital products and services, making you the preferred choice.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h4>Unlocks new opportunities</h4>
+                        <p style="font-size:0.9rem;">Equip yourself with in-demand skills to accelerate your growth and qualify for attractive roles worldwide.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div style="background:#8a5bbf; color:white; width:200px; height:200px; border-radius:50%; display:flex; align-items:center; justify-content:center; text-align:center; margin: 0 auto; padding: 20px; font-weight:bold; border: 10px solid #e1d5f2;">
+                    ITIL® Foundation<br>(Version 5)<br><br><small>CERTIFIED by PeopleCert</small>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="section-title">At a glance</h3>
+        <div class="glance-grid">
+            <div class="glance-card">Your entry point <br><strong>into ITIL</strong></div>
+            <div class="glance-card">Suitable for <br><strong>any career stage</strong></div>
+            <div class="glance-card">Globally recognized <br><strong>in the market</strong></div>
+            <div class="glance-card">Exam available <br><strong>in English</strong></div>
+        </div>
+
+        <h3 class="section-title">What will you learn?</h3>
+        <div class="learning-grid">
+            <div class="learning-card">
+                <h4>Digital product and service management concepts</h4>
+                <p>Understand the core concepts behind modern digital products and services, including value creation, continual improvement, and lifecycle management.</p>
+            </div>
+            <div class="learning-card">
+                <h4>Value co-creation</h4>
+                <p>Discover how value is co-created through collaboration between service providers, consumers, and stakeholders, weighing outcomes, costs, and risks.</p>
+            </div>
+            <div class="learning-card">
+                <h4>The dimensions of product & service management</h4>
+                <p>Delve into the four dimensions (Organizations/People, Value Streams, Information/Tech, Partners) for a holistic approach.</p>
+            </div>
+            <div class="learning-card">
+                <h4>ITIL Value System</h4>
+                <p>Gain an understanding of the ITIL Value System and how it brings together guiding principles, governance, and continual improvement.</p>
+            </div>
+            <div class="learning-card">
+                <h4>The ITIL Guiding Principles</h4>
+                <p>Learn how to apply the framework's guiding principles to make better decisions and adapt ITIL practices to real-world environments.</p>
+            </div>
+            <div class="learning-card">
+                <h4>The product and service lifecycle</h4>
+                <p>Develop a solid understanding of the purpose of each lifecycle activity; from discovery and design to operation, delivery and support.</p>
+            </div>
+            <div class="learning-card">
+                <h4>ITIL's management practices</h4>
+                <p>Explore the role of ITIL management practices and how official practice guides support consistent, effective ways of working.</p>
+            </div>
+            <div class="learning-card">
+                <h4>Continual improvement</h4>
+                <p>Learn how continual improvement is embedded within ITIL, covering the step-by-step approach supporting long-term success.</p>
+            </div>
+            <div class="learning-card">
+                <h4>Value Stream Mapping and Management</h4>
+                <p>Understand how to identify, map, and manage value streams to improve flow, visibility, and outcomes across digital services.</p>
+            </div>
+        </div>
+
+        <div class="skills-careers-grid">
+            <div>
+                <h3 class="section-title" style="text-align: left;">What skills will you acquire?</h3>
+                <div class="skill-item">
+                    <h4>Lifecycle thinking</h4>
+                    <p>Embrace a 'lifecycle mindset' to make smarter decisions, anticipate changes, reduce technical debt, and keep teams aligned.</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Continuous improvement mindset</h4>
+                    <p>Build practical skills to embed continual improvement into everyday work and swiftly adapt to change in fast-paced environments.</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Collaborative, value-focused working</h4>
+                    <p>Strengthen collaboration across roles by aligning with modern, team-based delivery and focusing on shared outcomes and transparency.</p>
+                </div>
+            </div>
+            <div>
+                <h3 class="section-title" style="text-align: left;">Unlock career opportunities</h3>
+                <div class="career-tags">
+                    <span class="career-tag">IT Specialist Application Development</span>
+                    <span class="career-tag">IT Operations Specialist</span>
+                    <span class="career-tag">IT Development Manager</span>
+                    <span class="career-tag">IT Service Operations Manager</span>
+                    <span class="career-tag">Chief Digital Officer</span>
+                    <span class="career-tag">IT Project Manager</span>
+                    <span class="career-tag">Transformation Manager</span>
+                    <span class="career-tag">Digital Product Manager</span>
+                    <span class="career-tag">Experience Manager</span>
+                    <span class="career-tag">Product Owner</span>
+                    <span class="career-tag">Customer Success Manager</span>
+                    <span class="career-tag">Digital Product Designer</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-container">
+            <h2>Ready to master the new ITIL V5?</h2>
+            <p>Join our next AI-enhanced training cohort and secure your globally recognized certification.</p>
+            <a href="#" class="btn-primary">View Schedule & Pricing</a>
+        </div>
+    </section>
+
+    <section id="v4" class="tab-content">
+        
+        <div class="ai-callout">
+            <strong>Peer Consulting Exclusive:</strong> Our ITIL 4 Foundation courses are enhanced with our proprietary AI-based e-learning ecosystem, providing dynamic problem-solving scenarios and adaptive quizzes to ensure you pass your exam on the first try.
+        </div>
+
+        <div class="intro-grid">
+            <div class="intro-text">
+                <h2>Advance your career in IT service management.</h2>
+                <p>Crafted by the creators of ITIL, advance your career with the official eLearning course and exam voucher, all in one bundle!</p>
+                
+                <div class="highlights">
+                    <div class="highlight-item">
+                        <h4>Industry-recognised certification</h4>
+                        <p style="font-size:0.9rem;">Showcase your ability to excel in essential IT service management, and to handle critical tasks in the field.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h4>Employers' first choice</h4>
+                        <p style="font-size:0.9rem;">Certify your expertise in managing IT services, making you the preferred choice for roles in IT service management and support.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h4>New career opportunities</h4>
+                        <p style="font-size:0.9rem;">Advance your career in IT with an ITIL certification, opening doors to new roles and cutting-edge opportunities in the evolving tech landscape.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div style="background:#004b87; color:white; width:200px; height:200px; border-radius:50%; display:flex; align-items:center; justify-content:center; text-align:center; margin: 0 auto; padding: 20px; font-weight:bold; border: 10px solid #cce0f5;">
+                    ITIL® 4 Foundation<br><br><small>CERTIFIED by PeopleCert</small>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="section-title">At a glance</h3>
+        <div class="glance-grid">
+            <div class="glance-card">Core module <br><strong>to get you started</strong></div>
+            <div class="glance-card">Suitable for <br><strong>any career stage</strong></div>
+            <div class="glance-card">Globally recognised <br><strong>in the market</strong></div>
+            <div class="glance-card">Exam available <br><strong>in 12 languages</strong></div>
+            <div class="glance-card">Flexible <br><strong>e-learning option</strong></div>
+        </div>
+
+        <h3 class="section-title">What will you learn?</h3>
+        <div class="learning-grid">
+            <div class="learning-card">
+                <h4>Service management concepts</h4>
+                <p>Learn the fundamental concepts of service management. What defines a service? What are its components? What is its value to stakeholders?</p>
+            </div>
+            <div class="learning-card">
+                <h4>Service value system</h4>
+                <p>Discover the framework that will help you create, deliver, and manage services, including the Service Value Chain, guiding principles, and governance.</p>
+            </div>
+            <div class="learning-card">
+                <h4>Four dimensions of service management</h4>
+                <p>Explore the four dimensions of effective service management: organisations and people, information and technology, partners and suppliers, and value streams and processes.</p>
+            </div>
+            <div class="learning-card">
+                <h4>Guiding principles</h4>
+                <p>Develop a mindset for adopting ITIL practices and adapting them to your specific needs with the seven guiding principles of ITIL 4.</p>
+            </div>
+            <div class="learning-card">
+                <h4>Service Value Chain</h4>
+                <p>Understand how the Service Value Chain helps organisations create value by optimising their activities and resources.</p>
+            </div>
+            <div class="learning-card">
+                <h4>ITIL practices</h4>
+                <p>Employ ITIL 4 practices to enable working methods aligned to your business strategy, improving the process of service development and supporting users.</p>
+            </div>
+            <div class="learning-card">
+                <h4>Continuous improvement</h4>
+                <p>Focus on the central ITIL 4 concept of continuous improvement, and the ways in which organisations can iterate and adapt their processes and services.</p>
+            </div>
+            <div class="learning-card">
+                <h4>Service Level Agreements</h4>
+                <p>Study the role of SLAs in defining and managing service quality, and the role of service level management in this context.</p>
+            </div>
+            <div class="learning-card">
+                <h4>Key metrics and performance indicators</h4>
+                <p>Grasp the importance of defining and tracking metrics and KPIs to measure the performance and effectiveness of IT services.</p>
+            </div>
+        </div>
+
+        <div class="skills-careers-grid">
+            <div>
+                <h3 class="section-title" style="text-align: left;">What skills will you acquire?</h3>
+                <div class="skill-item">
+                    <h4>Service Operation</h4>
+                    <p>Develop operational support and analysis skills for ITSM activities, including monitoring and maintaining IT systems and infrastructure.</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Problem Management</h4>
+                    <p>Learn how to reduce the likelihood and impact of incidents by identifying actual and potential causes of incidents and managing workarounds and known errors.</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Digital Transformation</h4>
+                    <p>Learn the processes involved in transforming IT systems to support a digital model. Learn how to collaborate with stakeholders, manage and lead plans.</p>
+                </div>
+            </div>
+            <div>
+                <h3 class="section-title" style="text-align: left;">Unlock career opportunities</h3>
+                <div class="career-tags">
+                    <span class="career-tag">IT Specialist Application Development</span>
+                    <span class="career-tag">IT Specialist Change Management</span>
+                    <span class="career-tag">IT Operations Specialist</span>
+                    <span class="career-tag">IT Development Manager</span>
+                    <span class="career-tag">IT Service Operations Manager</span>
+                    <span class="career-tag">IT Team Leader</span>
+                    <span class="career-tag">Chief Digital Officer</span>
+                    <span class="career-tag">IT Project Manager</span>
+                    <span class="career-tag">Transformation Manager</span>
+                    <span class="career-tag">IT Service Manager</span>
+                    <span class="career-tag">Digital Product Manager</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-container">
+            <h2>Start your ITIL 4 Journey Today</h2>
+            <p>Get certified with an Accredited Training Organization and leverage the power of AI in your learning.</p>
+            <a href="#" class="btn-primary">View Schedule & Pricing</a>
+        </div>
+    </section>
+
+    <script>
+        function switchTab(version) {
+            // Update Buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.currentTarget.classList.add('active');
+
+            // Update Content
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(version).classList.add('active');
+        }
+    </script>
+</body>
+</html>

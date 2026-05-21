@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITIL® Certification Training | Peer Consulting Resources</title>
+    <style>
+        :root {
+            --primary-color: #004b87;
+            --secondary-color: #00a1e0;
+            --accent-color: #f7931e;
+            --accent-light: #fff3e6;
+            --text-dark: #333333;
+            --text-light: #f4f7f6;
+            --bg-light: #ffffff;
+            --bg-gray: #f8f9fa;
+            --border-color: #e0e0e0;
+            --purple-scheme: #8a5bbf;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: var(--text-dark);
+            background-color: var(--bg-gray);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background-color: var(--bg-light);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--secondary-color);
+        }
+
+        /* Page Header */
+        .page-header {
+            background-color: var(--bg-light);
+            padding: 3rem 5%;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 800px;
+        }
+
+        /* Main Content Layout */
+        .container {
+            display: flex;
+            padding: 3rem 5%;
+            gap: 2.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Sidebar Filters */
+        .sidebar {
+            flex: 0 0 280px;
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            height: fit-content;
+        }
+
+        .sidebar h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .filter-list {
+            list-style: none;
+        }
+
+        .filter-item {
+            margin-bottom: 1rem;
+        }
+
+        .filter-btn {
+            background: none;
+            border: none;
+            text-align: left;
+            width: 100%;
+            font-size: 1rem;
+            color: var(--text-dark);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .filter-btn:hover {
+            background-color: var(--bg-gray);
+            color: var(--secondary-color);
+        }
+
+        .filter-btn.active {
+            background-color: var(--accent-light);
+            color: var(--accent-color);
+            font-weight: bold;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        /* Catalog Grid */
+        .catalog {
+            flex: 1;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Course Cards */
+        .card {
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-color: var(--secondary-color);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.25rem 1rem;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border-bottom-right-radius: 8px;
+        }
+
+        .card-badge.new {
+            background: var(--purple-scheme);
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin: 1rem 0;
+            line-height: 1.3;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .skills-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .skills-list li {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .skills-list li::before {
+            content: "✓";
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .card-footer {
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .btn-details {
+            padding: 0.6rem 1.2rem;
+            background-color: var(--bg-gray);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .card:hover .btn-details {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* Hidden Class for Filtering */
+        .hidden {
+            display: none !important;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Peer Consulting Resources</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="itil-certification.html" class="active">ITIL® Certification</a></li>
+            <li><a href="devops-certification.html">DevOps Certification</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <h1>Start your ITIL (Version 5) journey</h1>
+        <p>Practical and AI-native by design, the new ITIL framework builds capability across product, service, strategy, experience, and transformation roles. Select your path below.</p>
+    </header>
+
+    <div class="container">
+        
+        <aside class="sidebar">
+            <h3>Qualification Paths</h3>
+            <ul class="filter-list">
+                <li class="filter-item">
+                    <button class="filter-btn active" data-filter="all">All Modules</button>
+                </li>
+                <li class="filter-item">
+                    <button class="filter-btn" data-filter="foundation">ITIL Foundation</button>
+                </li>
+                <li class="filter-item">
+                    <button class="filter-btn" data-filter="specialist">ITIL Specialist</button>
+                </li>
+                <li class="filter-item">
+                    <button class="filter-btn" data-filter="practice">ITIL Practice Manager</button>
+                </li>
+                <li class="filter-item">
+                    <button class="filter-btn" data-filter="ai-gov">AI Governance</button>
+                </li>
+            </ul>
+        </aside>
+
+        <main class="catalog">
+            <div class="grid" id="courseGrid">
+
+                <div class="card" data-category="foundation">
+                    <div class="card-badge">Start Here</div>
+                    <h2>ITIL Foundation (Version 5)</h2>
+                    <p>Delve into the core ITIL principles and practices. Future-proof your career with in-demand skills and reach attractive roles spanning product, service, experience, and transformation.</p>
+                    <ul class="skills-list">
+                        <li>Digital product & service management</li>
+                        <li>Strategy & experience design</li>
+                        <li>Responsible AI practice</li>
+                    </ul>
+                    <div class="card-footer">
+                        <span class="price">US$690.00</span>
+                        <a href="itil-foundation.html" class="btn-details">See Details</a>
+                    </div>
+                </div>
+
+                <div class="card" data-category="specialist">
+                    <div class="card-badge new">New V5</div>
+                    <h2>ITIL Product</h2>
+                    <p>Master the lifecycle of digital products. Learn to build, manage, and optimize products that deliver continuous value to consumers and the organization.</p>
+                    <ul class="skills-list">
+                        <li>Product lifecycle management</li>
+                        <li>Value stream mapping</li>
+                        <li>Agile integration</li>
+                    </ul>
+                    <div class="card-footer">
+                        <span class="price">US$750.00</span>
+                        <a href="#" class="btn-details">See Details</a>
+                    </div>
+                </div>
+
+                <div class="card" data-category="specialist">
+                    <div class="card-badge new">New V5</div>
+                    <h2>ITIL Service</h2>
+                    <p>Focus on robust service operation and digital transformation. Ensure IT services are highly available, reliable, and aligned with business outcomes.</p>
+                    <ul class="skills-list">
+                        <li>Service Operation</li>
+                        <li>Digital transformation</li>
+                        <li>Advanced Incident/Problem Mgmt</li>
+                    </ul>
+                    <div class="card-footer">
+                        <span class="price">US$750.00</span>
+                        <a href="#" class="btn-details">See Details</a>
+                    </div>
+                </div>
+
+                <div class="card" data-category="specialist">
+                    <div class="card-badge new">New V5</div>
+                    <h2>ITIL Experience</h2>
+                    <p>Elevate the consumer and employee experience. Learn to design interactions and touchpoints that maximize satisfaction and drive adoption.</p>
+                    <ul class="skills-list">
+                        <li>UX/CX in IT</li>
+                        <li>Journey mapping</li>
+                        <li>Experience metrics (XLAs)</li>
+                    </ul>
+                    <div class="card-footer">
+                        <span class="price">US$750.00</span>
+                        <a href="#" class="btn-details">See Details</a>
+                    </div>
+                </div>
+
+                <div class="card" data-category="specialist">
+                    <h2>ITIL Strategy</h2>
+                    <p>Develop a clear vision and strategy for digital and IT operations. Align technology investments with overarching business goals.</p>
+                    <ul class="skills-list">
+                        <li>Strategic planning</li>
+                        <li>Digital leadership</li>
+                        <li>Risk management</li>
+                    </ul>
+                    <div class="card-footer">
+                        <span class="price">US$800.00</span>
+                        <a href="#" class="btn-details">See Details</a>
+                    </div>
+                </div>
+
+                <div class="card" data-category="specialist">
+                    <h2>ITIL Transformation</h2>
+                    <p>Bridge the gap between strategy and execution. Lead complex organizational changes and foster a culture of continuous improvement.</p>
+                    <ul class="skills-list">
+                        <li>Organizational Change Management</li>
+                        <li>Cultural transformation</li>
+                        <li>Leadership at scale</li>
+                    </ul>
+                    <div class="card-footer">
+                        <span class="price">US$800.00</span>
+                        <a href="#" class="btn-details">See Details</a>
+                    </div>
+                </div>
+
+                <div class="card" data-category="practice">
+                    <h2>Monitor, Support and Fulfill</h2>
+                    <p>Gain deep practical knowledge in the core operational practices required to keep the business running smoothly and users satisfied.</p>
+                    <ul class="skills-list">
+                        <li>Incident & Problem Management</li>
+                        <li>Service Desk optimization</li>
+                        <li>Monitoring and Event Mgmt</li>
+                    </ul>
+                    <div class="card-footer">
+                        <span class="price">US$750.00</span>
+                        <a href="#" class="btn-details">See Details</a>
+                    </div>
+                </div>
+
+                <div class="card" data-category="practice">
+                    <h2>Plan, Implement and Control</h2>
+                    <p>Master the practices involved in planning changes, deploying new services, and maintaining control over the IT environment.</p>
+                    <ul class="skills-list">
+                        <li>Change Enablement</li>
+                        <li>Release Management</li>
+                        <li>IT Asset Management</li>
+                    </ul>
+                    <div class="card-footer">
+                        <span class="price">US$750.00</span>
+                        <a href="#" class="btn-details">See Details</a>
+                    </div>
+                </div>
+
+                <div class="card" data-category="ai-gov">
+                    <div class="card-badge">Extension</div>
+                    <h2>ITIL AI Governance</h2>
+                    <p>Navigate the complexities of Artificial Intelligence. Establish guardrails, ensure ethical use, and govern AI initiatives within the ITIL framework.</p>
+                    <ul class="skills-list">
+                        <li>AI Risk Assessment</li>
+                        <li>Ethical AI frameworks</li>
+                        <li>Policy implementation</li>
+                    </ul>
+                    <div class="card-footer">
+                        <span class="price">US$550.00</span>
+                        <a href="#" class="btn-details">See Details</a>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Simple Filtering Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                cards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

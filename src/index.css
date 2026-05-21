@@ -1,0 +1,613 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+
+  h1,
+  .hero-heading {
+    font-family: 'Manrope', sans-serif;
+    font-size: 64px;
+    line-height: 72px;
+    font-weight: 600;
+  }
+
+  h2,
+  .section-heading {
+    font-family: 'Manrope', sans-serif;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 600;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6,
+  .subheading {
+    font-family: 'Manrope', sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+  }
+
+  body,
+  p,
+  .body-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+  }
+
+  a,
+  li,
+  span {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .supporting-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+  }
+
+  .nav-text,
+  .nav-link {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+  }
+
+  .btn-text,
+  button,
+  .btn-primary,
+  .btn-secondary,
+  .btn-secondary-hero,
+  .premium-cta-button {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+  }
+
+  /* Automatic text color adjustments for the very light theme sections */
+  .block-gradient {
+    background: radial-gradient(circle at center, #ffffff 0%, #f0f9ff 45%, #e0f2fe 100%);
+  }
+
+  .bg-primary-light .text-white,
+  .bg-primary-light.text-white,
+  .block-gradient .text-white,
+  .block-gradient.text-white {
+    color: #071B34 !important;
+  }
+
+  /* Protect dark buttons and premium hover buttons from any global light-theme overrides */
+  .bg-primary .text-white,
+  .bg-primary.text-white,
+  .bg-primary-light .hover\:text-white:hover,
+  .block-gradient .hover\:text-white:hover,
+  .hover\:text-white:hover {
+    color: #F4F7FB !important;
+  }
+
+  .bg-primary-light .text-slate-300,
+  .bg-primary-light .text-slate-200,
+  .block-gradient .text-slate-300,
+  .block-gradient .text-slate-200 {
+    color: #334155 !important;
+  }
+
+  .bg-primary-light .border-white,
+  .block-gradient .border-white {
+    border-color: #071B34 !important;
+  }
+}
+
+@layer components {
+
+  /* Global Base Hover Line Animation */
+  .nav-link {
+    position: relative;
+    text-decoration: none;
+    transition: color 120ms ease-in-out;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #4DA3FF;
+    transition: width 120ms ease-in-out;
+  }
+
+  .nav-link:hover {
+    color: #4DA3FF !important;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .dark .nav-link:hover {
+    color: #4DA3FF !important;
+  }
+
+  /* Active Link Permanent Animation State */
+  .nav-link.active-nav-link {
+    color: #4DA3FF !important;
+  }
+
+  .nav-link.active-nav-link::after {
+    width: 100% !important;
+  }
+
+  .dark .nav-link.active-nav-link {
+    color: #4DA3FF !important;
+  }
+
+  .navbar-blur {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .btn-primary {
+    background-color: #071B34;
+    color: white;
+    transition: background-color 150ms ease-in-out, transform 150ms ease-in-out, box-shadow 150ms ease-in-out;
+  }
+
+  .btn-primary:hover {
+    background-color: #0B2242;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(77, 163, 255, 0.2);
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    border: 1px solid #071B34;
+    color: #071B34;
+    transition: background-color 150ms ease-in-out, color 150ms ease-in-out, box-shadow 150ms ease-in-out, transform 150ms ease-in-out;
+  }
+
+  .btn-secondary:hover {
+    background-color: #071B34;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(77, 163, 255, 0.2);
+  }
+
+  .btn-secondary-hero {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    transition: background-color 120ms ease-in-out, color 120ms ease-in-out;
+  }
+
+  .btn-secondary-hero:hover {
+    background-color: white;
+    color: #071B34;
+  }
+
+  .card-hover {
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-hover:hover {
+    border-color: #4DA3FF;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(7, 27, 52, 0.1), 0 8px 10px -6px rgba(7, 27, 52, 0.1);
+  }
+
+  .dark .card-hover {
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .dark .card-hover:hover {
+    border-color: #4DA3FF;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  }
+
+  .icon-hover {
+    transition: opacity 120ms ease-in-out, color 120ms ease-in-out;
+  }
+
+  .icon-hover:hover {
+    opacity: 0.9;
+  }
+
+  /* =====================================================
+   * PAGE HERO — Consistent first-section height
+   * Change `min-height` here to resize ALL page heroes.
+   * ===================================================== */
+  .page-hero {
+    min-height: 750px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Hero dot-grid texture overlay */
+  .hero-dot-grid {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+}
+
+/* Hero breathing gradient animation */
+@keyframes hero-breathe {
+
+  0%,
+  100% {
+    opacity: 0.07;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.15;
+    transform: scale(1.2);
+  }
+}
+
+.hero-breathe {
+  animation: hero-breathe 14s ease-in-out infinite;
+  border-radius: 50%;
+  filter: blur(90px);
+}
+
+@layer utilities {
+  .pause-hover:hover {
+    animation-play-state: paused;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+  }
+
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @keyframes subtle-zoom {
+    0% {
+      transform: scale(1.0);
+    }
+
+    100% {
+      transform: scale(1.15);
+    }
+  }
+
+  .hero-zoom {
+    animation: subtle-zoom 25s infinite alternate ease-in-out;
+  }
+
+  /* Premium CTA Button - Explicit overrides to fix hover text visibility */
+  .premium-cta-button {
+    background-color: #F4F7FB !important;
+    color: #071B34 !important;
+    border: 1px solid #e5e7eb !important;
+    transition: all 0.3s ease-in-out !important;
+  }
+
+  .premium-cta-button:hover {
+    background-color: #071B34 !important;
+    color: #ffffff !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+    transform: translateY(-1px) !important;
+  }
+
+  /* Section Top/Bottom Padding overrides: 120px desktop, 80px tablet, 64px mobile */
+  .section-padding,
+  .py-20 {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+
+  @media (min-width: 768px) {
+    .section-padding,
+    .py-20 {
+      padding-top: 80px !important;
+      padding-bottom: 80px !important;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-padding,
+    .py-20 {
+      padding-top: 120px !important;
+      padding-bottom: 120px !important;
+    }
+  }
+}
+
+/* Workflow Lifecycle Animation */
+.workflow-line-fill {
+  width: 0%;
+  transition: width 2.5s ease-in-out !important;
+  transition-delay: 0.2s !important;
+}
+
+.reveal.active .workflow-line-fill {
+  width: 100%;
+}
+
+.workflow-container .workflow-node {
+  opacity: 0 !important;
+  transform: translateY(20px) scale(0.8) !important;
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.workflow-container.active .workflow-node:nth-child(1) {
+  transition-delay: 0.2s !important;
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+.workflow-container.active .workflow-node:nth-child(2) {
+  transition-delay: 0.8s !important;
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+.workflow-container.active .workflow-node:nth-child(3) {
+  transition-delay: 1.4s !important;
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+.workflow-container.active .workflow-node:nth-child(4) {
+  transition-delay: 2.0s !important;
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+.workflow-container.active .workflow-node:nth-child(5) {
+  transition-delay: 2.6s !important;
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+@keyframes workflow-process {
+  0% {
+    box-shadow: 0 0 0 0 rgba(77, 163, 255, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 15px rgba(77, 163, 255, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(77, 163, 255, 0);
+  }
+}
+
+.workflow-container.active .workflow-node:nth-child(1) .rounded-full {
+  animation: workflow-process 2s infinite 0.2s;
+  background-color: #4DA3FF;
+  color: white;
+  border-color: #4DA3FF;
+}
+
+.workflow-container.active .workflow-node:nth-child(2) .rounded-full {
+  animation: workflow-process 2s infinite 0.8s;
+  background-color: #4DA3FF;
+  color: white;
+  border-color: #4DA3FF;
+}
+
+.workflow-container.active .workflow-node:nth-child(3) .rounded-full {
+  animation: workflow-process 2s infinite 1.4s;
+  background-color: #4DA3FF;
+  color: white;
+  border-color: #4DA3FF;
+}
+
+.workflow-container.active .workflow-node:nth-child(4) .rounded-full {
+  animation: workflow-process 2s infinite 2.0s;
+  background-color: #4DA3FF;
+  color: white;
+  border-color: #4DA3FF;
+}
+
+.workflow-container.active .workflow-node:nth-child(5) .rounded-full {
+  animation: workflow-process 2s infinite 2.6s;
+  background-color: #4DA3FF;
+  color: white;
+  border-color: #4DA3FF;
+}
+
+/* Amoeba morphing blob shapes — roam entire hero block */
+@keyframes blob1 {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: translate(-30vw, -10vh) rotate(0deg);
+  }
+
+  15% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    transform: translate(10vw, -15vh) rotate(30deg);
+  }
+
+  30% {
+    border-radius: 70% 30% 50% 50% / 30% 70% 40% 60%;
+    transform: translate(30vw, 5vh) rotate(-15deg);
+  }
+
+  50% {
+    border-radius: 40% 60% 20% 80% / 70% 40% 60% 30%;
+    transform: translate(15vw, 18vh) rotate(50deg);
+  }
+
+  65% {
+    border-radius: 50% 50% 60% 40% / 40% 50% 60% 50%;
+    transform: translate(-20vw, 20vh) rotate(20deg);
+  }
+
+  80% {
+    border-radius: 30% 70% 40% 60% / 60% 30% 50% 70%;
+    transform: translate(-35vw, 5vh) rotate(-30deg);
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: translate(-30vw, -10vh) rotate(0deg);
+  }
+}
+
+@keyframes blob2 {
+  0% {
+    border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
+    transform: translate(25vw, 12vh) rotate(0deg);
+  }
+
+  20% {
+    border-radius: 70% 30% 40% 60% / 60% 70% 30% 40%;
+    transform: translate(-10vw, 18vh) rotate(-40deg);
+  }
+
+  40% {
+    border-radius: 30% 70% 70% 30% / 70% 30% 60% 50%;
+    transform: translate(-30vw, -5vh) rotate(60deg);
+  }
+
+  60% {
+    border-radius: 60% 40% 50% 50% / 30% 60% 40% 70%;
+    transform: translate(5vw, -18vh) rotate(-20deg);
+  }
+
+  80% {
+    border-radius: 50% 50% 30% 70% / 50% 40% 70% 60%;
+    transform: translate(30vw, -10vh) rotate(45deg);
+  }
+
+  100% {
+    border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
+    transform: translate(25vw, 12vh) rotate(0deg);
+  }
+}
+
+@keyframes blob3 {
+  0% {
+    border-radius: 50% 50% 40% 60% / 60% 40% 60% 40%;
+    transform: translate(0vw, -15vh) rotate(0deg);
+  }
+
+  25% {
+    border-radius: 20% 80% 60% 40% / 40% 60% 30% 70%;
+    transform: translate(28vw, 5vh) rotate(70deg);
+  }
+
+  50% {
+    border-radius: 70% 30% 30% 70% / 70% 30% 50% 50%;
+    transform: translate(5vw, 20vh) rotate(-50deg);
+  }
+
+  75% {
+    border-radius: 40% 60% 70% 30% / 30% 70% 40% 60%;
+    transform: translate(-28vw, 10vh) rotate(30deg);
+  }
+
+  100% {
+    border-radius: 50% 50% 40% 60% / 60% 40% 60% 40%;
+    transform: translate(0vw, -15vh) rotate(0deg);
+  }
+}
+
+.blob-float-1 {
+  animation: blob1 12s ease-in-out infinite;
+}
+
+.blob-float-2 {
+  animation: blob2 16s ease-in-out infinite;
+}
+
+.blob-float-3 {
+  animation: blob3 20s ease-in-out infinite;
+}
+
+/* =====================================================
+ * Hero floating gradient sweep — atmospheric light shimmer
+ * ===================================================== */
+@keyframes hero-gradient-sweep {
+  0% {
+    transform: translateX(-8%) scaleX(1.15);
+    opacity: 0.12;
+  }
+  100% {
+    transform: translateX(8%) scaleX(1.15);
+    opacity: 0.18;
+  }
+}
+
+.hero-gradient-sweep {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  /*
+   * Very dark teal/blue tones — close to the navy base so only a
+   * faint atmospheric shimmer is visible, not a color change.
+   * Fades fully transparent at the top.
+   */
+  background: linear-gradient(
+    105deg,
+    rgba(1, 80, 84, 0.9) 0%,        /* deep teal, bottom-left */
+    rgba(13, 50, 100, 0.6) 45%,      /* dark mid-blue */
+    rgba(10, 22, 40, 0) 100%         /* transparent toward top-right */
+  );
+  animation: hero-gradient-sweep 8s ease-in-out infinite alternate;
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-gradient-sweep {
+    animation-play-state: paused;
+  }
+}
+
+/* Ceipal Widget Overrides */
+#example-widget-container,
+#example-widget-container * {
+  font-family: 'Inter', sans-serif !important;
+}
+
+#example-widget-container button[type="submit"],
+#example-widget-container .search-btn,
+#example-widget-container .btn,
+#example-widget-container input[type="button"],
+#example-widget-container .apply-btn {
+  background-color: #4DA3FF !important;
+  border-color: #4DA3FF !important;
+  color: white !important;
+  transition: all 0.2s ease-in-out !important;
+  border-radius: 0.5rem !important;
+}
+
+#example-widget-container button[type="submit"]:hover,
+#example-widget-container .search-btn:hover,
+#example-widget-container .apply-btn:hover {
+  background-color: #071B34 !important;
+  border-color: #071B34 !important;
+}
+
+#example-widget-container iframe {
+  border: none !important;
+  box-shadow: none !important;
+  min-height: 600px !important;
+}
+
+.ceipal-widget-override {
+  min-height: 600px;
+  box-shadow: none !important;
+  border: none !important;
+  background: transparent !important;
+}
