@@ -191,16 +191,16 @@ export default function Home() {
 
     return (
         <>
-            <section className="py-20 lg:py-32 min-h-[750px] flex flex-col justify-center relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #071B34 0%, #0B2242 100%)' }}>
+            <section className="py-16 lg:py-32 lg:min-h-[750px] flex flex-col justify-center relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #071B34 0%, #0B2242 100%)' }}>
                 {/* Floating gradient sweep — atmospheric light from bottom-left to bottom-right */}
                 <div className="hero-gradient-sweep" aria-hidden="true"></div>
                 <div className="absolute -right-20 -top-20 w-96 h-96 bg-blue-400 rounded-full blur-3xl opacity-20 pointer-events-none"></div>
                 <div className="absolute -left-20 bottom-0 w-80 h-80 bg-indigo-400 rounded-full blur-3xl opacity-10 pointer-events-none"></div>
                 <div className="absolute bottom-10 right-1/3 w-64 h-64 bg-teal-400 rounded-full opacity-[0.07] hero-breathe pointer-events-none"></div>
 
-                <div className="container mx-auto px-6 lg:px-12 relative z-10 grid grid-cols-12 gap-8 items-center">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                     <div className="col-span-12 lg:col-span-8">
-                        <h1 className="text-white text-5xl lg:text-[72px] font-display font-bold leading-tight mb-6 tracking-tight">
+                        <h1 className="text-white text-4xl sm:text-5xl lg:text-[72px] font-display font-bold leading-tight mb-6 tracking-tight">
                             Powering Digital Growth Through Trusted Technology
                         </h1>
                         <p className="text-[#8ba3bd] text-lg lg:text-[20px] font-body mb-10 max-w-2xl leading-relaxed">
@@ -474,7 +474,7 @@ export default function Home() {
             </section>
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-6 lg:px-12">
-                    <div className="grid grid-cols-12 gap-12 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                         <div className="col-span-12 lg:col-span-6">
                             <div className="w-16 h-1 bg-accent-blue mb-6"></div>
                             <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#071B34] mb-6">
@@ -489,7 +489,7 @@ export default function Home() {
                                 Learn More About Us <span className="material-icons text-sm">arrow_forward</span>
                             </Link>
                         </div>
-                        <div className="col-span-12 lg:col-span-6 relative h-[400px]">
+                        <div className="col-span-12 lg:col-span-6 relative h-64 sm:h-80 lg:h-[400px]">
                             <img alt="Diverse team collaborating in modern office" className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-sm" data-alt="Diverse team collaborating in modern office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5YHLyIM-OaEcUBU0gUvcWvtVpHWN4N0cH5keQhQ1lvhuU49ClI6xXrk5MsOKERCAMR6x_K8BF--FNO8odhZDk-CWg2QUZE05UhrFbkA5hdWtAWL882AoyexK-dypgdeftqXth7jqZcZEaACINvir6IAh8vodNsPsHVAyQ2InIM7oq93ML6oQJYYNMvs3yNVa_rU1R6RtdvcBnzO0k5DD8D_k4QF5ljRCWh85FF_omEa0lZHFkR2ZkmAu111H26Qlg4rBIr6p4lv85" />
                             <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-[#071B34]/10 rounded-full -z-10 hidden lg:block"></div>
                             <div className="absolute -top-6 -right-6 w-32 h-32 bg-slate-100 rounded-full -z-10 hidden lg:block"></div>

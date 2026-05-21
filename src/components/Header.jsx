@@ -19,7 +19,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="bg-[#071B34] text-white py-2 text-sm border-b border-[#0B2242]">
+      <div className="hidden sm:block bg-[#071B34] text-white py-2 text-sm border-b border-[#0B2242]">
         <div className="container mx-auto px-6 lg:px-12 flex flex-col sm:flex-row justify-between items-center gap-2">
           <div className="flex items-center space-x-6">
             <span className="flex items-center gap-2"><span className="material-icons text-sm">phone</span> +1 732 444 4645</span>
@@ -36,7 +36,7 @@ export default function Header() {
         </div>
       </div>
       <header className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm transition-all duration-300">
-        <div className="container mx-auto px-6 lg:px-12 h-28 flex justify-between items-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12 h-20 sm:h-28 flex justify-between items-center overflow-hidden">
           <Link className="flex items-center group" to="/">
             <img
               src={logo}

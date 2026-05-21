@@ -7,7 +7,7 @@ export default function Layout() {
   useScrollReveal();
 
   return (
-    <div className="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 antialiased flex flex-col min-h-screen">
+    <div className="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 antialiased flex flex-col min-h-screen overflow-x-hidden">
       <Header />
       <main className="flex-grow">
         <Outlet />
