@@ -55,15 +55,15 @@ export default function Header() {
             </nav>
           ) : (
             <nav className="hidden md:flex space-x-8 h-full items-center">
-              <Link to="/services" className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 text-gray-200 hover:text-white hover:bg-white/20 transition-all font-bold text-sm group">
+              <Link to="/services" className="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-50 border border-slate-200/60 text-[#071B34] hover:text-[#4DA3FF] hover:bg-slate-100/80 transition-all font-semibold text-sm group shadow-sm">
                 <span className="material-icons text-lg group-hover:-translate-x-1 transition-transform">arrow_back</span>
                 Back to Solutions
               </Link>
-              <div className="h-6 w-[1px] bg-gray-600 mx-2"></div>
+              <div className="h-6 w-[1px] bg-slate-200 mx-2"></div>
               <div className="flex items-center space-x-6">
-                <NavLink to="/itil-certification" className={({ isActive }) => `text-sm font-black uppercase tracking-widest transition-all ${isActive ? "text-[#4DA3FF] border-b-2 border-[#4DA3FF] pb-1" : "text-gray-300 hover:text-[#4DA3FF]"}`}>ITIL®</NavLink>
-                <NavLink to="/ai-certification" className={({ isActive }) => `text-sm font-black uppercase tracking-widest transition-all ${isActive ? "text-[#4DA3FF] border-b-2 border-[#4DA3FF] pb-1" : "text-gray-300 hover:text-[#4DA3FF]"}`}>AI & Machine Learning</NavLink>
-                <NavLink to="/ppm-agile-certification" className={({ isActive }) => `text-sm font-black uppercase tracking-widest transition-all ${isActive ? "text-[#4DA3FF] border-b-2 border-[#4DA3FF] pb-1" : "text-gray-300 hover:text-[#4DA3FF]"}`}>PPM & Agile</NavLink>
+                <NavLink to="/itil-certification" className={({ isActive }) => `text-sm font-black uppercase tracking-widest transition-all ${isActive ? "text-[#4DA3FF] border-b-2 border-[#4DA3FF] pb-1" : "text-[#071B34]/80 hover:text-[#4DA3FF]"}`}>ITIL®</NavLink>
+                <NavLink to="/ai-certification" className={({ isActive }) => `text-sm font-black uppercase tracking-widest transition-all ${isActive ? "text-[#4DA3FF] border-b-2 border-[#4DA3FF] pb-1" : "text-[#071B34]/80 hover:text-[#4DA3FF]"}`}>AI & Machine Learning</NavLink>
+                <NavLink to="/ppm-agile-certification" className={({ isActive }) => `text-sm font-black uppercase tracking-widest transition-all ${isActive ? "text-[#4DA3FF] border-b-2 border-[#4DA3FF] pb-1" : "text-[#071B34]/80 hover:text-[#4DA3FF]"}`}>PPM & Agile</NavLink>
               </div>
             </nav>
           )}
@@ -90,12 +90,12 @@ export default function Header() {
             </>
           ) : (
             <>
-              <Link to="/services" className="nav-link font-medium text-gray-300 py-3 border-b border-white/10 flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/services" className="nav-link font-medium text-[#071B34]/80 py-3 border-b border-slate-100 flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
                 <span className="material-icons text-sm">arrow_back</span> Back to Solutions
               </Link>
-              <NavLink to="/itil-certification" className="nav-link font-bold text-white py-3 border-b border-white/10" onClick={() => setIsMenuOpen(false)}>ITIL®</NavLink>
-              <NavLink to="/ai-certification" className="nav-link font-bold text-white py-3 border-b border-white/10" onClick={() => setIsMenuOpen(false)}>Artificial Intelligence</NavLink>
-              <NavLink to="/ppm-agile-certification" className="nav-link font-bold text-white py-3 border-b border-white/10" onClick={() => setIsMenuOpen(false)}>PPM & Agile</NavLink>
+              <NavLink to="/itil-certification" className={({ isActive }) => `nav-link font-bold py-3 border-b border-slate-100 transition-all ${isActive ? "text-[#4DA3FF]" : "text-[#071B34] hover:text-[#4DA3FF]"}`} onClick={() => setIsMenuOpen(false)}>ITIL®</NavLink>
+              <NavLink to="/ai-certification" className={({ isActive }) => `nav-link font-bold py-3 border-b border-slate-100 transition-all ${isActive ? "text-[#4DA3FF]" : "text-[#071B34] hover:text-[#4DA3FF]"}`} onClick={() => setIsMenuOpen(false)}>Artificial Intelligence</NavLink>
+              <NavLink to="/ppm-agile-certification" className={({ isActive }) => `nav-link font-bold py-3 border-b border-slate-100 transition-all ${isActive ? "text-[#4DA3FF]" : "text-[#071B34] hover:text-[#4DA3FF]"}`} onClick={() => setIsMenuOpen(false)}>PPM & Agile</NavLink>
             </>
           )}
         </div>

@@ -173,7 +173,7 @@ export default function AiTraining() {
   return (
     <div className="bg-[#fcfaff] dark:bg-background-dark min-h-screen font-body">
       {/* Hero */}
-      <header className="relative bg-[#071B34] text-white py-24 overflow-hidden">
+      <header className="relative bg-[#071B34] text-white py-24 lg:py-32 overflow-hidden page-hero flex items-center justify-center">
         <div className="absolute inset-0">
            {/* Animated blobs for AI theme */}
            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#6a1b9a]/20 rounded-full blur-[120px] -mr-48 -mt-48 animate-pulse"></div>
@@ -181,7 +181,7 @@ export default function AiTraining() {
            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_#fff_0.2px,_transparent_0.2px)] bg-[length:32px_32px] opacity-10"></div>
         </div>
         
-        <div className="container mx-auto px-6 lg:px-12 relative z-10">
+        <div className="container mx-auto px-6 lg:px-12 relative z-10 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-8">
               <div className="inline-block bg-[#6a1b9a]/30 backdrop-blur-md px-4 py-1.5 rounded-full text-white text-[10px] font-black uppercase tracking-[0.25em] mb-6 border border-white/10">

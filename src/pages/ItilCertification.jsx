@@ -213,11 +213,11 @@ export default function ItilCertification() {
   return (
     <div className="bg-[#f8fafc] dark:bg-background-dark min-h-screen">
       {/* Page Header */}
-      <header className="bg-[#071B34] text-white py-20 text-center relative overflow-hidden">
+      <header className="relative bg-[#071B34] text-white py-24 lg:py-32 overflow-hidden text-center page-hero flex items-center justify-center">
         <div className="absolute inset-0 opacity-10">
            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_#4DA3FF_1px,_transparent_1px)] bg-[length:32px_32px]"></div>
         </div>
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-6 relative z-10 w-full">
           <div className="inline-block bg-accent/20 backdrop-blur-md px-4 py-1 rounded-full text-accent-blue text-[10px] font-black uppercase tracking-[0.2em] mb-4 border border-accent/30">
             PeopleCert Accredited · Registry ID 9550
           </div>

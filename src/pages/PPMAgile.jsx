@@ -144,13 +144,13 @@ export default function PPMAgile() {
   return (
     <div className="bg-[#f8fafc] dark:bg-background-dark min-h-screen">
       {/* Hero */}
-      <header className="relative bg-[#071B34] text-white py-24 overflow-hidden">
+      <header className="relative bg-[#071B34] text-white py-24 lg:py-32 overflow-hidden page-hero flex items-center justify-center">
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-accent/10 to-transparent"></div>
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_white_0.5px,_transparent_0.5px)] bg-[length:24px_24px] opacity-10"></div>
         </div>
         
-        <div className="container mx-auto px-6 lg:px-12 relative z-10">
+        <div className="container mx-auto px-6 lg:px-12 relative z-10 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-7">
               <div className="inline-block bg-accent/20 backdrop-blur-md px-4 py-1.5 rounded-lg text-accent-blue text-[10px] font-black uppercase tracking-[0.25em] mb-6 border border-accent/20">

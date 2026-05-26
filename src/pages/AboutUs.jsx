@@ -17,7 +17,7 @@ export default function AboutUs() {
                     <span className="text-accent-blue font-semibold tracking-wider text-sm uppercase mb-4">About Peer Consulting Resources</span>
                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white tracking-tight max-w-4xl leading-tight mb-6">
                         Technology Expertise <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-800">Built Around</span> <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4DA3FF] to-indigo-300">Built Around</span> <br />
                         Business Impact
                     </h1>
                     <p className="mt-4 max-w-2xl text-xl text-[#8ba3bd] font-light">
