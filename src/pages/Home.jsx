@@ -28,7 +28,7 @@ const TeamAvatar = ({ src, alt, silhouetteClass = "w-full h-full text-slate-700"
 
 // Resolve local team member images using Vite's static asset handling
 const teamImages = {
-    "misha-edara": new URL('../assets/team/Misha-Edara.jpg', import.meta.url).href,
+    "misha-edara": new URL('../assets/team/Misha.jpg', import.meta.url).href,
     "vineela-mandava": new URL('../assets/team/Vineela-Mandava.png', import.meta.url).href,
     "omer-halilovic": new URL('../assets/team/Omer-Halilovic.jpg', import.meta.url).href,
     "seema-mittal": new URL('../assets/team/Seema-Mittal.png', import.meta.url).href,
@@ -251,120 +251,29 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section className="py-20 bg-[#f8fafc] dark:bg-background-dark border-y border-border-light dark:border-white/10">
+            <section className="py-20 bg-white">
                 <div className="container mx-auto px-6 lg:px-12">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#071B34] dark:text-white mb-4">The Team Behind PEER</h2>
-                        <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Meet the dedicated experts driving innovation and delivering exceptional results for our clients every single day.</p>
-                    </div>
-                    {/* Primary Row: 3 Vertical Cards */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
-
-                        {/* Misha Edara - Founder */}
-                        <div className="relative overflow-hidden bg-white dark:bg-[#071B34] pt-10 pb-12 px-10 rounded-[28px] shadow-none border border-gray-100 dark:border-white/10 flex flex-col items-center hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_16px_40px_rgba(59,130,246,0.16)] hover:-translate-y-2 transition-all duration-300 group">
-                            {/* Decorative corner block */}
-                            <div className="absolute top-0 right-0 w-16 h-16 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[24px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
-                            {/* Avatar with offset blue block */}
-                            <div className="relative mt-3 mb-6 flex-shrink-0" style={{ width: '160px', height: '160px' }}>
-                                {/* Blue offset rectangle - slides in behind avatar on hover */}
-                                <div className="absolute top-4 right-[-10px] w-36 h-36 rounded-[20px] bg-blue-300/30 dark:bg-blue-500/25 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
-                                {/* Avatar */}
-                                <div className="relative w-36 h-36 rounded-[20px] overflow-hidden bg-gradient-to-b from-[#e3e6ec] to-[#f3f5f8] dark:from-[#2d3748] dark:to-[#1a202c] flex items-center justify-center border-2 border-[#d2d9e4] dark:border-slate-700 group-hover:border-blue-400 dark:group-hover:border-blue-500 group-hover:shadow-[0_0_0_4px_rgba(59,130,246,0.22)] transition-all duration-300 z-10">
-                                    <TeamAvatar src={teamImages["misha-edara"]} alt="Misha Edara" silhouetteClass="w-full h-full text-slate-700 dark:text-slate-355" />
-                                </div>
-                            </div>
-                            <h3 className="text-xl font-bold font-display text-[#071B34] dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-300 mb-1 transition-colors duration-300">Misha Edara</h3>
-                            <p className="text-[#3b82f6] dark:text-blue-400 font-extrabold text-xs uppercase tracking-widest">Founder</p>
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                        <div className="col-span-12 lg:col-span-6">
+                            <div className="w-16 h-1 bg-accent-blue mb-6"></div>
+                            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#071B34] mb-6">
+                                Your Partner in Smart Transformation
+                            </h2>
+                            <p className="text-slate-600 font-body text-lg leading-relaxed mb-6">
+                                At Peer Consulting Resources, we don't just solve IT problems; we go beyond fixing problems — we build the technology foundation for long-term success. With over 15 years of industry experience, we bridge the gap between complex technology and business objectives. </p>
+                            <p className="text-slate-600 font-body text-lg leading-relaxed mb-8">
+                                Our experts work as an extension of your team to deliver solutions that are efficient, secure, and built to scale.
+                            </p>
+                            <Link className="text-[#071B34] font-bold inline-flex items-center gap-2 hover:text-accent-blue transition-all" to="/about">
+                                Learn More About Us <span className="material-icons text-sm">arrow_forward</span>
+                            </Link>
                         </div>
-
-                        {/* Vineela Mandava - Co-Founder */}
-                        <div className="relative overflow-hidden bg-white dark:bg-[#071B34] pt-10 pb-12 px-10 rounded-[28px] shadow-none border border-gray-100 dark:border-white/10 flex flex-col items-center hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_16px_40px_rgba(59,130,246,0.16)] hover:-translate-y-2 transition-all duration-300 group">
-                            {/* Decorative corner block */}
-                            <div className="absolute top-0 right-0 w-16 h-16 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[24px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
-                            {/* Avatar with offset blue block */}
-                            <div className="relative mt-3 mb-6 flex-shrink-0" style={{ width: '160px', height: '160px' }}>
-                                {/* Blue offset rectangle */}
-                                <div className="absolute top-4 right-[-10px] w-36 h-36 rounded-[20px] bg-blue-300/30 dark:bg-blue-500/25 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
-                                {/* Avatar */}
-                                <div className="relative w-36 h-36 rounded-[20px] overflow-hidden bg-gradient-to-b from-[#e3e6ec] to-[#f3f5f8] dark:from-[#2d3748] dark:to-[#1a202c] flex items-center justify-center border-2 border-[#d2d9e4] dark:border-slate-700 group-hover:border-blue-400 dark:group-hover:border-blue-500 group-hover:shadow-[0_0_0_4px_rgba(59,130,246,0.22)] transition-all duration-300 z-10">
-                                    <TeamAvatar src={teamImages["vineela-mandava"]} alt="Vineela Mandava" silhouetteClass="w-full h-full text-slate-700 dark:text-slate-355" />
-                                </div>
-                            </div>
-                            <h3 className="text-xl font-bold font-display text-[#071B34] dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-300 mb-1 transition-colors duration-300">Vineela Mandava</h3>
-                            <p className="text-[#3b82f6] dark:text-blue-400 font-extrabold text-xs uppercase tracking-widest">Co-Founder</p>
-                        </div>
-
-                        {/* Vivek Philar - CEO */}
-                        <div className="relative overflow-hidden bg-white dark:bg-[#071B34] pt-10 pb-12 px-10 rounded-[28px] shadow-none border border-gray-100 dark:border-white/10 flex flex-col items-center hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_16px_40px_rgba(59,130,246,0.16)] hover:-translate-y-2 transition-all duration-300 group">
-                            {/* Decorative corner block */}
-                            <div className="absolute top-0 right-0 w-16 h-16 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[24px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
-                            {/* Avatar with offset blue block */}
-                            <div className="relative mt-3 mb-6 flex-shrink-0" style={{ width: '160px', height: '160px' }}>
-                                {/* Blue offset rectangle */}
-                                <div className="absolute top-4 right-[-10px] w-36 h-36 rounded-[20px] bg-blue-300/30 dark:bg-blue-500/25 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
-                                {/* Avatar */}
-                                <div className="relative w-36 h-36 rounded-[20px] overflow-hidden bg-gradient-to-b from-[#e3e6ec] to-[#f3f5f8] dark:from-[#2d3748] dark:to-[#1a202c] flex items-center justify-center border-2 border-[#d2d9e4] dark:border-slate-700 group-hover:border-blue-400 dark:group-hover:border-blue-500 group-hover:shadow-[0_0_0_4px_rgba(59,130,246,0.22)] transition-all duration-300 z-10">
-                                    <TeamAvatar src={teamImages["vivek-philar"]} alt="Vivek Philar" silhouetteClass="w-full h-full text-slate-700 dark:text-slate-355" />
-                                </div>
-                            </div>
-                            <h3 className="text-xl font-bold font-display text-[#071B34] dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-300 mb-1 transition-colors duration-300">Vivek Philar</h3>
-                            <p className="text-[#3b82f6] dark:text-blue-400 font-extrabold text-xs uppercase tracking-widest">CEO</p>
+                        <div className="col-span-12 lg:col-span-6 relative h-64 sm:h-80 lg:h-[400px]">
+                            <img alt="Diverse team collaborating in modern office" className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-sm" data-alt="Diverse team collaborating in modern office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5YHLyIM-OaEcUBU0gUvcWvtVpHWN4N0cH5keQhQ1lvhuU49ClI6xXrk5MsOKERCAMR6x_K8BF--FNO8odhZDk-CWg2QUZE05UhrFbkA5hdWtAWL882AoyexK-dypgdeftqXth7jqZcZEaACINvir6IAh8vodNsPsHVAyQ2InIM7oq93ML6oQJYYNMvs3yNVa_rU1R6RtdvcBnzO0k5DD8D_k4QF5ljRCWh85FF_omEa0lZHFkR2ZkmAu111H26Qlg4rBIr6p4lv85" />
+                            <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-[#071B34]/10 rounded-full -z-10 hidden lg:block"></div>
+                            <div className="absolute -top-6 -right-6 w-32 h-32 bg-slate-100 rounded-full -z-10 hidden lg:block"></div>
                         </div>
                     </div>
-
-                    {/* Secondary Row: 4 Horizontal Cards */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-
-                        {/* Omer Halilovic */}
-                        <div className="relative overflow-hidden flex items-center gap-6 p-8 bg-white dark:bg-[#071B34] rounded-[20px] border border-gray-100 dark:border-white/10 shadow-none hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_8px_24px_rgba(59,130,246,0.18)] hover:-translate-y-1 transition-all duration-300 group">
-                            <div className="absolute top-0 right-0 w-9 h-9 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[14px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
-                            <div className="w-20 h-20 rounded-[16px] overflow-hidden bg-gradient-to-b from-[#e3e6ec] to-[#f3f5f8] dark:from-[#2d3748] dark:to-[#1a202c] flex items-center justify-center border-2 border-[#d2d9e4] dark:border-slate-700 flex-shrink-0 group-hover:border-blue-400 group-hover:shadow-[0_0_0_3px_rgba(59,130,246,0.22)] transition-all duration-300">
-                                <TeamAvatar src={teamImages["omer-halilovic"]} alt="Omer Halilovic" silhouetteClass="w-14 h-14 text-slate-700 dark:text-slate-355" />
-                            </div>
-                            <div className="flex flex-col flex-grow min-w-0">
-                                <h4 className="font-bold text-[#071B34] dark:text-white text-base mb-1 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">Omer Halilovic</h4>
-                                <p className="text-xs font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400 leading-tight">Director of NYC Services</p>
-                            </div>
-                        </div>
-
-                        {/* Seema Mittal */}
-                        <div className="relative overflow-hidden flex items-center gap-6 p-8 bg-white dark:bg-[#071B34] rounded-[20px] border border-gray-100 dark:border-white/10 shadow-none hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_8px_24px_rgba(59,130,246,0.18)] hover:-translate-y-1 transition-all duration-300 group">
-                            <div className="absolute top-0 right-0 w-9 h-9 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[14px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
-                            <div className="w-20 h-20 rounded-[16px] overflow-hidden bg-gradient-to-b from-[#e3e6ec] to-[#f3f5f8] dark:from-[#2d3748] dark:to-[#1a202c] flex items-center justify-center border-2 border-[#d2d9e4] dark:border-slate-700 flex-shrink-0 group-hover:border-blue-400 group-hover:shadow-[0_0_0_3px_rgba(59,130,246,0.22)] transition-all duration-300">
-                                <TeamAvatar src={teamImages["seema-mittal"]} alt="Seema Mittal" silhouetteClass="w-14 h-14 text-slate-700 dark:text-slate-355" />
-                            </div>
-                            <div className="flex flex-col flex-grow min-w-0">
-                                <h4 className="font-bold text-[#071B34] dark:text-white text-base mb-1 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">Seema Mittal</h4>
-                                <p className="text-xs font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400 leading-tight">Director of Recruiting</p>
-                            </div>
-                        </div>
-
-                        {/* Sandeep Bussa */}
-                        <div className="relative overflow-hidden flex items-center gap-6 p-8 bg-white dark:bg-[#071B34] rounded-[20px] border border-gray-100 dark:border-white/10 shadow-none hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_8px_24px_rgba(59,130,246,0.18)] hover:-translate-y-1 transition-all duration-300 group">
-                            <div className="absolute top-0 right-0 w-9 h-9 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[14px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
-                            <div className="w-20 h-20 rounded-[16px] overflow-hidden bg-gradient-to-b from-[#e3e6ec] to-[#f3f5f8] dark:from-[#2d3748] dark:to-[#1a202c] flex items-center justify-center border-2 border-[#d2d9e4] dark:border-slate-700 flex-shrink-0 group-hover:border-blue-400 group-hover:shadow-[0_0_0_3px_rgba(59,130,246,0.22)] transition-all duration-300">
-                                <TeamAvatar src={teamImages["sandeep-bussa"]} alt="Sandeep Bussa" silhouetteClass="w-14 h-14 text-slate-700 dark:text-slate-355" />
-                            </div>
-                            <div className="flex flex-col flex-grow min-w-0">
-                                <h4 className="font-bold text-[#071B34] dark:text-white text-base mb-1 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">Sandeep Bussa</h4>
-                                <p className="text-xs font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400 leading-tight">Director of Accounts &amp; HR</p>
-                            </div>
-                        </div>
-
-                        {/* Naveen Marrivada */}
-                        <div className="relative overflow-hidden flex items-center gap-6 p-8 bg-white dark:bg-[#071B34] rounded-[20px] border border-gray-100 dark:border-white/10 shadow-none hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_8px_24px_rgba(59,130,246,0.18)] hover:-translate-y-1 transition-all duration-300 group">
-                            <div className="absolute top-0 right-0 w-9 h-9 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[14px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
-                            <div className="w-20 h-20 rounded-[16px] overflow-hidden bg-gradient-to-b from-[#e3e6ec] to-[#f3f5f8] dark:from-[#2d3748] dark:to-[#1a202c] flex items-center justify-center border-2 border-[#d2d9e4] dark:border-slate-700 flex-shrink-0 group-hover:border-blue-400 group-hover:shadow-[0_0_0_3px_rgba(59,130,246,0.22)] transition-all duration-300">
-                                <TeamAvatar src={teamImages["naveen-marrivada"]} alt="Naveen Marrivada" silhouetteClass="w-14 h-14 text-slate-700 dark:text-slate-355" />
-                            </div>
-                            <div className="flex flex-col flex-grow min-w-0">
-                                <h4 className="font-bold text-[#071B34] dark:text-white text-base mb-1 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">Naveen Marrivada</h4>
-                                <p className="text-xs font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400 leading-tight">Director of Client Relations, NYC</p>
-                            </div>
-                        </div>
-
-                    </div>
-
                 </div>
             </section>
             <section className="py-20 bg-[#071B34] border-y border-white/10">
@@ -472,29 +381,120 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section className="py-20 bg-white">
+            <section className="py-20 bg-[#f8fafc] dark:bg-background-dark border-y border-border-light dark:border-white/10">
                 <div className="container mx-auto px-6 lg:px-12">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                        <div className="col-span-12 lg:col-span-6">
-                            <div className="w-16 h-1 bg-accent-blue mb-6"></div>
-                            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#071B34] mb-6">
-                                Your Partner in Smart Transformation
-                            </h2>
-                            <p className="text-slate-600 font-body text-lg leading-relaxed mb-6">
-                                At Peer Consulting Resources, we don't just solve IT problems; we go beyond fixing problems — we build the technology foundation for long-term success. With over 15 years of industry experience, we bridge the gap between complex technology and business objectives. </p>
-                            <p className="text-slate-600 font-body text-lg leading-relaxed mb-8">
-                                Our experts work as an extension of your team to deliver solutions that are efficient, secure, and built to scale.
-                            </p>
-                            <Link className="text-[#071B34] font-bold inline-flex items-center gap-2 hover:text-accent-blue transition-all" to="/about">
-                                Learn More About Us <span className="material-icons text-sm">arrow_forward</span>
-                            </Link>
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#071B34] dark:text-white mb-4">The Team Behind PEER</h2>
+                        <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Meet the dedicated experts driving innovation and delivering exceptional results for our clients every single day.</p>
+                    </div>
+                    {/* Primary Row: 3 Vertical Cards */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+
+                        {/* Misha Edara - Founder */}
+                        <div className="relative overflow-hidden bg-white dark:bg-[#071B34] pt-10 pb-12 px-10 rounded-[28px] shadow-none border border-gray-100 dark:border-white/10 flex flex-col items-center hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_16px_40px_rgba(59,130,246,0.16)] hover:-translate-y-2 transition-all duration-300 group">
+                            {/* Decorative corner block */}
+                            <div className="absolute top-0 right-0 w-16 h-16 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[24px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
+                            {/* Avatar with offset blue block */}
+                            <div className="relative mt-3 mb-6 flex-shrink-0" style={{ width: '160px', height: '160px' }}>
+                                {/* Blue offset rectangle - slides in behind avatar on hover */}
+                                <div className="absolute top-4 right-[-10px] w-36 h-36 rounded-[20px] bg-blue-300/30 dark:bg-blue-500/25 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
+                                {/* Avatar */}
+                                <div className="relative w-36 h-36 rounded-[20px] overflow-hidden bg-gradient-to-b from-[#e3e6ec] to-[#f3f5f8] dark:from-[#2d3748] dark:to-[#1a202c] flex items-center justify-center border-2 border-[#d2d9e4] dark:border-slate-700 group-hover:border-blue-400 dark:group-hover:border-blue-500 group-hover:shadow-[0_0_0_4px_rgba(59,130,246,0.22)] transition-all duration-300 z-10">
+                                    <TeamAvatar src={teamImages["misha-edara"]} alt="Misha Edara" silhouetteClass="w-full h-full text-slate-700 dark:text-slate-355" />
+                                </div>
+                            </div>
+                            <h3 className="text-xl font-bold font-display text-[#071B34] dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-300 mb-1 transition-colors duration-300">Misha Edara</h3>
+                            <p className="text-[#3b82f6] dark:text-blue-400 font-extrabold text-xs uppercase tracking-widest">Founder</p>
                         </div>
-                        <div className="col-span-12 lg:col-span-6 relative h-64 sm:h-80 lg:h-[400px]">
-                            <img alt="Diverse team collaborating in modern office" className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-sm" data-alt="Diverse team collaborating in modern office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5YHLyIM-OaEcUBU0gUvcWvtVpHWN4N0cH5keQhQ1lvhuU49ClI6xXrk5MsOKERCAMR6x_K8BF--FNO8odhZDk-CWg2QUZE05UhrFbkA5hdWtAWL882AoyexK-dypgdeftqXth7jqZcZEaACINvir6IAh8vodNsPsHVAyQ2InIM7oq93ML6oQJYYNMvs3yNVa_rU1R6RtdvcBnzO0k5DD8D_k4QF5ljRCWh85FF_omEa0lZHFkR2ZkmAu111H26Qlg4rBIr6p4lv85" />
-                            <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-[#071B34]/10 rounded-full -z-10 hidden lg:block"></div>
-                            <div className="absolute -top-6 -right-6 w-32 h-32 bg-slate-100 rounded-full -z-10 hidden lg:block"></div>
+
+                        {/* Vineela Mandava - Co-Founder */}
+                        <div className="relative overflow-hidden bg-white dark:bg-[#071B34] pt-10 pb-12 px-10 rounded-[28px] shadow-none border border-gray-100 dark:border-white/10 flex flex-col items-center hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_16px_40px_rgba(59,130,246,0.16)] hover:-translate-y-2 transition-all duration-300 group">
+                            {/* Decorative corner block */}
+                            <div className="absolute top-0 right-0 w-16 h-16 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[24px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
+                            {/* Avatar with offset blue block */}
+                            <div className="relative mt-3 mb-6 flex-shrink-0" style={{ width: '160px', height: '160px' }}>
+                                {/* Blue offset rectangle */}
+                                <div className="absolute top-4 right-[-10px] w-36 h-36 rounded-[20px] bg-blue-300/30 dark:bg-blue-500/25 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
+                                {/* Avatar */}
+                                <div className="relative w-36 h-36 rounded-[20px] overflow-hidden bg-gradient-to-b from-[#e3e6ec] to-[#f3f5f8] dark:from-[#2d3748] dark:to-[#1a202c] flex items-center justify-center border-2 border-[#d2d9e4] dark:border-slate-700 group-hover:border-blue-400 dark:group-hover:border-blue-500 group-hover:shadow-[0_0_0_4px_rgba(59,130,246,0.22)] transition-all duration-300 z-10">
+                                    <TeamAvatar src={teamImages["vineela-mandava"]} alt="Vineela Mandava" silhouetteClass="w-full h-full text-slate-700 dark:text-slate-355" />
+                                </div>
+                            </div>
+                            <h3 className="text-xl font-bold font-display text-[#071B34] dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-300 mb-1 transition-colors duration-300">Vineela Mandava</h3>
+                            <p className="text-[#3b82f6] dark:text-blue-400 font-extrabold text-xs uppercase tracking-widest">Co-Founder</p>
+                        </div>
+
+                        {/* Vivek Philar - CEO */}
+                        <div className="relative overflow-hidden bg-white dark:bg-[#071B34] pt-10 pb-12 px-10 rounded-[28px] shadow-none border border-gray-100 dark:border-white/10 flex flex-col items-center hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_16px_40px_rgba(59,130,246,0.16)] hover:-translate-y-2 transition-all duration-300 group">
+                            {/* Decorative corner block */}
+                            <div className="absolute top-0 right-0 w-16 h-16 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[24px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
+                            {/* Avatar with offset blue block */}
+                            <div className="relative mt-3 mb-6 flex-shrink-0" style={{ width: '160px', height: '160px' }}>
+                                {/* Blue offset rectangle */}
+                                <div className="absolute top-4 right-[-10px] w-36 h-36 rounded-[20px] bg-blue-300/30 dark:bg-blue-500/25 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
+                                {/* Avatar */}
+                                <div className="relative w-36 h-36 rounded-[20px] overflow-hidden bg-gradient-to-b from-[#e3e6ec] to-[#f3f5f8] dark:from-[#2d3748] dark:to-[#1a202c] flex items-center justify-center border-2 border-[#d2d9e4] dark:border-slate-700 group-hover:border-blue-400 dark:group-hover:border-blue-500 group-hover:shadow-[0_0_0_4px_rgba(59,130,246,0.22)] transition-all duration-300 z-10">
+                                    <TeamAvatar src={teamImages["vivek-philar"]} alt="Vivek Philar" silhouetteClass="w-full h-full text-slate-700 dark:text-slate-355" />
+                                </div>
+                            </div>
+                            <h3 className="text-xl font-bold font-display text-[#071B34] dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-300 mb-1 transition-colors duration-300">Vivek Philar</h3>
+                            <p className="text-[#3b82f6] dark:text-blue-400 font-extrabold text-xs uppercase tracking-widest">CEO</p>
                         </div>
                     </div>
+
+                    {/* Secondary Row: 4 Horizontal Cards */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+
+                        {/* Naveen Marrivada */}
+                        <div className="relative overflow-hidden flex items-center gap-6 p-8 bg-white dark:bg-[#071B34] rounded-[20px] border border-gray-100 dark:border-white/10 shadow-none hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_8px_24px_rgba(59,130,246,0.18)] hover:-translate-y-1 transition-all duration-300 group">
+                            <div className="absolute top-0 right-0 w-9 h-9 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[14px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
+                            <div className="w-20 h-20 rounded-[16px] overflow-hidden bg-gradient-to-b from-[#e3e6ec] to-[#f3f5f8] dark:from-[#2d3748] dark:to-[#1a202c] flex items-center justify-center border-2 border-[#d2d9e4] dark:border-slate-700 flex-shrink-0 group-hover:border-blue-400 group-hover:shadow-[0_0_0_3px_rgba(59,130,246,0.22)] transition-all duration-300">
+                                <TeamAvatar src={teamImages["naveen-marrivada"]} alt="Naveen Marrivada" silhouetteClass="w-14 h-14 text-slate-700 dark:text-slate-355" />
+                            </div>
+                            <div className="flex flex-col flex-grow min-w-0">
+                                <h4 className="font-bold text-[#071B34] dark:text-white text-base mb-1 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">Naveen Marrivada</h4>
+                                <p className="text-xs font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400 leading-tight">Director of Client Relations, NYC</p>
+                            </div>
+                        </div>
+
+                        {/* Omer Halilovic */}
+                        <div className="relative overflow-hidden flex items-center gap-6 p-8 bg-white dark:bg-[#071B34] rounded-[20px] border border-gray-100 dark:border-white/10 shadow-none hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_8px_24px_rgba(59,130,246,0.18)] hover:-translate-y-1 transition-all duration-300 group">
+                            <div className="absolute top-0 right-0 w-9 h-9 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[14px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
+                            <div className="w-20 h-20 rounded-[16px] overflow-hidden bg-gradient-to-b from-[#e3e6ec] to-[#f3f5f8] dark:from-[#2d3748] dark:to-[#1a202c] flex items-center justify-center border-2 border-[#d2d9e4] dark:border-slate-700 flex-shrink-0 group-hover:border-blue-400 group-hover:shadow-[0_0_0_3px_rgba(59,130,246,0.22)] transition-all duration-300">
+                                <TeamAvatar src={teamImages["omer-halilovic"]} alt="Omer Halilovic" silhouetteClass="w-14 h-14 text-slate-700 dark:text-slate-355" />
+                            </div>
+                            <div className="flex flex-col flex-grow min-w-0">
+                                <h4 className="font-bold text-[#071B34] dark:text-white text-base mb-1 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">Omer Halilovic</h4>
+                                <p className="text-xs font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400 leading-tight">Director of NYC Services</p>
+                            </div>
+                        </div>
+
+                        {/* Seema Mittal */}
+                        <div className="relative overflow-hidden flex items-center gap-6 p-8 bg-white dark:bg-[#071B34] rounded-[20px] border border-gray-100 dark:border-white/10 shadow-none hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_8px_24px_rgba(59,130,246,0.18)] hover:-translate-y-1 transition-all duration-300 group">
+                            <div className="absolute top-0 right-0 w-9 h-9 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[14px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
+                            <div className="w-20 h-20 rounded-[16px] overflow-hidden bg-gradient-to-b from-[#e3e6ec] to-[#f3f5f8] dark:from-[#2d3748] dark:to-[#1a202c] flex items-center justify-center border-2 border-[#d2d9e4] dark:border-slate-700 flex-shrink-0 group-hover:border-blue-400 group-hover:shadow-[0_0_0_3px_rgba(59,130,246,0.22)] transition-all duration-300">
+                                <TeamAvatar src={teamImages["seema-mittal"]} alt="Seema Mittal" silhouetteClass="w-14 h-14 text-slate-700 dark:text-slate-355" />
+                            </div>
+                            <div className="flex flex-col flex-grow min-w-0">
+                                <h4 className="font-bold text-[#071B34] dark:text-white text-base mb-1 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">Seema Mittal</h4>
+                                <p className="text-xs font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400 leading-tight">Director of Recruiting</p>
+                            </div>
+                        </div>
+
+                        {/* Sandeep Bussa */}
+                        <div className="relative overflow-hidden flex items-center gap-6 p-8 bg-white dark:bg-[#071B34] rounded-[20px] border border-gray-100 dark:border-white/10 shadow-none hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_8px_24px_rgba(59,130,246,0.18)] hover:-translate-y-1 transition-all duration-300 group">
+                            <div className="absolute top-0 right-0 w-9 h-9 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[14px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
+                            <div className="w-20 h-20 rounded-[16px] overflow-hidden bg-gradient-to-b from-[#e3e6ec] to-[#f3f5f8] dark:from-[#2d3748] dark:to-[#1a202c] flex items-center justify-center border-2 border-[#d2d9e4] dark:border-slate-700 flex-shrink-0 group-hover:border-blue-400 group-hover:shadow-[0_0_0_3px_rgba(59,130,246,0.22)] transition-all duration-300">
+                                <TeamAvatar src={teamImages["sandeep-bussa"]} alt="Sandeep Bussa" silhouetteClass="w-14 h-14 text-slate-700 dark:text-slate-355" />
+                            </div>
+                            <div className="flex flex-col flex-grow min-w-0">
+                                <h4 className="font-bold text-[#071B34] dark:text-white text-base mb-1 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">Sandeep Bussa</h4>
+                                <p className="text-xs font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400 leading-tight">Director of Accounts &amp; HR</p>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
             </section>
             <section className="py-20 bg-[#071B34]">

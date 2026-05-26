@@ -74,8 +74,9 @@ export default function AboutUs() {
                     <h2 className="text-3xl lg:text-4xl font-display font-bold text-primary-text dark:text-white mb-4">Certifications</h2>
                 </div>
                 <div className="relative w-full overflow-hidden pb-4">
-                    <div className="flex w-[200%] animate-scroll pause-hover">
-                        <div className="flex w-1/2 justify-around items-center px-4 gap-6">
+                    <div className="flex flex-nowrap animate-scroll pause-hover" style={{ width: 'max-content' }}>
+                        {/* First set */}
+                        <div className="flex flex-nowrap items-center gap-6 px-4">
                             {/*  Card 1  */}
                             <div className="bg-white px-4 py-4 shadow-md rounded border border-gray-100 flex flex-col items-center justify-center w-48 h-24 flex-shrink-0 cursor-pointer hover:shadow-lg transition-shadow">
                                 <span className="text-[10px] font-bold text-blue-600 uppercase tracking-tighter leading-none mb-1 text-center">New York State Of Opportunity</span>
@@ -108,8 +109,8 @@ export default function AboutUs() {
                                 <span className="text-2xl font-serif text-white tracking-tighter">Connectic<span className="text-red-500 text-3xl leading-none">~</span>t</span>
                             </div>
                         </div>
-                        {/*  DUPLICATE SET FOR INFINITE SCROLL  */}
-                        <div className="flex w-1/2 justify-around items-center px-4 gap-6">
+                        {/* Duplicate set for seamless infinite scroll */}
+                        <div className="flex flex-nowrap items-center gap-6 px-4" aria-hidden="true">
                             {/*  Card 1  */}
                             <div className="bg-white px-4 py-4 shadow-md rounded border border-gray-100 flex flex-col items-center justify-center w-48 h-24 flex-shrink-0 cursor-pointer hover:shadow-lg transition-shadow">
                                 <span className="text-[10px] font-bold text-blue-600 uppercase tracking-tighter leading-none mb-1 text-center">New York State Of Opportunity</span>
