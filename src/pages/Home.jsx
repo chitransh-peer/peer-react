@@ -29,11 +29,11 @@ const TeamAvatar = ({ src, alt, silhouetteClass = "w-full h-full text-slate-700"
 // Resolve local team member images using Vite's static asset handling
 const teamImages = {
     "misha-edara": new URL('../assets/team/Misha.jpg', import.meta.url).href,
-    "vineela-mandava": new URL('../assets/team/Vineela-Mandava.png', import.meta.url).href,
-    "omer-halilovic": new URL('../assets/team/Omer-Halilovic.jpg', import.meta.url).href,
-    "seema-mittal": new URL('../assets/team/Seema-Mittal.png', import.meta.url).href,
-    "sandeep-bussa": new URL('../assets/team/Sandeep-Bussa.jpg', import.meta.url).href,
-    "vivek-philar": new URL('../assets/team/Vivek-Philar.png', import.meta.url).href,
+    "vineela-mandava": new URL('../assets/team/Vineela-Mandava.webp', import.meta.url).href,
+    "omer-halilovic": new URL('../assets/team/Omer-Halilovic.webp', import.meta.url).href,
+    "seema-mittal": new URL('../assets/team/Seema-Mittal.webp', import.meta.url).href,
+    "sandeep-bussa": new URL('../assets/team/Sandeep-Bussa.webp', import.meta.url).href,
+    "vivek-philar": new URL('../assets/team/Vivek-Philar.webp', import.meta.url).href,
     "naveen-marrivada": new URL('../assets/team/Naveen.png', import.meta.url).href,
 };
 
@@ -210,7 +210,7 @@ export default function Home() {
                             <Link className="inline-flex justify-center items-center px-8 py-4 bg-[#4DA3FF] text-white font-bold rounded transition-all duration-300 shadow-[0_4px_15px_rgba(77,163,255,0.2)] transform hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(77,163,255,0.4)] hover:bg-[#3b82f6]" to="/services">
                                 Discover Our Solutions
                             </Link>
-                            <Link className="inline-flex justify-center items-center px-8 py-4 border border-white/20 text-white font-bold rounded hover:bg-white hover:text-[#071B34] transition-all duration-300" to="/about">
+                            <Link className="inline-flex justify-center items-center px-8 py-4 border border-white/20 text-white font-bold rounded hover:bg-white hover:text-[#071B34] transition-all duration-300" to="/team">
                                 Meet the Team Behind the Work
                             </Link>
                         </div>
@@ -391,7 +391,10 @@ export default function Home() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
 
                         {/* Misha Edara - Founder */}
-                        <div className="relative overflow-hidden bg-white dark:bg-[#071B34] pt-10 pb-12 px-10 rounded-[28px] shadow-none border border-gray-100 dark:border-white/10 flex flex-col items-center hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_16px_40px_rgba(59,130,246,0.16)] hover:-translate-y-2 transition-all duration-300 group">
+                        <div
+                            onClick={() => navigate('/team?member=misha-edara')}
+                            className="relative overflow-hidden bg-white dark:bg-[#071B34] pt-10 pb-12 px-10 rounded-[28px] shadow-none border border-gray-100 dark:border-white/10 flex flex-col items-center hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_16px_40px_rgba(59,130,246,0.16)] hover:-translate-y-2 transition-all duration-300 group cursor-pointer"
+                        >
                             {/* Decorative corner block */}
                             <div className="absolute top-0 right-0 w-16 h-16 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[24px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
                             {/* Avatar with offset blue block */}
@@ -408,7 +411,10 @@ export default function Home() {
                         </div>
 
                         {/* Vineela Mandava - Co-Founder */}
-                        <div className="relative overflow-hidden bg-white dark:bg-[#071B34] pt-10 pb-12 px-10 rounded-[28px] shadow-none border border-gray-100 dark:border-white/10 flex flex-col items-center hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_16px_40px_rgba(59,130,246,0.16)] hover:-translate-y-2 transition-all duration-300 group">
+                        <div
+                            onClick={() => navigate('/team?member=vineela-mandava')}
+                            className="relative overflow-hidden bg-white dark:bg-[#071B34] pt-10 pb-12 px-10 rounded-[28px] shadow-none border border-gray-100 dark:border-white/10 flex flex-col items-center hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_16px_40px_rgba(59,130,246,0.16)] hover:-translate-y-2 transition-all duration-300 group cursor-pointer"
+                        >
                             {/* Decorative corner block */}
                             <div className="absolute top-0 right-0 w-16 h-16 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[24px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
                             {/* Avatar with offset blue block */}
@@ -425,7 +431,10 @@ export default function Home() {
                         </div>
 
                         {/* Vivek Philar - CEO */}
-                        <div className="relative overflow-hidden bg-white dark:bg-[#071B34] pt-10 pb-12 px-10 rounded-[28px] shadow-none border border-gray-100 dark:border-white/10 flex flex-col items-center hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_16px_40px_rgba(59,130,246,0.16)] hover:-translate-y-2 transition-all duration-300 group">
+                        <div
+                            onClick={() => navigate('/team?member=vivek-philar')}
+                            className="relative overflow-hidden bg-white dark:bg-[#071B34] pt-10 pb-12 px-10 rounded-[28px] shadow-none border border-gray-100 dark:border-white/10 flex flex-col items-center hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_16px_40px_rgba(59,130,246,0.16)] hover:-translate-y-2 transition-all duration-300 group cursor-pointer"
+                        >
                             {/* Decorative corner block */}
                             <div className="absolute top-0 right-0 w-16 h-16 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[24px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
                             {/* Avatar with offset blue block */}
@@ -446,7 +455,10 @@ export default function Home() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
 
                         {/* Naveen Marrivada */}
-                        <div className="relative overflow-hidden flex items-center gap-6 p-8 bg-white dark:bg-[#071B34] rounded-[20px] border border-gray-100 dark:border-white/10 shadow-none hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_8px_24px_rgba(59,130,246,0.18)] hover:-translate-y-1 transition-all duration-300 group">
+                        <div
+                            onClick={() => navigate('/team?member=naveen-marrivada')}
+                            className="relative overflow-hidden flex items-center gap-6 p-8 bg-white dark:bg-[#071B34] rounded-[20px] border border-gray-100 dark:border-white/10 shadow-none hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_8px_24px_rgba(59,130,246,0.18)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
+                        >
                             <div className="absolute top-0 right-0 w-9 h-9 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[14px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
                             <div className="w-20 h-20 rounded-[16px] overflow-hidden bg-gradient-to-b from-[#e3e6ec] to-[#f3f5f8] dark:from-[#2d3748] dark:to-[#1a202c] flex items-center justify-center border-2 border-[#d2d9e4] dark:border-slate-700 flex-shrink-0 group-hover:border-blue-400 group-hover:shadow-[0_0_0_3px_rgba(59,130,246,0.22)] transition-all duration-300">
                                 <TeamAvatar src={teamImages["naveen-marrivada"]} alt="Naveen Marrivada" silhouetteClass="w-14 h-14 text-slate-700 dark:text-slate-355" />
@@ -458,7 +470,10 @@ export default function Home() {
                         </div>
 
                         {/* Omer Halilovic */}
-                        <div className="relative overflow-hidden flex items-center gap-6 p-8 bg-white dark:bg-[#071B34] rounded-[20px] border border-gray-100 dark:border-white/10 shadow-none hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_8px_24px_rgba(59,130,246,0.18)] hover:-translate-y-1 transition-all duration-300 group">
+                        <div
+                            onClick={() => navigate('/team?member=omer-halilovic')}
+                            className="relative overflow-hidden flex items-center gap-6 p-8 bg-white dark:bg-[#071B34] rounded-[20px] border border-gray-100 dark:border-white/10 shadow-none hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_8px_24px_rgba(59,130,246,0.18)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
+                        >
                             <div className="absolute top-0 right-0 w-9 h-9 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[14px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
                             <div className="w-20 h-20 rounded-[16px] overflow-hidden bg-gradient-to-b from-[#e3e6ec] to-[#f3f5f8] dark:from-[#2d3748] dark:to-[#1a202c] flex items-center justify-center border-2 border-[#d2d9e4] dark:border-slate-700 flex-shrink-0 group-hover:border-blue-400 group-hover:shadow-[0_0_0_3px_rgba(59,130,246,0.22)] transition-all duration-300">
                                 <TeamAvatar src={teamImages["omer-halilovic"]} alt="Omer Halilovic" silhouetteClass="w-14 h-14 text-slate-700 dark:text-slate-355" />
@@ -470,7 +485,10 @@ export default function Home() {
                         </div>
 
                         {/* Seema Mittal */}
-                        <div className="relative overflow-hidden flex items-center gap-6 p-8 bg-white dark:bg-[#071B34] rounded-[20px] border border-gray-100 dark:border-white/10 shadow-none hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_8px_24px_rgba(59,130,246,0.18)] hover:-translate-y-1 transition-all duration-300 group">
+                        <div
+                            onClick={() => navigate('/team?member=seema-mittal')}
+                            className="relative overflow-hidden flex items-center gap-6 p-8 bg-white dark:bg-[#071B34] rounded-[20px] border border-gray-100 dark:border-white/10 shadow-none hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_8px_24px_rgba(59,130,246,0.18)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
+                        >
                             <div className="absolute top-0 right-0 w-9 h-9 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[14px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
                             <div className="w-20 h-20 rounded-[16px] overflow-hidden bg-gradient-to-b from-[#e3e6ec] to-[#f3f5f8] dark:from-[#2d3748] dark:to-[#1a202c] flex items-center justify-center border-2 border-[#d2d9e4] dark:border-slate-700 flex-shrink-0 group-hover:border-blue-400 group-hover:shadow-[0_0_0_3px_rgba(59,130,246,0.22)] transition-all duration-300">
                                 <TeamAvatar src={teamImages["seema-mittal"]} alt="Seema Mittal" silhouetteClass="w-14 h-14 text-slate-700 dark:text-slate-355" />
@@ -482,7 +500,10 @@ export default function Home() {
                         </div>
 
                         {/* Sandeep Bussa */}
-                        <div className="relative overflow-hidden flex items-center gap-6 p-8 bg-white dark:bg-[#071B34] rounded-[20px] border border-gray-100 dark:border-white/10 shadow-none hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_8px_24px_rgba(59,130,246,0.18)] hover:-translate-y-1 transition-all duration-300 group">
+                        <div
+                            onClick={() => navigate('/team?member=sandeep-bussa')}
+                            className="relative overflow-hidden flex items-center gap-6 p-8 bg-white dark:bg-[#071B34] rounded-[20px] border border-gray-100 dark:border-white/10 shadow-none hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_8px_24px_rgba(59,130,246,0.18)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
+                        >
                             <div className="absolute top-0 right-0 w-9 h-9 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[14px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
                             <div className="w-20 h-20 rounded-[16px] overflow-hidden bg-gradient-to-b from-[#e3e6ec] to-[#f3f5f8] dark:from-[#2d3748] dark:to-[#1a202c] flex items-center justify-center border-2 border-[#d2d9e4] dark:border-slate-700 flex-shrink-0 group-hover:border-blue-400 group-hover:shadow-[0_0_0_3px_rgba(59,130,246,0.22)] transition-all duration-300">
                                 <TeamAvatar src={teamImages["sandeep-bussa"]} alt="Sandeep Bussa" silhouetteClass="w-14 h-14 text-slate-700 dark:text-slate-355" />
@@ -493,6 +514,15 @@ export default function Home() {
                             </div>
                         </div>
 
+                    </div>
+
+                    <div className="mt-12 text-center">
+                        <Link
+                            to="/team"
+                            className="inline-flex items-center justify-center px-8 py-3.5 bg-[#4DA3FF] hover:bg-[#3b82f6] text-white font-bold rounded-lg transition-all duration-300 shadow-[0_4px_15px_rgba(77,163,255,0.3)] hover:shadow-[0_8px_25px_rgba(77,163,255,0.4)] active:scale-95 transform hover:-translate-y-0.5"
+                        >
+                            View Full Team Biographies
+                        </Link>
                     </div>
 
                 </div>
