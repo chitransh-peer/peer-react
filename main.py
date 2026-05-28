@@ -38,4 +38,10 @@ remove_bg_and_crop(
     manual_crop=(140, 0, 9999, 9999)
 )
 
+print("Processing header1 logo...")
+remove_bg_and_crop(
+    r"f:\Peer redesign\react-app\src\assets\logos\Peer-header1.png",
+    r"f:\Peer redesign\react-app\src\assets\logos\Peer-header1-transparent.png"
+)
+
 print("Done!")

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import logo from '../assets/logos/Peer-header-transparent.png';
+import logo from '../assets/logos/Peer-header1-transparent.png';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

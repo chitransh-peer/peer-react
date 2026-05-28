@@ -1,6 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function ContactUs() {
+  const [showToast, setShowToast] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setShowToast(true);
+    setTimeout(() => {
+      setShowToast(false);
+    }, 5000);
+  };
   return (
     <>
       {/* Hero Section */}
@@ -37,21 +46,21 @@ export default function ContactUs() {
               </div>
 
               <div className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg border border-slate-100 dark:border-slate-700">
-                <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                <form className="space-y-6" onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="firstName" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">First Name</label>
-                      <input type="text" id="firstName" className="w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white shadow-sm focus:border-accent-blue focus:ring-accent-blue" placeholder="Jane" />
+                      <input type="text" id="firstName" className="w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white shadow-sm focus:border-accent-blue focus:ring-accent-blue" placeholder="Jane" required />
                     </div>
                     <div>
                       <label htmlFor="lastName" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Last Name</label>
-                      <input type="text" id="lastName" className="w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white shadow-sm focus:border-accent-blue focus:ring-accent-blue" placeholder="Doe" />
+                      <input type="text" id="lastName" className="w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white shadow-sm focus:border-accent-blue focus:ring-accent-blue" placeholder="Doe" required />
                     </div>
                   </div>
                   
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Email Address</label>
-                    <input type="email" id="email" className="w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white shadow-sm focus:border-accent-blue focus:ring-accent-blue" placeholder="jane@company.com" />
+                    <input type="email" id="email" className="w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white shadow-sm focus:border-accent-blue focus:ring-accent-blue" placeholder="jane@company.com" required />
                   </div>
 
                   <div>
@@ -66,10 +75,13 @@ export default function ContactUs() {
 
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Message</label>
-                    <textarea id="message" rows="4" className="w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white shadow-sm focus:border-accent-blue focus:ring-accent-blue" placeholder="How can we help you?"></textarea>
+                    <textarea id="message" rows="4" className="w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white shadow-sm focus:border-accent-blue focus:ring-accent-blue" placeholder="How can we help you?" required></textarea>
                   </div>
 
-                  <button type="submit" className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-primary-text bg-primary-light hover:bg-primary-light/80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors duration-150">
+                  <button
+                    type="submit"
+                    className="w-full flex justify-center py-3.5 px-4 rounded-lg shadow-[0_4px_15px_rgba(77,163,255,0.3)] text-sm font-bold uppercase tracking-wider text-white bg-[#4DA3FF] hover:bg-[#3b82f6] hover:shadow-[0_8px_25px_rgba(77,163,255,0.4)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#4DA3FF] active:scale-[0.98] transition-all duration-300"
+                  >
                     Send Message
                   </button>
                 </form>
@@ -157,6 +169,19 @@ export default function ContactUs() {
           </div>
         </div>
       </section>
+      {/* Toast Popup */}
+      <div className={`fixed bottom-6 right-6 z-50 transition-all duration-500 transform ${showToast ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-12 opacity-0 scale-95 pointer-events-none'}`}>
+        <div className="bg-[#071B34] text-white px-6 py-4 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.3)] border border-[#4DA3FF]/30 flex items-center gap-3 max-w-md">
+          <span className="material-icons text-[#4DA3FF] text-2xl animate-bounce">check_circle</span>
+          <div>
+            <h4 className="font-bold text-sm text-white">Message Delivered</h4>
+            <p className="text-xs text-slate-300 mt-0.5">We will get back to you as soon as possible.</p>
+          </div>
+          <button onClick={() => setShowToast(false)} className="text-slate-400 hover:text-white ml-auto transition-colors">
+            <span className="material-icons text-sm">close</span>
+          </button>
+        </div>
+      </div>
     </>
   );
 }

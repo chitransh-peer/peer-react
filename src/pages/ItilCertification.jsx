@@ -5,7 +5,7 @@ const COURSES = [
   // Foundation & AI Governance
   {
     category: 'foundation',
-    badge: 'Start Here', badgeBg: 'bg-[#00796b]',
+    badge: 'Start Here', badgeBg: 'bg-[#0f2e59]',
     title: 'ITIL® Foundation (Version 5)',
     description: 'Build a strong foundation in digital product and service management for AI-enabled environments. The modern starting point for the ITIL journey.',
     skills: ['Digital product & service management', 'ITIL Value System & guiding principles', 'Responsible AI practice', 'Value stream mapping basics'],
@@ -14,7 +14,7 @@ const COURSES = [
   },
   {
     category: 'foundation',
-    badge: 'Classic', badgeBg: 'bg-[#004b87]',
+    badge: 'Classic', badgeBg: 'bg-[#183d73]',
     title: 'ITIL® 4 Foundation',
     description: 'The proven, globally recognized ITIL 4 framework. Ideal for professionals with prior ITIL v3 knowledge or entering IT service management fresh.',
     skills: ['Service value system & chain', 'Four dimensions of service management', 'Continual improvement model', 'Key ITIL 4 practices'],
@@ -23,7 +23,7 @@ const COURSES = [
   },
   {
     category: 'foundation',
-    badge: 'Bridge', badgeBg: 'bg-[#0097a7]',
+    badge: 'Bridge', badgeBg: 'bg-[#224d8d]',
     title: 'ITIL® Foundation Bridge (V5)',
     description: 'Already ITIL 4 certified? Upgrade efficiently to ITIL V5 Foundation with this targeted bridge covering only the delta content.',
     skills: ['ITIL V5 key concept updates', 'New guiding principles & value system changes', 'AI-native practice overview'],
@@ -32,7 +32,7 @@ const COURSES = [
   },
   {
     category: 'foundation',
-    badge: 'Extension', badgeBg: 'bg-[#e65100]',
+    badge: 'Extension', badgeBg: 'bg-[#2c5da7]',
     title: 'ITIL® AI Governance',
     description: 'Navigate the complexities of Artificial Intelligence. Establish guardrails, ensure ethical use, and govern AI initiatives within the ITIL framework.',
     skills: ['AI risk assessment', 'Ethical AI frameworks', 'AI policy design & implementation'],
@@ -42,7 +42,7 @@ const COURSES = [
   // Specialist
   {
     category: 'specialist',
-    badge: 'New V5', badgeBg: 'bg-[#8a5bbf]',
+    badge: 'New V5', badgeBg: 'bg-[#2563eb]',
     title: 'ITIL® Specialist — Product',
     description: 'Master the lifecycle of digital products. Build, manage, and optimize products that deliver continuous value to consumers and the organization.',
     skills: ['Product lifecycle management', 'Value stream mapping', 'Agile integration'],
@@ -51,7 +51,7 @@ const COURSES = [
   },
   {
     category: 'specialist',
-    badge: 'New V5', badgeBg: 'bg-[#8a5bbf]',
+    badge: 'New V5', badgeBg: 'bg-[#2563eb]',
     title: 'ITIL® Specialist — Service',
     description: 'Focus on robust service operation and digital transformation. Ensure IT services are highly available, reliable, and aligned with business outcomes.',
     skills: ['Service operation & digital transformation', 'Advanced Incident / Problem Management', 'Reliability engineering'],
@@ -60,7 +60,7 @@ const COURSES = [
   },
   {
     category: 'specialist',
-    badge: 'New V5', badgeBg: 'bg-[#8a5bbf]',
+    badge: 'New V5', badgeBg: 'bg-[#2563eb]',
     title: 'ITIL® Specialist — Experience',
     description: 'Elevate the consumer and employee experience. Design interactions and touchpoints that maximize satisfaction and drive adoption.',
     skills: ['UX/CX in IT services', 'Journey mapping', 'Experience level agreements (XLAs)'],
@@ -69,7 +69,7 @@ const COURSES = [
   },
   {
     category: 'specialist',
-    badge: 'New V5', badgeBg: 'bg-[#8a5bbf]',
+    badge: 'New V5', badgeBg: 'bg-[#2563eb]',
     title: 'ITIL® Specialist — Strategy',
     description: 'Develop a clear vision and digital strategy for IT operations. Align technology investments with overarching business goals and leadership expectations.',
     skills: ['Strategic planning & digital leadership', 'IT investment alignment', 'Risk management'],
@@ -78,7 +78,7 @@ const COURSES = [
   },
   {
     category: 'specialist',
-    badge: 'New V5', badgeBg: 'bg-[#8a5bbf]',
+    badge: 'New V5', badgeBg: 'bg-[#2563eb]',
     title: 'ITIL® Specialist — Transformation',
     description: 'Bridge strategy and execution. Lead complex organizational changes and foster a culture of continuous improvement at scale.',
     skills: ['Organizational Change Management', 'Cultural transformation', 'Leadership at scale'],
@@ -88,7 +88,7 @@ const COURSES = [
   // Practice Manager
   {
     category: 'practice',
-    badge: 'Practice Manager', badgeBg: 'bg-[#c0392b]',
+    badge: 'Practice Manager', badgeBg: 'bg-[#0ea5e9]',
     title: 'Monitor, Support & Fulfill',
     description: 'Gain deep practical knowledge in the core operational practices that keep the business running smoothly and users satisfied day-to-day.',
     skills: ['Incident & Problem Management', 'Service Desk optimization', 'Monitoring & Event Management', 'Request fulfillment'],
@@ -97,7 +97,7 @@ const COURSES = [
   },
   {
     category: 'practice',
-    badge: 'Practice Manager', badgeBg: 'bg-[#c0392b]',
+    badge: 'Practice Manager', badgeBg: 'bg-[#0ea5e9]',
     title: 'Plan, Implement & Control',
     description: 'Master the practices for planning changes, deploying new services, and maintaining rigorous control over the IT environment.',
     skills: ['Change Enablement', 'Release & Deployment Management', 'IT Asset Management', 'Configuration Management'],
@@ -106,7 +106,7 @@ const COURSES = [
   },
   {
     category: 'practice',
-    badge: 'Practice Manager', badgeBg: 'bg-[#c0392b]',
+    badge: 'Practice Manager', badgeBg: 'bg-[#0ea5e9]',
     title: 'Collaborate, Assure & Improve',
     description: 'Drive collaboration across teams, ensure quality assurance, and embed a culture of continual improvement across IT operations.',
     skills: ['Relationship & Supplier Management', 'Service Level Management', 'Continual Improvement practices', 'IT quality assurance'],
@@ -122,24 +122,24 @@ const GROUPS = [
     cls: 'found',
     title: 'ITIL Foundation & AI Governance',
     desc: 'Entry point · Any career stage · Globally recognized',
-    color: 'text-[#00796b]',
-    border: 'border-[#00796b]'
+    color: 'text-[#0f2e59]',
+    border: 'border-[#0f2e59]'
   },
   {
     key: 'specialist',
     cls: 'spec',
     title: 'ITIL® Specialist',
     desc: 'Requires Foundation · Domain expertise',
-    color: 'text-[#8a5bbf]',
-    border: 'border-[#8a5bbf]'
+    color: 'text-[#2563eb]',
+    border: 'border-[#2563eb]'
   },
   {
     key: 'practice',
     cls: 'pm',
     title: 'ITIL® Practice Manager',
     desc: 'Requires Foundation · Operational depth',
-    color: 'text-[#c0392b]',
-    border: 'border-[#c0392b]'
+    color: 'text-[#0ea5e9]',
+    border: 'border-[#0ea5e9]'
   },
 ];
 
@@ -153,10 +153,10 @@ const FILTER_BUTTONS = [
 function CourseCard({ course, mode, setMode }) {
   const { category, badge, badgeBg, title, description, skills, spPrice, olPrice, link } = course;
   
-  const categoryColor = category === 'foundation' ? 'text-[#00796b]' : 
-                        category === 'specialist' ? 'text-[#8a5bbf]' : 'text-[#c0392b]';
-  const categoryHover = category === 'foundation' ? 'hover:border-[#00796b]' : 
-                        category === 'specialist' ? 'hover:border-[#8a5bbf]' : 'hover:border-[#c0392b]';
+  const categoryColor = category === 'foundation' ? 'text-[#0f2e59]' : 
+                        category === 'specialist' ? 'text-[#2563eb]' : 'text-[#0ea5e9]';
+  const categoryHover = category === 'foundation' ? 'hover:border-[#0f2e59]' : 
+                        category === 'specialist' ? 'hover:border-[#2563eb]' : 'hover:border-[#0ea5e9]';
 
   return (
     <div className={`bg-white dark:bg-surface-dark border border-gray-100 dark:border-white/5 rounded-2xl p-6 transition-all duration-300 shadow-subtle ${categoryHover} hover:-translate-y-1 relative overflow-hidden group`}>
@@ -181,16 +181,16 @@ function CourseCard({ course, mode, setMode }) {
         <div className="grid grid-cols-2 gap-3 mb-4">
           <button 
             onClick={() => setMode('sp')}
-            className={`p-3 rounded-xl text-center border-2 transition-all ${mode === 'sp' ? 'bg-[#e8f5e9]/50 border-[#a5d6a7] scale-105 shadow-sm' : 'bg-gray-50/50 dark:bg-white/5 border-transparent opacity-50 hover:opacity-100'}`}
+            className={`p-3 rounded-xl text-center border-2 transition-all ${mode === 'sp' ? 'bg-[#e0f2fe]/50 border-[#bae6fd] scale-105 shadow-sm' : 'bg-gray-50/50 dark:bg-white/5 border-transparent opacity-50 hover:opacity-100'}`}
           >
-            <span className="block text-[8px] font-black uppercase tracking-tighter text-[#00796b]">Self-Paced</span>
+            <span className="block text-[8px] font-black uppercase tracking-tighter text-[#0284c7]">Self-Paced</span>
             <span className="text-sm font-bold text-[#071B34] dark:text-white">US${spPrice}</span>
           </button>
           <button 
             onClick={() => setMode('ol')}
-            className={`p-3 rounded-xl text-center border-2 transition-all ${mode === 'ol' ? 'bg-[#e3f2fd]/50 border-[#90caf9] scale-105 shadow-sm' : 'bg-gray-50/50 dark:bg-white/5 border-transparent opacity-50 hover:opacity-100'}`}
+            className={`p-3 rounded-xl text-center border-2 transition-all ${mode === 'ol' ? 'bg-[#dbeafe]/50 border-[#bfdbfe] scale-105 shadow-sm' : 'bg-gray-50/50 dark:bg-white/5 border-transparent opacity-50 hover:opacity-100'}`}
           >
-            <span className="block text-[8px] font-black uppercase tracking-tighter text-[#004b87]">Online Live</span>
+            <span className="block text-[8px] font-black uppercase tracking-tighter text-[#1e40af]">Online Live</span>
             <span className="text-sm font-bold text-[#071B34] dark:text-white">US${olPrice}</span>
           </button>
         </div>
@@ -284,11 +284,11 @@ export default function ItilCertification() {
                   <h2 className="text-2xl font-black font-display text-primary dark:text-white tracking-tight">Module Catalog</h2>
                   <p className="text-xs text-gray-400 font-medium mt-1 uppercase tracking-widest">{filteredCourses.length} Learning modules identified</p>
                </div>
-                <div className="text-right">
-                   <div className={`text-sm font-black py-1 px-4 rounded-full border transition-all ${mode === 'sp' ? 'text-[#00796b] border-[#00796b] bg-[#e8f5e9]' : 'text-[#004b87] border-[#004b87] bg-[#e3f2fd]'}`}>
-                     {mode === 'sp' ? 'Self-Paced Enabled' : 'Online Live Enabled'}
-                   </div>
-                </div>
+                 <div className="text-right">
+                    <div className={`text-sm font-black py-1 px-4 rounded-full border transition-all ${mode === 'sp' ? 'text-[#0284c7] border-[#bae6fd] bg-[#e0f2fe]' : 'text-[#1e40af] border-[#bfdbfe] bg-[#dbeafe]'}`}>
+                      {mode === 'sp' ? 'Self-Paced Enabled' : 'Online Live Enabled'}
+                    </div>
+                 </div>
             </div>
 
             <div className="space-y-16">

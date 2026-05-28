@@ -3,6 +3,33 @@ import { Link, useNavigate } from 'react-router-dom';
 
 export default function OurServices() {
   const navigate = useNavigate();
+
+  const SERVICES_TAGS = [
+    { label: "ITIL Training", id: "itil-training" },
+    { label: "Software Services", id: "software-services" },
+    { label: "Enterprise ERP", id: "enterprise-erp" },
+    { label: "Cloud & Digital", id: "cloud-digital" },
+    { label: "Quality Assurance", id: "quality-assurance" },
+    { label: "Business Consulting", id: "business-consulting" },
+    { label: "Mobile Apps", id: "mobile-apps" },
+    { label: "Data Science & Analytics", id: "data-science" },
+    { label: "Cyber Security", id: "cyber-security" },
+    { label: "Strategic Staffing", id: "strategic-staffing" },
+    { label: "Infrastructure", id: "infrastructure" }
+  ];
+
+  const scrollToService = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Add a temporary subtle glow highlight ring
+      element.classList.add('ring-4', 'ring-[#4DA3FF]/50', 'scale-[1.03]', 'shadow-[0_0_30px_rgba(77,163,255,0.4)]');
+      setTimeout(() => {
+        element.classList.remove('ring-4', 'ring-[#4DA3FF]/50', 'scale-[1.03]', 'shadow-[0_0_30px_rgba(77,163,255,0.4)]');
+      }, 2000);
+    }
+  };
+
   return (
     <>
       <section className="bg-[#071B34] text-white relative overflow-hidden page-hero">
@@ -18,8 +45,14 @@ export default function OurServices() {
           </p>
           {/* Service tags */}
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            {["Software Services", "Enterprise ERP", "Cloud & Digital", "Quality Assurance", "Business Consulting", "ITIL Training", "Mobile Apps", "Data Science & Analytics", "Cyber Security", "Strategic Staffing", "Infrastructure"].map(tag => (
-              <span key={tag} className="px-4 py-1.5 rounded-full border border-white/20 text-sm text-white/80 bg-white/5 hover:bg-white/15 hover:border-white/40 transition-all duration-200 cursor-pointer">{tag}</span>
+            {SERVICES_TAGS.map(tag => (
+              <button
+                key={tag.id}
+                onClick={() => scrollToService(tag.id)}
+                className="px-6 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-300 border border-white/20 text-white/70 bg-white/5 hover:bg-white hover:text-[#071B34] hover:border-white hover:shadow-[0_4px_15px_rgba(255,255,255,0.15)] active:scale-95"
+              >
+                {tag.label}
+              </button>
             ))}
           </div>
         </div>
@@ -43,7 +76,8 @@ export default function OurServices() {
 
             {/* 1. ITIL Training & Certifications */}
             <div
-              className="relative overflow-hidden bg-[#071B34] p-8 rounded-lg border border-white/10 hover:bg-white hover:border-transparent hover:-translate-y-3 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-300 h-full group cursor-pointer flex flex-col"
+              id="itil-training"
+              className="scroll-mt-32 relative overflow-hidden bg-[#071B34] p-8 rounded-lg border border-white/10 hover:bg-white hover:border-transparent hover:-translate-y-3 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-300 h-full group cursor-pointer flex flex-col"
               onClick={(e) => {
                 if (e.target.closest('a')) return;
                 navigate('/itil-overview');
@@ -74,7 +108,10 @@ export default function OurServices() {
             </div>
 
             {/* 2. Software Application Services */}
-            <div className="relative overflow-hidden bg-[#071B34] p-8 rounded-lg border border-white/10 hover:bg-white hover:border-transparent hover:-translate-y-3 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-300 h-full group cursor-pointer flex flex-col">
+            <div
+              id="software-services"
+              className="scroll-mt-32 relative overflow-hidden bg-[#071B34] p-8 rounded-lg border border-white/10 hover:bg-white hover:border-transparent hover:-translate-y-3 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-300 h-full group cursor-pointer flex flex-col"
+            >
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-full -mr-8 -mt-8 group-hover:bg-[#071B34]/5 transition-colors duration-300"></div>
               <div className="w-14 h-14 bg-accent-blue/10 rounded-lg flex items-center justify-center mb-6 text-accent-blue group-hover:bg-[#071B34] group-hover:text-white transition-colors duration-300 relative z-10">
                 <span className="material-icons-outlined text-3xl">code</span>
@@ -100,7 +137,10 @@ export default function OurServices() {
             </div>
 
             {/* 3. Enterprise & ERP Solutions */}
-            <div className="relative overflow-hidden bg-[#071B34] p-8 rounded-lg border border-white/10 hover:bg-white hover:border-transparent hover:-translate-y-3 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-300 h-full group cursor-pointer flex flex-col">
+            <div
+              id="enterprise-erp"
+              className="scroll-mt-32 relative overflow-hidden bg-[#071B34] p-8 rounded-lg border border-white/10 hover:bg-white hover:border-transparent hover:-translate-y-3 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-300 h-full group cursor-pointer flex flex-col"
+            >
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-full -mr-8 -mt-8 group-hover:bg-[#071B34]/5 transition-colors duration-300"></div>
               <div className="w-14 h-14 bg-accent-blue/10 rounded-lg flex items-center justify-center mb-6 text-accent-blue group-hover:bg-[#071B34] group-hover:text-white transition-colors duration-300 relative z-10">
                 <span className="material-icons-outlined text-3xl">business</span>
@@ -126,7 +166,10 @@ export default function OurServices() {
             </div>
 
             {/* 4. Cloud & Digital Transformation */}
-            <div className="relative overflow-hidden bg-[#071B34] p-8 rounded-lg border border-white/10 hover:bg-white hover:border-transparent hover:-translate-y-3 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-300 h-full group cursor-pointer flex flex-col">
+            <div
+              id="cloud-digital"
+              className="scroll-mt-32 relative overflow-hidden bg-[#071B34] p-8 rounded-lg border border-white/10 hover:bg-white hover:border-transparent hover:-translate-y-3 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-300 h-full group cursor-pointer flex flex-col"
+            >
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-full -mr-8 -mt-8 group-hover:bg-[#071B34]/5 transition-colors duration-300"></div>
               <div className="w-14 h-14 bg-accent-blue/10 rounded-lg flex items-center justify-center mb-6 text-accent-blue group-hover:bg-[#071B34] group-hover:text-white transition-colors duration-300 relative z-10">
                 <span className="material-icons-outlined text-3xl">cloud</span>
@@ -152,7 +195,10 @@ export default function OurServices() {
             </div>
 
             {/* 5. Quality Assurance */}
-            <div className="relative overflow-hidden bg-[#071B34] p-8 rounded-lg border border-white/10 hover:bg-white hover:border-transparent hover:-translate-y-3 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-300 h-full group cursor-pointer flex flex-col">
+            <div
+              id="quality-assurance"
+              className="scroll-mt-32 relative overflow-hidden bg-[#071B34] p-8 rounded-lg border border-white/10 hover:bg-white hover:border-transparent hover:-translate-y-3 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-300 h-full group cursor-pointer flex flex-col"
+            >
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-full -mr-8 -mt-8 group-hover:bg-[#071B34]/5 transition-colors duration-300"></div>
               <div className="w-14 h-14 bg-accent-blue/10 rounded-lg flex items-center justify-center mb-6 text-accent-blue group-hover:bg-[#071B34] group-hover:text-white transition-colors duration-300 relative z-10">
                 <span className="material-icons-outlined text-3xl">verified_user</span>
@@ -178,7 +224,10 @@ export default function OurServices() {
             </div>
 
             {/* 6. Business Consulting / Advisory */}
-            <div className="relative overflow-hidden bg-[#071B34] p-8 rounded-lg border border-white/10 hover:bg-white hover:border-transparent hover:-translate-y-3 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-300 h-full group cursor-pointer flex flex-col">
+            <div
+              id="business-consulting"
+              className="scroll-mt-32 relative overflow-hidden bg-[#071B34] p-8 rounded-lg border border-white/10 hover:bg-white hover:border-transparent hover:-translate-y-3 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-300 h-full group cursor-pointer flex flex-col"
+            >
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-full -mr-8 -mt-8 group-hover:bg-[#071B34]/5 transition-colors duration-300"></div>
               <div className="w-14 h-14 bg-accent-blue/10 rounded-lg flex items-center justify-center mb-6 text-accent-blue group-hover:bg-[#071B34] group-hover:text-white transition-colors duration-300 relative z-10">
                 <span className="material-icons-outlined text-3xl">business_center</span>
@@ -204,7 +253,10 @@ export default function OurServices() {
             </div>
 
             {/* 7. Mobile Application Development */}
-            <div className="relative overflow-hidden bg-[#071B34] p-8 rounded-lg border border-white/10 hover:bg-white hover:border-transparent hover:-translate-y-3 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-300 h-full group cursor-pointer flex flex-col">
+            <div
+              id="mobile-apps"
+              className="scroll-mt-32 relative overflow-hidden bg-[#071B34] p-8 rounded-lg border border-white/10 hover:bg-white hover:border-transparent hover:-translate-y-3 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-300 h-full group cursor-pointer flex flex-col"
+            >
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-full -mr-8 -mt-8 group-hover:bg-[#071B34]/5 transition-colors duration-300"></div>
               <div className="w-14 h-14 bg-accent-blue/10 rounded-lg flex items-center justify-center mb-6 text-accent-blue group-hover:bg-[#071B34] group-hover:text-white transition-colors duration-300 relative z-10">
                 <span className="material-icons-outlined text-3xl">smartphone</span>
@@ -230,7 +282,10 @@ export default function OurServices() {
             </div>
 
             {/* 8. Data Science & Analytics */}
-            <div className="relative overflow-hidden bg-[#071B34] p-8 rounded-lg border border-white/10 hover:bg-white hover:border-transparent hover:-translate-y-3 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-300 h-full group cursor-pointer flex flex-col">
+            <div
+              id="data-science"
+              className="scroll-mt-32 relative overflow-hidden bg-[#071B34] p-8 rounded-lg border border-white/10 hover:bg-white hover:border-transparent hover:-translate-y-3 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-300 h-full group cursor-pointer flex flex-col"
+            >
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-full -mr-8 -mt-8 group-hover:bg-[#071B34]/5 transition-colors duration-300"></div>
               <div className="w-14 h-14 bg-accent-blue/10 rounded-lg flex items-center justify-center mb-6 text-accent-blue group-hover:bg-[#071B34] group-hover:text-white transition-colors duration-300 relative z-10">
                 <span className="material-icons-outlined text-3xl">analytics</span>
@@ -256,7 +311,10 @@ export default function OurServices() {
             </div>
 
             {/* 9. Cyber Security Solutions */}
-            <div className="relative overflow-hidden bg-[#071B34] p-8 rounded-lg border border-white/10 hover:bg-white hover:border-transparent hover:-translate-y-3 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-300 h-full group cursor-pointer flex flex-col">
+            <div
+              id="cyber-security"
+              className="scroll-mt-32 relative overflow-hidden bg-[#071B34] p-8 rounded-lg border border-white/10 hover:bg-white hover:border-transparent hover:-translate-y-3 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-300 h-full group cursor-pointer flex flex-col"
+            >
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-full -mr-8 -mt-8 group-hover:bg-[#071B34]/5 transition-colors duration-300"></div>
               <div className="w-14 h-14 bg-accent-blue/10 rounded-lg flex items-center justify-center mb-6 text-accent-blue group-hover:bg-[#071B34] group-hover:text-white transition-colors duration-300 relative z-10">
                 <span className="material-icons-outlined text-3xl">security</span>
@@ -282,7 +340,10 @@ export default function OurServices() {
             </div>
 
             {/* 10. Strategic Staffing */}
-            <div className="relative overflow-hidden bg-[#071B34] p-8 rounded-lg border border-white/10 hover:bg-white hover:border-transparent hover:-translate-y-3 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-300 h-full group cursor-pointer flex flex-col">
+            <div
+              id="strategic-staffing"
+              className="scroll-mt-32 relative overflow-hidden bg-[#071B34] p-8 rounded-lg border border-white/10 hover:bg-white hover:border-transparent hover:-translate-y-3 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-300 h-full group cursor-pointer flex flex-col"
+            >
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-full -mr-8 -mt-8 group-hover:bg-[#071B34]/5 transition-colors duration-300"></div>
               <div className="w-14 h-14 bg-accent-blue/10 rounded-lg flex items-center justify-center mb-6 text-accent-blue group-hover:bg-[#071B34] group-hover:text-white transition-colors duration-300 relative z-10">
                 <span className="material-icons-outlined text-3xl">people</span>
@@ -308,7 +369,10 @@ export default function OurServices() {
             </div>
 
             {/* 11. Infrastructure Solutions */}
-            <div className="relative overflow-hidden bg-[#071B34] p-8 rounded-lg border border-white/10 hover:bg-white hover:border-transparent hover:-translate-y-3 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-300 h-full group cursor-pointer flex flex-col">
+            <div
+              id="infrastructure"
+              className="scroll-mt-32 relative overflow-hidden bg-[#071B34] p-8 rounded-lg border border-white/10 hover:bg-white hover:border-transparent hover:-translate-y-3 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-300 h-full group cursor-pointer flex flex-col"
+            >
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-full -mr-8 -mt-8 group-hover:bg-[#071B34]/5 transition-colors duration-300"></div>
               <div className="w-14 h-14 bg-accent-blue/10 rounded-lg flex items-center justify-center mb-6 text-accent-blue group-hover:bg-[#071B34] group-hover:text-white transition-colors duration-300 relative z-10">
                 <span className="material-icons-outlined text-3xl">dns</span>
