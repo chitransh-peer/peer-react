@@ -30,7 +30,7 @@ const TeamAvatar = ({ src, alt, silhouetteClass = "w-full h-full text-slate-700"
 const teamImages = {
     "misha-edara": new URL('../assets/team/Misha.jpg', import.meta.url).href,
     "vineela-mandava": new URL('../assets/team/Vineela-Mandava.webp', import.meta.url).href,
-    "omer-halilovic": new URL('../assets/team/Omer-Halilovic.webp', import.meta.url).href,
+    "omer-halilovic": new URL('../assets/team/Omer.webp', import.meta.url).href,
     "seema-mittal": new URL('../assets/team/Seema-Mittal.webp', import.meta.url).href,
     "sandeep-bussa": new URL('../assets/team/Sandeep-Bussa.webp', import.meta.url).href,
     "vivek-philar": new URL('../assets/team/Vivek-Philar.webp', import.meta.url).href,
