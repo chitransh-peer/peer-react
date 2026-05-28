@@ -32,7 +32,7 @@ const teamImages = {
     "vineela-mandava": new URL('../assets/team/Vineela-Mandava.webp', import.meta.url).href,
     "omer-halilovic": new URL('../assets/team/Omer.webp', import.meta.url).href,
     "seema-mittal": new URL('../assets/team/Seema-Mittal.webp', import.meta.url).href,
-    "sandeep-bussa": new URL('../assets/team/Sandeep-Bussa.webp', import.meta.url).href,
+    "sandeep-bussa": new URL('../assets/team/Sandeep-Bussa.png', import.meta.url).href,
     "vivek-philar": new URL('../assets/team/Vivek-Philar.webp', import.meta.url).href,
     "naveen-marrivada": new URL('../assets/team/Naveen.png', import.meta.url).href,
 };

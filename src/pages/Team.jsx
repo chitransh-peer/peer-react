@@ -53,7 +53,7 @@ const teamImages = {
   'naveen-marrivada': new URL('../assets/team/Naveen.png', import.meta.url).href,
   'omer-halilovic': new URL('../assets/team/Omer.webp', import.meta.url).href,
   'seema-mittal': new URL('../assets/team/Seema-Mittal.webp', import.meta.url).href,
-  'sandeep-bussa': new URL('../assets/team/Sandeep-Bussa.webp', import.meta.url).href,
+  'sandeep-bussa': new URL('../assets/team/Sandeep-Bussa.png', import.meta.url).href,
 };
 
 /* ─────────────────────────────────────────────
