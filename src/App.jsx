@@ -27,6 +27,8 @@ import ItilTransformationV5 from './pages/ItilTransformationV5';
 import Itil4SpecialistMsf from './pages/Itil4SpecialistMsf';
 import ItilPmPic from './pages/ItilPmPic';
 import ItilPmCai from './pages/ItilPmCai';
+import BlogAdmin from './pages/BlogAdmin';
+import BlogPost from './pages/BlogPost';
 
 function App() {
   return (
@@ -58,9 +60,12 @@ function App() {
           <Route path="itil-practice-pic" element={<ItilPmPic />} />
           <Route path="itil-practice-cai" element={<ItilPmCai />} />
           <Route path="sandbox" element={<Sandbox />} />
-          <Route path ="ai-certification" element={<AiTraining />} />
-          <Route path ="ppm-agile-certification" element={<PPMAgile />} />
+          <Route path="ai-certification" element={<AiTraining />} />
+          <Route path="ppm-agile-certification" element={<PPMAgile />} />
+          <Route path="blog/:id" element={<BlogPost />} />
         </Route>
+        {/* Hidden admin route — not linked in nav */}
+        <Route path="/peer-admin" element={<BlogAdmin />} />
       </Routes>
     </Router>
   );
