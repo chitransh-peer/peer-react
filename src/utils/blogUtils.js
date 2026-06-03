@@ -1,12 +1,28 @@
+import { STATIC_BLOGS } from '../data/blogs';
+
 const STORAGE_KEY = 'peer_blogs_v1';
 
+/**
+ * Returns all blogs — static (code) + admin-added (localStorage).
+ * Static blogs are always shown to every visitor.
+ * Admin-added blogs are only visible in the browser where they were created,
+ * until they are committed to src/data/blogs.js and redeployed.
+ */
 export function getBlogs() {
+  let localBlogs = [];
   try {
     const data = localStorage.getItem(STORAGE_KEY);
-    return data ? JSON.parse(data) : [];
+    localBlogs = data ? JSON.parse(data) : [];
   } catch {
-    return [];
+    localBlogs = [];
   }
+
+  // Merge: local blogs take precedence over static ones (so admin edits override static)
+  const staticFiltered = STATIC_BLOGS.filter(
+    (sb) => !localBlogs.some((lb) => lb.id === sb.id)
+  );
+
+  return [...staticFiltered, ...localBlogs];
 }
 
 export function getPublishedBlogs() {
@@ -20,20 +36,30 @@ export function getBlogById(id) {
 }
 
 export function saveBlog(blog) {
-  const blogs = getBlogs();
-  const idx = blogs.findIndex((b) => b.id === blog.id);
+  const localBlogs = getLocalBlogs();
+  const idx = localBlogs.findIndex((b) => b.id === blog.id);
   const now = new Date().toISOString();
   if (idx >= 0) {
-    blogs[idx] = { ...blog, updatedAt: now };
+    localBlogs[idx] = { ...blog, updatedAt: now };
   } else {
-    blogs.unshift({ ...blog, createdAt: now, updatedAt: now });
+    localBlogs.unshift({ ...blog, createdAt: now, updatedAt: now });
   }
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(blogs));
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(localBlogs));
 }
 
 export function deleteBlog(id) {
-  const blogs = getBlogs().filter((b) => b.id !== id);
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(blogs));
+  const localBlogs = getLocalBlogs().filter((b) => b.id !== id);
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(localBlogs));
+}
+
+/** Only returns blogs stored in localStorage (used by admin panel internals) */
+function getLocalBlogs() {
+  try {
+    const data = localStorage.getItem(STORAGE_KEY);
+    return data ? JSON.parse(data) : [];
+  } catch {
+    return [];
+  }
 }
 
 export function generateId() {
