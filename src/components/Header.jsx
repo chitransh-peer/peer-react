@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import logo from '../assets/logos/Peer-header1-transparent.png';
+import logo from '../assets/logos/Peer-header-full.png';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,7 +38,8 @@ export default function Header() {
             <img
               src={logo}
               alt="Peer Consulting Resources Logo"
-              className="h-20 w-auto object-contain transition-transform group-hover:scale-105 drop-shadow-sm"
+              className="h-28 w-auto object-contain transition-transform group-hover:scale-105"
+              style={{ mixBlendMode: 'multiply' }}
             />
           </Link>
 
