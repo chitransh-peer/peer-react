@@ -14,6 +14,7 @@ import ItilCertification from './pages/ItilCertification';
 import ItilFoundation from './pages/ItilFoundation';
 import Sandbox from './pages/Sandbox';
 import ScrollToTop from './components/ScrollToTop';
+import ScrollToTopButton from './components/ScrollToTopButton';
 import AiTraining from './pages/AiTraining';
 import PPMAgile from './pages/PPMAgile';
 import ItilFoundationV5 from './pages/ItilFoundationV5';
@@ -34,6 +35,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <ScrollToTopButton />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

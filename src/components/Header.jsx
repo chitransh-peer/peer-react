@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import logo from '../assets/logos/Peer-header-full.png';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
-  // Define routes that belong to the Training/Certification section
   const trainingRoutes = [
     '/itil-overview',
     '/itil-certification',
@@ -17,39 +17,54 @@ export default function Header() {
 
   const isTrainingPage = trainingRoutes.includes(location.pathname);
 
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 60);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <>
-      <div className="hidden sm:block bg-[#071B34] text-white py-2 text-sm border-b border-[#0B2242]">
+    // Single fixed wrapper — everything stays on screen
+    <div className="fixed top-0 left-0 right-0 w-full z-50">
+      {/* Top info bar — collapses on scroll */}
+      <div
+        className={`hidden sm:block bg-[#071B34] text-white text-sm border-b border-[#0B2242] overflow-hidden transition-all duration-300 ${
+          isScrolled ? 'max-h-0 py-0 opacity-0' : 'max-h-12 py-2 opacity-100'
+        }`}
+      >
         <div className="container mx-auto px-6 lg:px-12 flex flex-col sm:flex-row justify-between items-center gap-2">
           <div className="flex items-center space-x-6">
             <span className="flex items-center gap-2"><span className="material-icons text-sm">phone</span> +1 732 444 4645</span>
             <span className="flex items-center gap-2"><span className="material-icons text-sm">email</span> contact@peer-consulting.com</span>
           </div>
           <div className="flex items-center space-x-4">
-            <a className="hover:text-gray-300 icon-hover transition-colors" href="https://www.linkedin.com/company/peer-consulting/posts/?feedView=all"><span className="sr-only">LinkedIn</span>
-              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+            <a className="hover:text-gray-300 transition-colors" href="https://www.linkedin.com/company/peer-consulting/posts/?feedView=all">
+              <span className="sr-only">LinkedIn</span>
+              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             </a>
           </div>
         </div>
       </div>
-      <header className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm transition-all duration-300">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-12 h-20 sm:h-28 flex justify-between items-center overflow-hidden">
+
+      {/* Main header — shrinks on scroll */}
+      <header className={`bg-white border-b border-slate-200 w-full transition-all duration-300 ${isScrolled ? 'shadow-md' : 'shadow-sm'}`}>
+        <div className={`container mx-auto px-4 sm:px-6 lg:px-12 flex justify-between items-center overflow-hidden transition-all duration-300 ${isScrolled ? 'h-14' : 'h-20 sm:h-28'}`}>
           <Link className="flex items-center group" to="/">
             <img
               src={logo}
               alt="Peer Consulting Resources Logo"
-              className="h-28 w-auto object-contain transition-transform group-hover:scale-105"
+              className={`w-auto object-contain transition-all duration-300 group-hover:scale-105 ${isScrolled ? 'h-10' : 'h-28'}`}
               style={{ mixBlendMode: 'multiply' }}
             />
           </Link>
 
           {!isTrainingPage ? (
             <nav className="hidden md:flex space-x-8 h-full items-center">
-              <NavLink className={({ isActive }) => `nav-link h-full flex items-center font-medium px-1 text-[#071B34] ${isActive ? "active-nav-link" : ""}`} to="/">Home</NavLink>
-              <NavLink className={({ isActive }) => `nav-link h-full flex items-center font-medium px-1 text-[#071B34] ${isActive ? "active-nav-link" : ""}`} to="/about">About</NavLink>
-              <NavLink className={({ isActive }) => `nav-link h-full flex items-center font-medium px-1 text-[#071B34] ${isActive ? "active-nav-link" : ""}`} to="/services">Solutions</NavLink>
-              <NavLink className={({ isActive }) => `nav-link h-full flex items-center font-medium px-1 text-[#071B34] ${isActive ? "active-nav-link" : ""}`} to="/blogs">Blogs</NavLink>
-              <NavLink className={({ isActive }) => `nav-link h-full flex items-center font-medium px-1 text-[#071B34] ${isActive ? "active-nav-link" : ""}`} to="/careers">Career</NavLink>
+              <NavLink className={({ isActive }) => `nav-link h-full flex items-center font-display font-bold text-base px-1 text-[#071B34] ${isActive ? "active-nav-link" : ""}`} to="/">Home</NavLink>
+              <NavLink className={({ isActive }) => `nav-link h-full flex items-center font-display font-bold text-base px-1 text-[#071B34] ${isActive ? "active-nav-link" : ""}`} to="/about">About</NavLink>
+              <NavLink className={({ isActive }) => `nav-link h-full flex items-center font-display font-bold text-base px-1 text-[#071B34] ${isActive ? "active-nav-link" : ""}`} to="/services">Solutions</NavLink>
+              <NavLink className={({ isActive }) => `nav-link h-full flex items-center font-display font-bold text-base px-1 text-[#071B34] ${isActive ? "active-nav-link" : ""}`} to="/blogs">Blogs</NavLink>
+              <NavLink className={({ isActive }) => `nav-link h-full flex items-center font-display font-bold text-base px-1 text-[#071B34] ${isActive ? "active-nav-link" : ""}`} to="/careers">Career</NavLink>
             </nav>
           ) : (
             <nav className="hidden md:flex space-x-8 h-full items-center">
@@ -77,14 +92,14 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`${isMenuOpen ? "flex" : "hidden"} md:hidden bg-white border-t border-slate-200 px-6 py-4 flex flex-col`} id="mobile-menu">
+        <div className={`${isMenuOpen ? "flex" : "hidden"} md:hidden bg-white border-t border-slate-200 px-6 py-4 flex-col`} id="mobile-menu">
           {!isTrainingPage ? (
             <>
-              <NavLink className={({ isActive }) => `nav-link font-medium text-[#071B34] py-2 border-b border-slate-200 ${isActive ? "active-nav-link" : ""}`} to="/" onClick={() => setIsMenuOpen(false)}>Home</NavLink>
-              <NavLink className={({ isActive }) => `nav-link font-medium text-[#071B34] py-2 border-b border-slate-200 ${isActive ? "active-nav-link" : ""}`} to="/about" onClick={() => setIsMenuOpen(false)}>About</NavLink>
-              <NavLink className={({ isActive }) => `nav-link font-medium text-[#071B34] py-2 border-b border-slate-200 ${isActive ? "active-nav-link" : ""}`} to="/services" onClick={() => setIsMenuOpen(false)}>Solutions</NavLink>
-              <NavLink className={({ isActive }) => `nav-link font-medium text-[#071B34] py-2 border-b border-slate-200 ${isActive ? "active-nav-link" : ""}`} to="/blogs" onClick={() => setIsMenuOpen(false)}>Blogs</NavLink>
-              <NavLink className={({ isActive }) => `nav-link font-medium text-[#071B34] py-2 border-b border-slate-200 ${isActive ? "active-nav-link" : ""}`} to="/careers" onClick={() => setIsMenuOpen(false)}>Career</NavLink>
+              <NavLink className={({ isActive }) => `nav-link font-display font-bold text-base text-[#071B34] py-2 border-b border-slate-200 ${isActive ? "active-nav-link" : ""}`} to="/" onClick={() => setIsMenuOpen(false)}>Home</NavLink>
+              <NavLink className={({ isActive }) => `nav-link font-display font-bold text-base text-[#071B34] py-2 border-b border-slate-200 ${isActive ? "active-nav-link" : ""}`} to="/about" onClick={() => setIsMenuOpen(false)}>About</NavLink>
+              <NavLink className={({ isActive }) => `nav-link font-display font-bold text-base text-[#071B34] py-2 border-b border-slate-200 ${isActive ? "active-nav-link" : ""}`} to="/services" onClick={() => setIsMenuOpen(false)}>Solutions</NavLink>
+              <NavLink className={({ isActive }) => `nav-link font-display font-bold text-base text-[#071B34] py-2 border-b border-slate-200 ${isActive ? "active-nav-link" : ""}`} to="/blogs" onClick={() => setIsMenuOpen(false)}>Blogs</NavLink>
+              <NavLink className={({ isActive }) => `nav-link font-display font-bold text-base text-[#071B34] py-2 border-b border-slate-200 ${isActive ? "active-nav-link" : ""}`} to="/careers" onClick={() => setIsMenuOpen(false)}>Career</NavLink>
             </>
           ) : (
             <>
@@ -98,7 +113,6 @@ export default function Header() {
           )}
         </div>
       </header>
-    </>
+    </div>
   );
 }
-

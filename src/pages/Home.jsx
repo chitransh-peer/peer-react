@@ -210,9 +210,6 @@ export default function Home() {
                             <Link className="inline-flex justify-center items-center px-8 py-4 bg-[#4DA3FF] text-white font-bold rounded transition-all duration-300 shadow-[0_4px_15px_rgba(77,163,255,0.2)] transform hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(77,163,255,0.4)] hover:bg-[#3b82f6]" to="/services">
                                 Discover Our Solutions
                             </Link>
-                            <Link className="inline-flex justify-center items-center px-8 py-4 border border-white/20 text-white font-bold rounded hover:bg-white hover:text-[#071B34] transition-all duration-300" to="/team">
-                                Meet the Team Behind the Work
-                            </Link>
                         </div>
                         {/* Stats strip */}
                         <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3">
@@ -315,11 +312,6 @@ export default function Home() {
                                     </div>
 
                                     <div className="p-8 flex flex-col flex-grow bg-transparent">
-                                        {/* Branding row */}
-                                        <div className="flex items-center gap-1.5 mb-3">
-                                            <span className="material-icons text-accent-blue group-hover:text-blue-600 text-[14px] transition-colors duration-300">verified</span>
-                                            <span className="text-[10px] font-bold uppercase tracking-widest text-accent-blue group-hover:text-blue-600 transition-colors duration-300">PEER SOLUTIONS GROUP</span>
-                                        </div>
 
                                         {/* Title */}
                                         <h3 className="text-xl font-display font-bold text-white group-hover:text-primary mb-3 transition-colors duration-300 leading-snug">
@@ -381,150 +373,81 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section className="py-20 bg-[#f8fafc] dark:bg-background-dark border-y border-border-light dark:border-white/10">
-                <div className="container mx-auto px-6 lg:px-12">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#071B34] dark:text-white mb-4">The Team Behind PEER</h2>
-                        <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Meet the dedicated experts driving innovation and delivering exceptional results for our clients every single day.</p>
-                    </div>
-                    {/* Primary Row: 3 Vertical Cards */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
-
-                        {/* Misha Edara - Founder */}
-                        <div
-                            onClick={() => navigate('/team?member=misha-edara')}
-                            className="relative overflow-hidden bg-white dark:bg-[#071B34] pt-10 pb-12 px-10 rounded-[28px] shadow-none border border-gray-100 dark:border-white/10 flex flex-col items-center hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_16px_40px_rgba(59,130,246,0.16)] hover:-translate-y-2 transition-all duration-300 group cursor-pointer"
-                        >
-                            {/* Decorative corner block */}
-                            <div className="absolute top-0 right-0 w-16 h-16 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[24px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
-                            {/* Avatar with offset blue block */}
-                            <div className="relative mt-3 mb-6 flex-shrink-0" style={{ width: '160px', height: '160px' }}>
-                                {/* Blue offset rectangle - slides in behind avatar on hover */}
-                                <div className="absolute top-4 right-[-10px] w-36 h-36 rounded-[20px] bg-blue-300/30 dark:bg-blue-500/25 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
-                                {/* Avatar */}
-                                <div className="relative w-36 h-36 rounded-[20px] overflow-hidden bg-gradient-to-b from-[#e3e6ec] to-[#f3f5f8] dark:from-[#2d3748] dark:to-[#1a202c] flex items-center justify-center border-2 border-[#d2d9e4] dark:border-slate-700 group-hover:border-blue-400 dark:group-hover:border-blue-500 group-hover:shadow-[0_0_0_4px_rgba(59,130,246,0.22)] transition-all duration-300 z-10">
-                                    <TeamAvatar src={teamImages["misha-edara"]} alt="Misha Edara" silhouetteClass="w-full h-full text-slate-700 dark:text-slate-355" />
+            <section className="py-28 bg-gradient-to-r from-[#f0f7ff] via-[#e0efff] to-[#f0f7ff] dark:from-slate-800 dark:via-slate-800 dark:to-slate-900 border-y border-blue-200 dark:border-white/10">
+                <div className="container mx-auto px-6 lg:px-12 mb-8 text-center">
+                    <h2 className="text-3xl lg:text-4xl font-display font-bold text-primary-text dark:text-white mb-4">Certifications</h2>
+                </div>
+                <div className="relative w-full overflow-hidden pb-4">
+                    <div className="flex flex-nowrap animate-scroll pause-hover" style={{ width: 'max-content' }}>
+                        {/* First set */}
+                        <div className="flex flex-nowrap items-center gap-16 pr-16">
+                            {/*  Card 1  */}
+                            <div className="bg-white px-4 py-4 shadow-md rounded border border-gray-100 flex flex-col items-center justify-center w-48 h-24 flex-shrink-0 cursor-pointer hover:shadow-lg transition-shadow">
+                                <span className="text-[10px] font-bold text-blue-600 uppercase tracking-tighter leading-none mb-1 text-center">New York State Of Opportunity</span>
+                                <span className="text-xs font-black text-gray-800 tracking-wide text-center">MWBE CERTIFIED</span>
+                            </div>
+                            {/*  Card 2  */}
+                            <div className="bg-white px-4 py-4 shadow-md rounded border border-gray-100 flex flex-col items-center justify-center w-48 h-24 flex-shrink-0 cursor-pointer hover:shadow-lg transition-shadow">
+                                <span className="text-[10px] font-bold text-blue-500 uppercase tracking-tighter leading-none mb-1">New York City</span>
+                                <span className="text-3xl font-black text-blue-900 tracking-tighter leading-none">M/WBE</span>
+                                <span className="text-[8px] text-gray-500 uppercase mt-1 text-center">Minority and Women-Owned Business</span>
+                            </div>
+                            {/*  Card 3  */}
+                            <div className="bg-white px-4 py-4 shadow-md rounded border border-gray-100 flex flex-col items-center justify-center w-48 h-24 flex-shrink-0 cursor-pointer hover:shadow-lg transition-shadow">
+                                <div className="w-12 h-12 rounded-full border-2 border-yellow-500 flex items-center justify-center bg-blue-50">
+                                    <span className="text-[8px] text-center font-bold text-blue-900 leading-none">THE STATE OF<br />NEW JERSEY</span>
                                 </div>
                             </div>
-                            <h3 className="text-xl font-bold font-display text-[#071B34] dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-300 mb-1 transition-colors duration-300">Misha Edara</h3>
-                            <p className="text-[#3b82f6] dark:text-blue-400 font-extrabold text-xs uppercase tracking-widest">Founder</p>
+                            {/*  Card 4  */}
+                            <div className="bg-blue-800 px-4 py-4 shadow-md rounded flex flex-col items-center justify-center w-48 h-24 flex-shrink-0 border border-yellow-400 cursor-pointer hover:shadow-lg transition-shadow">
+                                <span className="text-sm font-black text-white leading-tight text-center">PORT AUTHORITY<br />NY NJ</span>
+                                <span className="text-[9px] text-yellow-400 mt-2 tracking-widest uppercase text-center">AIR LAND RAIL SEA</span>
+                            </div>
+                            {/*  Card 5  */}
+                            <div className="bg-white px-4 py-4 shadow-md rounded border border-gray-100 flex flex-col items-center justify-center w-48 h-24 flex-shrink-0 cursor-pointer hover:shadow-lg transition-shadow">
+                                <span className="text-xl font-black text-gray-800 tracking-tight">HUB<span className="text-yellow-500">Zone</span></span>
+                                <span className="text-[10px] tracking-[0.2em] text-gray-500 mt-1 uppercase text-center border-t border-black w-full pt-1">Certified</span>
+                            </div>
+                            {/*  Card 6  */}
+                            <div className="bg-black px-4 py-4 shadow-md rounded flex items-center justify-center w-48 h-24 flex-shrink-0 cursor-pointer hover:shadow-lg transition-shadow">
+                                <span className="text-2xl font-serif text-white tracking-tighter">Connectic<span className="text-red-500 text-3xl leading-none">~</span>t</span>
+                            </div>
                         </div>
-
-                        {/* Vineela Mandava - Co-Founder */}
-                        <div
-                            onClick={() => navigate('/team?member=vineela-mandava')}
-                            className="relative overflow-hidden bg-white dark:bg-[#071B34] pt-10 pb-12 px-10 rounded-[28px] shadow-none border border-gray-100 dark:border-white/10 flex flex-col items-center hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_16px_40px_rgba(59,130,246,0.16)] hover:-translate-y-2 transition-all duration-300 group cursor-pointer"
-                        >
-                            {/* Decorative corner block */}
-                            <div className="absolute top-0 right-0 w-16 h-16 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[24px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
-                            {/* Avatar with offset blue block */}
-                            <div className="relative mt-3 mb-6 flex-shrink-0" style={{ width: '160px', height: '160px' }}>
-                                {/* Blue offset rectangle */}
-                                <div className="absolute top-4 right-[-10px] w-36 h-36 rounded-[20px] bg-blue-300/30 dark:bg-blue-500/25 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
-                                {/* Avatar */}
-                                <div className="relative w-36 h-36 rounded-[20px] overflow-hidden bg-gradient-to-b from-[#e3e6ec] to-[#f3f5f8] dark:from-[#2d3748] dark:to-[#1a202c] flex items-center justify-center border-2 border-[#d2d9e4] dark:border-slate-700 group-hover:border-blue-400 dark:group-hover:border-blue-500 group-hover:shadow-[0_0_0_4px_rgba(59,130,246,0.22)] transition-all duration-300 z-10">
-                                    <TeamAvatar src={teamImages["vineela-mandava"]} alt="Vineela Mandava" silhouetteClass="w-full h-full text-slate-700 dark:text-slate-355" />
+                        {/* Duplicate set for seamless infinite scroll */}
+                        <div className="flex flex-nowrap items-center gap-16 pr-16" aria-hidden="true">
+                            {/*  Card 1  */}
+                            <div className="bg-white px-4 py-4 shadow-md rounded border border-gray-100 flex flex-col items-center justify-center w-48 h-24 flex-shrink-0 cursor-pointer hover:shadow-lg transition-shadow">
+                                <span className="text-[10px] font-bold text-blue-600 uppercase tracking-tighter leading-none mb-1 text-center">New York State Of Opportunity</span>
+                                <span className="text-xs font-black text-gray-800 tracking-wide text-center">MWBE CERTIFIED</span>
+                            </div>
+                            {/*  Card 2  */}
+                            <div className="bg-white px-4 py-4 shadow-md rounded border border-gray-100 flex flex-col items-center justify-center w-48 h-24 flex-shrink-0 cursor-pointer hover:shadow-lg transition-shadow">
+                                <span className="text-[10px] font-bold text-blue-500 uppercase tracking-tighter leading-none mb-1">New York City</span>
+                                <span className="text-3xl font-black text-blue-900 tracking-tighter leading-none">M/WBE</span>
+                                <span className="text-[8px] text-gray-500 uppercase mt-1 text-center">Minority and Women-Owned Business</span>
+                            </div>
+                            {/*  Card 3  */}
+                            <div className="bg-white px-4 py-4 shadow-md rounded border border-gray-100 flex flex-col items-center justify-center w-48 h-24 flex-shrink-0 cursor-pointer hover:shadow-lg transition-shadow">
+                                <div className="w-12 h-12 rounded-full border-2 border-yellow-500 flex items-center justify-center bg-blue-50">
+                                    <span className="text-[8px] text-center font-bold text-blue-900 leading-none">THE STATE OF<br />NEW JERSEY</span>
                                 </div>
                             </div>
-                            <h3 className="text-xl font-bold font-display text-[#071B34] dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-300 mb-1 transition-colors duration-300">Vineela Mandava</h3>
-                            <p className="text-[#3b82f6] dark:text-blue-400 font-extrabold text-xs uppercase tracking-widest">Co-Founder</p>
-                        </div>
-
-                        {/* Vivek Philar - CEO */}
-                        <div
-                            onClick={() => navigate('/team?member=vivek-philar')}
-                            className="relative overflow-hidden bg-white dark:bg-[#071B34] pt-10 pb-12 px-10 rounded-[28px] shadow-none border border-gray-100 dark:border-white/10 flex flex-col items-center hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_16px_40px_rgba(59,130,246,0.16)] hover:-translate-y-2 transition-all duration-300 group cursor-pointer"
-                        >
-                            {/* Decorative corner block */}
-                            <div className="absolute top-0 right-0 w-16 h-16 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[24px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
-                            {/* Avatar with offset blue block */}
-                            <div className="relative mt-3 mb-6 flex-shrink-0" style={{ width: '160px', height: '160px' }}>
-                                {/* Blue offset rectangle */}
-                                <div className="absolute top-4 right-[-10px] w-36 h-36 rounded-[20px] bg-blue-300/30 dark:bg-blue-500/25 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
-                                {/* Avatar */}
-                                <div className="relative w-36 h-36 rounded-[20px] overflow-hidden bg-gradient-to-b from-[#e3e6ec] to-[#f3f5f8] dark:from-[#2d3748] dark:to-[#1a202c] flex items-center justify-center border-2 border-[#d2d9e4] dark:border-slate-700 group-hover:border-blue-400 dark:group-hover:border-blue-500 group-hover:shadow-[0_0_0_4px_rgba(59,130,246,0.22)] transition-all duration-300 z-10">
-                                    <TeamAvatar src={teamImages["vivek-philar"]} alt="Vivek Philar" silhouetteClass="w-full h-full text-slate-700 dark:text-slate-355" />
-                                </div>
+                            {/*  Card 4  */}
+                            <div className="bg-blue-800 px-4 py-4 shadow-md rounded flex flex-col items-center justify-center w-48 h-24 flex-shrink-0 border border-yellow-400 cursor-pointer hover:shadow-lg transition-shadow">
+                                <span className="text-sm font-black text-white leading-tight text-center">PORT AUTHORITY<br />NY NJ</span>
+                                <span className="text-[9px] text-yellow-400 mt-2 tracking-widest uppercase text-center">AIR LAND RAIL SEA</span>
                             </div>
-                            <h3 className="text-xl font-bold font-display text-[#071B34] dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-300 mb-1 transition-colors duration-300">Vivek Philar</h3>
-                            <p className="text-[#3b82f6] dark:text-blue-400 font-extrabold text-xs uppercase tracking-widest">CEO</p>
+                            {/*  Card 5  */}
+                            <div className="bg-white px-4 py-4 shadow-md rounded border border-gray-100 flex flex-col items-center justify-center w-48 h-24 flex-shrink-0 cursor-pointer hover:shadow-lg transition-shadow">
+                                <span className="text-xl font-black text-gray-800 tracking-tight">HUB<span className="text-yellow-500">Zone</span></span>
+                                <span className="text-[10px] tracking-[0.2em] text-gray-500 mt-1 uppercase text-center border-t border-black w-full pt-1">Certified</span>
+                            </div>
+                            {/*  Card 6  */}
+                            <div className="bg-black px-4 py-4 shadow-md rounded flex items-center justify-center w-48 h-24 flex-shrink-0 cursor-pointer hover:shadow-lg transition-shadow">
+                                <span className="text-2xl font-serif text-white tracking-tighter">Connectic<span className="text-red-500 text-3xl leading-none">~</span>t</span>
+                            </div>
                         </div>
                     </div>
-
-                    {/* Secondary Row: 4 Horizontal Cards */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-
-                        {/* Naveen Marrivada */}
-                        <div
-                            onClick={() => navigate('/team?member=naveen-marrivada')}
-                            className="relative overflow-hidden flex items-center gap-6 p-8 bg-white dark:bg-[#071B34] rounded-[20px] border border-gray-100 dark:border-white/10 shadow-none hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_8px_24px_rgba(59,130,246,0.18)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
-                        >
-                            <div className="absolute top-0 right-0 w-9 h-9 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[14px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
-                            <div className="w-20 h-20 rounded-[16px] overflow-hidden bg-gradient-to-b from-[#e3e6ec] to-[#f3f5f8] dark:from-[#2d3748] dark:to-[#1a202c] flex items-center justify-center border-2 border-[#d2d9e4] dark:border-slate-700 flex-shrink-0 group-hover:border-blue-400 group-hover:shadow-[0_0_0_3px_rgba(59,130,246,0.22)] transition-all duration-300">
-                                <TeamAvatar src={teamImages["naveen-marrivada"]} alt="Naveen Marrivada" silhouetteClass="w-14 h-14 text-slate-700 dark:text-slate-355" />
-                            </div>
-                            <div className="flex flex-col flex-grow min-w-0">
-                                <h4 className="font-bold text-[#071B34] dark:text-white text-base mb-1 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">Naveen Marrivada</h4>
-                                <p className="text-xs font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400 leading-tight">Director of Client Relations, NYC</p>
-                            </div>
-                        </div>
-
-                        {/* Omer Halilovic */}
-                        <div
-                            onClick={() => navigate('/team?member=omer-halilovic')}
-                            className="relative overflow-hidden flex items-center gap-6 p-8 bg-white dark:bg-[#071B34] rounded-[20px] border border-gray-100 dark:border-white/10 shadow-none hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_8px_24px_rgba(59,130,246,0.18)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
-                        >
-                            <div className="absolute top-0 right-0 w-9 h-9 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[14px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
-                            <div className="w-20 h-20 rounded-[16px] overflow-hidden bg-gradient-to-b from-[#e3e6ec] to-[#f3f5f8] dark:from-[#2d3748] dark:to-[#1a202c] flex items-center justify-center border-2 border-[#d2d9e4] dark:border-slate-700 flex-shrink-0 group-hover:border-blue-400 group-hover:shadow-[0_0_0_3px_rgba(59,130,246,0.22)] transition-all duration-300">
-                                <TeamAvatar src={teamImages["omer-halilovic"]} alt="Omer Halilovic" silhouetteClass="w-14 h-14 text-slate-700 dark:text-slate-355" />
-                            </div>
-                            <div className="flex flex-col flex-grow min-w-0">
-                                <h4 className="font-bold text-[#071B34] dark:text-white text-base mb-1 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">Omer Halilovic</h4>
-                                <p className="text-xs font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400 leading-tight">Director of NYC Services</p>
-                            </div>
-                        </div>
-
-                        {/* Seema Mittal */}
-                        <div
-                            onClick={() => navigate('/team?member=seema-mittal')}
-                            className="relative overflow-hidden flex items-center gap-6 p-8 bg-white dark:bg-[#071B34] rounded-[20px] border border-gray-100 dark:border-white/10 shadow-none hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_8px_24px_rgba(59,130,246,0.18)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
-                        >
-                            <div className="absolute top-0 right-0 w-9 h-9 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[14px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
-                            <div className="w-20 h-20 rounded-[16px] overflow-hidden bg-gradient-to-b from-[#e3e6ec] to-[#f3f5f8] dark:from-[#2d3748] dark:to-[#1a202c] flex items-center justify-center border-2 border-[#d2d9e4] dark:border-slate-700 flex-shrink-0 group-hover:border-blue-400 group-hover:shadow-[0_0_0_3px_rgba(59,130,246,0.22)] transition-all duration-300">
-                                <TeamAvatar src={teamImages["seema-mittal"]} alt="Seema Mittal" silhouetteClass="w-14 h-14 text-slate-700 dark:text-slate-355" />
-                            </div>
-                            <div className="flex flex-col flex-grow min-w-0">
-                                <h4 className="font-bold text-[#071B34] dark:text-white text-base mb-1 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">Seema Mittal</h4>
-                                <p className="text-xs font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400 leading-tight">Director of Recruiting</p>
-                            </div>
-                        </div>
-
-                        {/* Sandeep Bussa */}
-                        <div
-                            onClick={() => navigate('/team?member=sandeep-bussa')}
-                            className="relative overflow-hidden flex items-center gap-6 p-8 bg-white dark:bg-[#071B34] rounded-[20px] border border-gray-100 dark:border-white/10 shadow-none hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_8px_24px_rgba(59,130,246,0.18)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
-                        >
-                            <div className="absolute top-0 right-0 w-9 h-9 bg-blue-200/60 dark:bg-blue-500/20 rounded-bl-[14px] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
-                            <div className="w-20 h-20 rounded-[16px] overflow-hidden bg-gradient-to-b from-[#e3e6ec] to-[#f3f5f8] dark:from-[#2d3748] dark:to-[#1a202c] flex items-center justify-center border-2 border-[#d2d9e4] dark:border-slate-700 flex-shrink-0 group-hover:border-blue-400 group-hover:shadow-[0_0_0_3px_rgba(59,130,246,0.22)] transition-all duration-300">
-                                <TeamAvatar src={teamImages["sandeep-bussa"]} alt="Sandeep Bussa" silhouetteClass="w-14 h-14 text-slate-700 dark:text-slate-355" />
-                            </div>
-                            <div className="flex flex-col flex-grow min-w-0">
-                                <h4 className="font-bold text-[#071B34] dark:text-white text-base mb-1 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">Sandeep Bussa</h4>
-                                <p className="text-xs font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400 leading-tight">Director of Accounts &amp; HR</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div className="mt-12 text-center">
-                        <Link
-                            to="/team"
-                            className="inline-flex items-center justify-center px-8 py-3.5 bg-[#4DA3FF] hover:bg-[#3b82f6] text-white font-bold rounded-lg transition-all duration-300 shadow-[0_4px_15px_rgba(77,163,255,0.3)] hover:shadow-[0_8px_25px_rgba(77,163,255,0.4)] active:scale-95 transform hover:-translate-y-0.5"
-                        >
-                            View Full Team Biographies
-                        </Link>
-                    </div>
-
                 </div>
             </section>
             <section className="py-20 bg-[#071B34]">

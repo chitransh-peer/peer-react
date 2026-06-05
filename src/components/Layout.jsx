@@ -7,12 +7,16 @@ export default function Layout() {
   useScrollReveal();
 
   return (
-    <div className="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 antialiased flex flex-col min-h-screen overflow-x-hidden">
+    <div className="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 antialiased flex flex-col min-h-screen">
       <Header />
-      <main className="flex-grow">
-        <Outlet />
-      </main>
-      <Footer />
+      {/* Spacer: matches fixed header total height — mobile: h-20, desktop: info-bar(36px) + header(112px) = 148px */}
+      <div className="h-20 sm:h-[148px] flex-shrink-0" />
+      <div className="overflow-x-hidden flex flex-col flex-grow">
+        <main className="flex-grow">
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }
