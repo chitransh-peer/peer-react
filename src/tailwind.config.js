@@ -28,8 +28,8 @@ export default {
         'subtle': '0 4px 12px rgba(0, 0, 0, 0.08)',
       },
       fontFamily: {
-        "display": ["Manrope", "sans-serif"],
-        "heading": ["Manrope", "sans-serif"],
+        "display": ["Satoshi", "sans-serif"],
+        "heading": ["Satoshi", "sans-serif"],
         "body": ["Inter", "sans-serif"],
       },
       transitionDuration: {

@@ -13,7 +13,7 @@ body {
 
   h1,
   .hero-heading {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Satoshi', sans-serif;
     font-size: 64px;
     line-height: 72px;
     font-weight: 600;
@@ -21,7 +21,7 @@ body {
 
   h2,
   .section-heading {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Satoshi', sans-serif;
     font-size: 40px;
     line-height: 48px;
     font-weight: 600;
@@ -32,7 +32,7 @@ body {
   h5,
   h6,
   .subheading {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Satoshi', sans-serif;
     font-size: 24px;
     line-height: 32px;
     font-weight: 500;
@@ -62,7 +62,7 @@ body {
 
   .nav-text,
   .nav-link {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Satoshi', sans-serif;
   }
 
   .btn-text,
