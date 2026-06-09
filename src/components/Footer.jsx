@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logo from '../assets/logos/Peer-footer-transparent.png';
+import logo from '../assets/logos/peer footer updated.png';
 
 export default function Footer() {
   const scrollToTop = (e) => {
@@ -18,7 +18,7 @@ export default function Footer() {
               <img
                 src={logo}
                 alt="Peer Consulting Resources Logo"
-                className="h-28 w-auto max-w-[320px] object-contain transition-transform group-hover:scale-105 brightness-0 invert mx-auto md:mx-0"
+                className="h-56 w-auto max-w-[520px] object-contain transition-transform group-hover:scale-105 brightness-0 invert mx-auto md:mx-0 md:-ml-16"
               />
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-8 max-w-xs mx-auto md:mx-0">
