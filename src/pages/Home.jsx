@@ -1,6 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
+const cert1Img = new URL('../assets/certifications/1.png', import.meta.url).href;
+const cert2Img = new URL('../assets/certifications/2.png', import.meta.url).href;
+const cert3Img = new URL('../assets/certifications/3.png', import.meta.url).href;
+const cert4Img = new URL('../assets/certifications/4.png', import.meta.url).href;
+const cert5Img = new URL('../assets/certifications/5.png', import.meta.url).href;
+const cert6Img = new URL('../assets/certifications/6.png', import.meta.url).href;
+
+// Per-card display configuration for the certification scroll strip
+const certCards = [
+    // 1 — NJ State Seal (white bg, circular seal)
+    { src: cert1Img, bg: 'bg-white', border: 'border border-gray-100', pad: 'p-3', fit: 'object-contain' },
+    // 2 — Connecticut (outline lettering — invisible on white → dark navy bg)
+    { src: cert2Img, bg: 'bg-[#071B34]', border: 'border-0', pad: 'p-4', fit: 'object-contain' },
+    // 3 — Port Authority NY NJ (has its own blue bg → fill the card)
+    { src: cert3Img, bg: 'bg-[#0032A0]', border: 'border-0', pad: 'p-0', fit: 'object-cover' },
+    // 4 — HUBZone Certified (white bg, wide logo)
+    { src: cert4Img, bg: 'bg-white', border: 'border border-gray-100', pad: 'p-3', fit: 'object-contain' },
+    // 5 — NYC m/wbe (white bg, square logo)
+    { src: cert5Img, bg: 'bg-white', border: 'border border-gray-100', pad: 'p-1', fit: 'object-contain' },
+    // 6 — NY State MWBE badge (white bg, circular badge — scale up to compensate for built-in whitespace)
+    { src: cert6Img, bg: 'bg-white', border: 'border border-gray-100', pad: 'p-0', fit: 'object-contain', extraImgClass: 'scale-[1.6]' },
+];
+
 const CorporateSilhouette = ({ className = "w-full h-full text-slate-700" }) => (
     <svg className={className} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="50" cy="31" r="12" fill="currentColor" />
@@ -380,75 +403,24 @@ export default function Home() {
                 <div className="relative w-full overflow-hidden pb-4">
                     <div className="flex flex-nowrap animate-scroll pause-hover" style={{ width: 'max-content' }}>
                         {/* First set */}
-                        <div className="flex flex-nowrap items-center gap-16 pr-16">
-                            {/*  Card 1  */}
-                            <div className="bg-white px-4 py-4 shadow-md rounded border border-gray-100 flex flex-col items-center justify-center w-48 h-24 flex-shrink-0 cursor-pointer hover:shadow-lg transition-shadow">
-                                <span className="text-[10px] font-bold text-blue-600 uppercase tracking-tighter leading-none mb-1 text-center">New York State Of Opportunity</span>
-                                <span className="text-xs font-black text-gray-800 tracking-wide text-center">MWBE CERTIFIED</span>
-                            </div>
-                            {/*  Card 2  */}
-                            <div className="bg-white px-4 py-4 shadow-md rounded border border-gray-100 flex flex-col items-center justify-center w-48 h-24 flex-shrink-0 cursor-pointer hover:shadow-lg transition-shadow">
-                                <span className="text-[10px] font-bold text-blue-500 uppercase tracking-tighter leading-none mb-1">New York City</span>
-                                <span className="text-3xl font-black text-blue-900 tracking-tighter leading-none">M/WBE</span>
-                                <span className="text-[8px] text-gray-500 uppercase mt-1 text-center">Minority and Women-Owned Business</span>
-                            </div>
-                            {/*  Card 3  */}
-                            <div className="bg-white px-4 py-4 shadow-md rounded border border-gray-100 flex flex-col items-center justify-center w-48 h-24 flex-shrink-0 cursor-pointer hover:shadow-lg transition-shadow">
-                                <div className="w-12 h-12 rounded-full border-2 border-yellow-500 flex items-center justify-center bg-blue-50">
-                                    <span className="text-[8px] text-center font-bold text-blue-900 leading-none">THE STATE OF<br />NEW JERSEY</span>
+                        <div className="flex flex-nowrap items-center gap-10 pr-10">
+                            {certCards.map((card, i) => (
+                                <div key={i} className={`${card.bg} ${card.pad} shadow-md rounded-lg overflow-hidden flex items-center justify-center w-56 h-32 flex-shrink-0 cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${card.border}`}>
+                                    <img src={card.src} alt={`Certification ${i + 1}`} className={`${card.fit} w-full h-full ${card.extraImgClass || ''}`} />
                                 </div>
-                            </div>
-                            {/*  Card 4  */}
-                            <div className="bg-blue-800 px-4 py-4 shadow-md rounded flex flex-col items-center justify-center w-48 h-24 flex-shrink-0 border border-yellow-400 cursor-pointer hover:shadow-lg transition-shadow">
-                                <span className="text-sm font-black text-white leading-tight text-center">PORT AUTHORITY<br />NY NJ</span>
-                                <span className="text-[9px] text-yellow-400 mt-2 tracking-widest uppercase text-center">AIR LAND RAIL SEA</span>
-                            </div>
-                            {/*  Card 5  */}
-                            <div className="bg-white px-4 py-4 shadow-md rounded border border-gray-100 flex flex-col items-center justify-center w-48 h-24 flex-shrink-0 cursor-pointer hover:shadow-lg transition-shadow">
-                                <span className="text-xl font-black text-gray-800 tracking-tight">HUB<span className="text-yellow-500">Zone</span></span>
-                                <span className="text-[10px] tracking-[0.2em] text-gray-500 mt-1 uppercase text-center border-t border-black w-full pt-1">Certified</span>
-                            </div>
-                            {/*  Card 6  */}
-                            <div className="bg-black px-4 py-4 shadow-md rounded flex items-center justify-center w-48 h-24 flex-shrink-0 cursor-pointer hover:shadow-lg transition-shadow">
-                                <span className="text-2xl font-serif text-white tracking-tighter">Connectic<span className="text-red-500 text-3xl leading-none">~</span>t</span>
-                            </div>
+                            ))}
                         </div>
                         {/* Duplicate set for seamless infinite scroll */}
-                        <div className="flex flex-nowrap items-center gap-16 pr-16" aria-hidden="true">
-                            {/*  Card 1  */}
-                            <div className="bg-white px-4 py-4 shadow-md rounded border border-gray-100 flex flex-col items-center justify-center w-48 h-24 flex-shrink-0 cursor-pointer hover:shadow-lg transition-shadow">
-                                <span className="text-[10px] font-bold text-blue-600 uppercase tracking-tighter leading-none mb-1 text-center">New York State Of Opportunity</span>
-                                <span className="text-xs font-black text-gray-800 tracking-wide text-center">MWBE CERTIFIED</span>
-                            </div>
-                            {/*  Card 2  */}
-                            <div className="bg-white px-4 py-4 shadow-md rounded border border-gray-100 flex flex-col items-center justify-center w-48 h-24 flex-shrink-0 cursor-pointer hover:shadow-lg transition-shadow">
-                                <span className="text-[10px] font-bold text-blue-500 uppercase tracking-tighter leading-none mb-1">New York City</span>
-                                <span className="text-3xl font-black text-blue-900 tracking-tighter leading-none">M/WBE</span>
-                                <span className="text-[8px] text-gray-500 uppercase mt-1 text-center">Minority and Women-Owned Business</span>
-                            </div>
-                            {/*  Card 3  */}
-                            <div className="bg-white px-4 py-4 shadow-md rounded border border-gray-100 flex flex-col items-center justify-center w-48 h-24 flex-shrink-0 cursor-pointer hover:shadow-lg transition-shadow">
-                                <div className="w-12 h-12 rounded-full border-2 border-yellow-500 flex items-center justify-center bg-blue-50">
-                                    <span className="text-[8px] text-center font-bold text-blue-900 leading-none">THE STATE OF<br />NEW JERSEY</span>
+                        <div className="flex flex-nowrap items-center gap-10 pr-10" aria-hidden="true">
+                            {certCards.map((card, i) => (
+                                <div key={i} className={`${card.bg} ${card.pad} shadow-md rounded-lg overflow-hidden flex items-center justify-center w-56 h-32 flex-shrink-0 cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${card.border}`}>
+                                    <img src={card.src} alt={`Certification ${i + 1}`} className={`${card.fit} w-full h-full ${card.extraImgClass || ''}`} />
                                 </div>
-                            </div>
-                            {/*  Card 4  */}
-                            <div className="bg-blue-800 px-4 py-4 shadow-md rounded flex flex-col items-center justify-center w-48 h-24 flex-shrink-0 border border-yellow-400 cursor-pointer hover:shadow-lg transition-shadow">
-                                <span className="text-sm font-black text-white leading-tight text-center">PORT AUTHORITY<br />NY NJ</span>
-                                <span className="text-[9px] text-yellow-400 mt-2 tracking-widest uppercase text-center">AIR LAND RAIL SEA</span>
-                            </div>
-                            {/*  Card 5  */}
-                            <div className="bg-white px-4 py-4 shadow-md rounded border border-gray-100 flex flex-col items-center justify-center w-48 h-24 flex-shrink-0 cursor-pointer hover:shadow-lg transition-shadow">
-                                <span className="text-xl font-black text-gray-800 tracking-tight">HUB<span className="text-yellow-500">Zone</span></span>
-                                <span className="text-[10px] tracking-[0.2em] text-gray-500 mt-1 uppercase text-center border-t border-black w-full pt-1">Certified</span>
-                            </div>
-                            {/*  Card 6  */}
-                            <div className="bg-black px-4 py-4 shadow-md rounded flex items-center justify-center w-48 h-24 flex-shrink-0 cursor-pointer hover:shadow-lg transition-shadow">
-                                <span className="text-2xl font-serif text-white tracking-tighter">Connectic<span className="text-red-500 text-3xl leading-none">~</span>t</span>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </div>
+
             </section>
             <section className="py-20 bg-[#071B34]">
                 <div className="container mx-auto px-6 lg:px-12 text-center">
