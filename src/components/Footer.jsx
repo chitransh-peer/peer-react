@@ -69,6 +69,10 @@ export default function Footer() {
                 <span className="material-icons text-white/50 text-[20px] mt-0.5">location_on</span>
                 <span className="text-white/70 text-sm leading-relaxed">20 Jefferson Plaza,<br />Princeton, NJ 08540</span>
               </li>
+              <li className="flex items-start gap-4 text-left">
+                <span className="material-icons text-white/50 text-[20px] mt-0.5">location_on</span>
+                <span className="text-white/70 text-sm leading-relaxed">Vaishnavi Sapphire Center, 9/36, Bengaluru, Karnataka 560022</span>
+              </li>
               <li className="flex items-center gap-4 text-left">
                 <span className="material-icons text-white/50 text-[20px]">phone</span>
                 <span className="text-white/70 text-sm">732-444-4645</span>
