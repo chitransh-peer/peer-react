@@ -34,8 +34,12 @@ export default function Header() {
       >
         <div className="container mx-auto px-6 lg:px-12 flex flex-col sm:flex-row justify-between items-center gap-2">
           <div className="flex items-center space-x-6">
-            <span className="flex items-center gap-2"><span className="material-icons text-sm">phone</span> +1 732 444 4645</span>
-            <span className="flex items-center gap-2"><span className="material-icons text-sm">email</span> contact@peer-consulting.com</span>
+            <a href="tel:+17324444645" className="flex items-center gap-2 hover:text-[#4DA3FF] transition-colors">
+              <span className="material-icons text-sm">phone</span> +1 732 444 4645
+            </a>
+            <a href="mailto:contact@peer-consulting.com" className="flex items-center gap-2 hover:text-[#4DA3FF] transition-colors">
+              <span className="material-icons text-sm">email</span> contact@peer-consulting.com
+            </a>
           </div>
           <div className="flex items-center space-x-4">
             <a className="hover:text-gray-300 transition-colors" href="https://www.linkedin.com/company/peer-consulting/posts/?feedView=all">

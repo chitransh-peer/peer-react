@@ -88,7 +88,7 @@ export default function Footer() {
 
         {/* Bottom Section */}
         <div className="border-t border-white/5 pt-8 pb-2 flex flex-col md:flex-row justify-between items-center gap-6 relative">
-          <p className="text-white/40 text-[11px] font-bold tracking-wider uppercase">© 2024 PEER CONSULTING RESOURCES, INC. ALL RIGHTS RESERVED.</p>
+          <p className="text-white/40 text-[11px] font-bold tracking-wider uppercase">© 2026 PEER CONSULTING RESOURCES, INC. ALL RIGHTS RESERVED.</p>
           <div className="flex items-center gap-8 text-[11px] font-bold tracking-wider uppercase text-white/40 md:mr-16">
             <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy</Link>
             <Link to="/terms-of-use" className="hover:text-white transition-colors">Terms</Link>

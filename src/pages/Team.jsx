@@ -102,7 +102,7 @@ const TEAM_MEMBERS = [
     quote: 'Successful relationships are built on listening, transparency, and a relentless focus on customer success.',
     skills: ['Client Relations', 'Strategic IT Staffing', 'Account Management', 'Talent Delivery'],
     email: 'naveen@peer-consulting.com',
-    linkedin: 'https://www.linkedin.com/company/peer-consulting/',
+    linkedin: 'https://www.linkedin.com/in/naveenmreddy/',
   },
   {
     key: 'omer-halilovic',
