@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import organisationsImg from '../assets/logos/Organisations_we_Serve.webp';
+import alliancesImg from '../assets/logos/Technology_alliances.webp';
 
 const cert1Img = new URL('../assets/certifications/1.png', import.meta.url).href;
 const cert2Img = new URL('../assets/certifications/2.png', import.meta.url).href;
@@ -236,11 +238,7 @@ export default function Home() {
                         </div>
                         {/* Stats strip */}
                         <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3">
-                            <div className="flex items-center gap-2">
-                                <span className="text-2xl font-bold text-white">60+</span>
-                                <span className="text-sm text-[#8ba3bd] leading-tight">Professionals</span>
-                            </div>
-                            <div className="w-px h-8 bg-white/20 hidden sm:block"></div>
+
                             <div className="flex items-center gap-2">
                                 <span className="text-2xl font-bold text-white">15</span>
                                 <span className="text-sm text-[#8ba3bd] leading-tight">Years Experience</span>
@@ -516,71 +514,45 @@ export default function Home() {
                 <div className="container mx-auto px-6 lg:px-12 text-center">
                     <h2 className="text-3xl lg:text-5xl font-display font-bold text-white mb-16 tracking-tight">Trusted by Clients, Backed by Partners</h2>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 relative">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative items-start">
 
                         {/*  Clients side  */}
                         <div>
-                            <div className="flex items-center justify-center mb-10">
+                            <div className="flex items-center justify-center mb-8">
                                 <div className="h-px bg-white/20 flex-grow"></div>
-                                <h3 className="text-3xl font-bold text-[#4DA3FF] px-6 font-display">Organizations We Serve</h3>
+                                <h3 className="text-2xl font-bold text-[#4DA3FF] px-6 font-display whitespace-nowrap">Organizations We Serve</h3>
                                 <div className="h-px bg-white/20 flex-grow"></div>
                             </div>
-
-                            <div className="flex flex-wrap justify-center gap-6 items-center text-white/70">
-                                <span className="text-xl font-bold font-serif italic">petco</span>
-                                <span className="text-xl font-black bg-white rounded-full text-black px-2 py-1 leading-none tracking-tighter">gsk</span>
-                                <div className="text-[10px] font-bold text-center leading-tight">NYC<br /><span className="text-[8px] font-normal">Consumer and<br />Worker Protection</span></div>
-                                <div className="text-[10px] font-bold text-center leading-tight">NYC<br /><span className="text-[8px] font-normal">Small Business<br />Services</span></div>
-                                <div className="text-[10px] font-bold text-center leading-tight">NYC<br /><span className="text-[8px] font-normal">Department of<br />Education</span></div>
-                                <span className="text-[10px] font-bold uppercase tracking-widest border border-white/50 px-2 py-1 rounded-full">FDNY</span>
-                                <div className="text-[10px] font-bold text-center leading-tight">DENVER<br /><span className="text-[7px] font-normal uppercase">The Mile High City</span></div>
-                                <span className="text-sm font-bold tracking-tight lowercase text-white">desibasket</span>
-                                <div className="text-[10px] font-bold text-center leading-tight">NYC<br /><span className="text-[7px] font-normal">Housing Preservation &amp; Development</span></div>
-                                <span className="text-xs font-bold tracking-widest">Liquidnet<span className="text-blue-500 text-[10px]">~</span></span>
-                                <span className="text-sm font-serif">galax<span className="font-bold">Solutions</span></span>
-                                <span className="text-lg font-black tracking-tighter">Genmab</span>
-                                <div className="text-[8px] font-bold text-center leading-tight uppercase border border-white/30 p-1">New York City<br />Housing<br />Authority</div>
-                                <span className="text-sm font-semibold flex items-center gap-1"><span className="grid grid-cols-2 gap-[1px] w-2 h-2"><span className="bg-[#f25022]"></span><span className="bg-[#7fba00]"></span><span className="bg-[#00a4ef]"></span><span className="bg-[#ffb900]"></span></span> Microsoft</span>
-                                <span className="text-lg font-serif font-bold tracking-tight">Prudential</span>
-                                <span className="text-sm font-black tracking-tight border-t-[3px] border-white pt-1">NEW YORK CITY DOT</span>
-                                <span className="text-[10px] font-bold border rounded-full px-2 py-1">OATH NYC</span>
-                                <div className="text-[8px] font-bold leading-tight">Department of<br />Youth &amp; Community<br />Development</div>
-                                <span className="text-xs font-black uppercase">City of Anaheim</span>
-                                <span className="text-xs font-black tracking-tighter">NYC<span className="text-[8px]">DOITT</span></span>
+                            <div className="rounded-xl overflow-hidden">
+                                <img
+                                    src={organisationsImg}
+                                    alt="Organizations we serve — Petco, Liquidnet, Microsoft, Prudential, NYC agencies, FDNY, Genmab, Denver, Anaheim and more"
+                                    className="w-full h-auto object-contain"
+                                />
                             </div>
                         </div>
 
                         {/*  Partners side  */}
                         <div>
-                            <div className="flex items-center justify-center mb-10">
+                            <div className="flex items-center justify-center mb-8">
                                 <div className="h-px bg-white/20 flex-grow"></div>
-                                <h3 className="text-3xl font-bold text-[#4DA3FF] px-6 font-display">Technology Alliances</h3>
+                                <h3 className="text-2xl font-bold text-[#4DA3FF] px-6 font-display whitespace-nowrap">Technology Alliances</h3>
                                 <div className="h-px bg-white/20 flex-grow"></div>
                             </div>
-
-                            <div className="flex flex-wrap justify-center gap-8 items-center text-white/80">
-                                <span className="text-xl font-semibold flex items-center gap-2 mb-2"><span className="grid grid-cols-2 gap-[1px] w-4 h-4"><span className="bg-white"></span><span className="bg-white"></span><span className="bg-white"></span><span className="bg-white"></span></span> Microsoft</span>
-                                <span className="text-2xl font-bold tracking-tighter lowercase mb-2">gcom</span>
-                                <div className="text-xl font-black tracking-tight leading-none mb-2">orbit<br /><span className="text-[8px] font-normal uppercase tracking-widest text-white/50">reporting + analytics</span></div>
-                                <span className="text-2xl font-black italic tracking-tighter mb-2">SAIC.</span>
-                                <span className="text-xl font-light mb-2">PruTech</span>
-                                <span className="text-2xl font-serif font-semibold italic mb-2">Spruce</span>
-                                <span className="text-xl font-bold tracking-widest uppercase mb-2 text-gray-300">Archibus</span>
-                                <span className="text-xl font-sans font-bold tracking-tight mb-2">Accela</span>
-                                <div className="mb-2 text-center"><span className="text-xl font-black uppercase tracking-widest">Mythics</span><br /><span className="text-[8px] text-white/50">where your digital modernization takes flight</span></div>
-                                <div className="mb-2 text-center"><span className="text-xl font-black uppercase tracking-tighter">TEKsystems<span className="text-blue-500 font-sans text-xs">®</span></span><br /><span className="text-[8px] italic uppercase text-right block">Own change</span></div>
-                                <span className="text-xl font-black uppercase tracking-tight mb-2">SIMPLIGOV</span>
-                                <span className="text-2xl font-bold lowercase tracking-tighter mb-2">infor</span>
-                                <div className="mb-2 text-center"><span className="text-xl font-bold tracking-widest uppercase text-white/90">RANGAM</span><br /><span className="text-[8px] italic text-white/60">Empathy Drives Innovation®</span></div>
-                                <div className="text-center mb-2"><span className="material-icons text-white/70">hub</span><br /><span className="text-sm font-bold uppercase tracking-widest">Synergy<br />Technologies</span></div>
-                                <div className="text-center mb-2"><span className="text-sm font-serif font-bold">Synergy America, Inc.</span><br /><span className="text-[8px] italic text-white/50">Technology Staffing &amp; Solutions</span></div>
+                            <div className="rounded-xl overflow-hidden">
+                                <img
+                                    src={alliancesImg}
+                                    alt="Technology alliance partners — TEKsystems, Accela, Eptura, Mythics, Rangam, PruTech, Spruce, SimpliGov, Microsoft, Synergy Technologies, GCOM Infotech, Orbit, Infor, Synergy America, SAIC"
+                                    className="w-full h-auto object-contain"
+                                />
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section className="py-20 bg-[#f0f4f8] dark:bg-background-dark">
+
+            <section className="py-20 bg-[#f0f4f8] dark:bg-[#071B34]">
                 <div className="container mx-auto px-6 lg:px-12">
                     <div className="flex flex-col md:flex-row justify-between items-end mb-12">
                         <div className="max-w-2xl">

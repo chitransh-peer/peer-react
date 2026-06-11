@@ -47,24 +47,23 @@ export default function Header() {
       </div>
 
       {/* Main header — shrinks on scroll */}
-      <header className={`bg-white border-b border-slate-200 w-full transition-all duration-300 ${isScrolled ? 'shadow-md' : 'shadow-sm'}`}>
+      <header className={`bg-white dark:bg-[#071B34] border-b border-slate-200 dark:border-[#0B2242] w-full transition-all duration-300 ${isScrolled ? 'shadow-md' : 'shadow-sm'}`}>
         <div className={`container mx-auto px-4 sm:px-6 lg:px-12 flex justify-between items-center overflow-hidden transition-all duration-300 ${isScrolled ? 'h-14' : 'h-20 sm:h-28'}`}>
           <Link className="flex items-center group" to="/">
             <img
               src={logo}
               alt="Peer Consulting Resources Logo"
-              className={`w-auto object-contain transition-all duration-300 group-hover:scale-105 ${isScrolled ? 'h-10' : 'h-28'}`}
-              style={{ mixBlendMode: 'multiply' }}
+              className={`w-auto object-contain transition-all duration-300 group-hover:scale-105 ${isScrolled ? 'h-10' : 'h-28'} dark:brightness-0 dark:invert`}
             />
           </Link>
 
           {!isTrainingPage ? (
             <nav className="hidden md:flex space-x-8 h-full items-center">
-              <NavLink className={({ isActive }) => `nav-link h-full flex items-center font-display font-bold text-base px-1 text-[#071B34] ${isActive ? "active-nav-link" : ""}`} to="/">Home</NavLink>
-              <NavLink className={({ isActive }) => `nav-link h-full flex items-center font-display font-bold text-base px-1 text-[#071B34] ${isActive ? "active-nav-link" : ""}`} to="/about">About</NavLink>
-              <NavLink className={({ isActive }) => `nav-link h-full flex items-center font-display font-bold text-base px-1 text-[#071B34] ${isActive ? "active-nav-link" : ""}`} to="/services">Solutions</NavLink>
-              <NavLink className={({ isActive }) => `nav-link h-full flex items-center font-display font-bold text-base px-1 text-[#071B34] ${isActive ? "active-nav-link" : ""}`} to="/blogs">Blogs</NavLink>
-              <NavLink className={({ isActive }) => `nav-link h-full flex items-center font-display font-bold text-base px-1 text-[#071B34] ${isActive ? "active-nav-link" : ""}`} to="/careers">Career</NavLink>
+              <NavLink className={({ isActive }) => `nav-link h-full flex items-center font-display font-bold text-base px-1 text-[#071B34] dark:text-white ${isActive ? "active-nav-link" : ""}`} to="/">Home</NavLink>
+              <NavLink className={({ isActive }) => `nav-link h-full flex items-center font-display font-bold text-base px-1 text-[#071B34] dark:text-white ${isActive ? "active-nav-link" : ""}`} to="/about">About</NavLink>
+              <NavLink className={({ isActive }) => `nav-link h-full flex items-center font-display font-bold text-base px-1 text-[#071B34] dark:text-white ${isActive ? "active-nav-link" : ""}`} to="/services">Solutions</NavLink>
+              <NavLink className={({ isActive }) => `nav-link h-full flex items-center font-display font-bold text-base px-1 text-[#071B34] dark:text-white ${isActive ? "active-nav-link" : ""}`} to="/blogs">Blogs</NavLink>
+              <NavLink className={({ isActive }) => `nav-link h-full flex items-center font-display font-bold text-base px-1 text-[#071B34] dark:text-white ${isActive ? "active-nav-link" : ""}`} to="/careers">Career</NavLink>
             </nav>
           ) : (
             <nav className="hidden md:flex space-x-8 h-full items-center">
@@ -86,20 +85,20 @@ export default function Header() {
               Contact Us
             </Link>
           </div>
-          <button aria-label="menu" className="md:hidden text-[#071B34] p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <button aria-label="menu" className="md:hidden text-[#071B34] dark:text-white p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <span className="material-icons">menu</span>
           </button>
         </div>
 
         {/* Mobile Menu */}
-        <div className={`${isMenuOpen ? "flex" : "hidden"} md:hidden bg-white border-t border-slate-200 px-6 py-4 flex-col`} id="mobile-menu">
+        <div className={`${isMenuOpen ? "flex" : "hidden"} md:hidden bg-white dark:bg-[#071B34] border-t border-slate-200 dark:border-[#0B2242] px-6 py-4 flex-col`} id="mobile-menu">
           {!isTrainingPage ? (
             <>
-              <NavLink className={({ isActive }) => `nav-link font-display font-bold text-base text-[#071B34] py-2 border-b border-slate-200 ${isActive ? "active-nav-link" : ""}`} to="/" onClick={() => setIsMenuOpen(false)}>Home</NavLink>
-              <NavLink className={({ isActive }) => `nav-link font-display font-bold text-base text-[#071B34] py-2 border-b border-slate-200 ${isActive ? "active-nav-link" : ""}`} to="/about" onClick={() => setIsMenuOpen(false)}>About</NavLink>
-              <NavLink className={({ isActive }) => `nav-link font-display font-bold text-base text-[#071B34] py-2 border-b border-slate-200 ${isActive ? "active-nav-link" : ""}`} to="/services" onClick={() => setIsMenuOpen(false)}>Solutions</NavLink>
-              <NavLink className={({ isActive }) => `nav-link font-display font-bold text-base text-[#071B34] py-2 border-b border-slate-200 ${isActive ? "active-nav-link" : ""}`} to="/blogs" onClick={() => setIsMenuOpen(false)}>Blogs</NavLink>
-              <NavLink className={({ isActive }) => `nav-link font-display font-bold text-base text-[#071B34] py-2 border-b border-slate-200 ${isActive ? "active-nav-link" : ""}`} to="/careers" onClick={() => setIsMenuOpen(false)}>Career</NavLink>
+              <NavLink className={({ isActive }) => `nav-link font-display font-bold text-base text-[#071B34] dark:text-white py-2 border-b border-slate-200 dark:border-white/10 ${isActive ? "active-nav-link" : ""}`} to="/" onClick={() => setIsMenuOpen(false)}>Home</NavLink>
+              <NavLink className={({ isActive }) => `nav-link font-display font-bold text-base text-[#071B34] dark:text-white py-2 border-b border-slate-200 dark:border-white/10 ${isActive ? "active-nav-link" : ""}`} to="/about" onClick={() => setIsMenuOpen(false)}>About</NavLink>
+              <NavLink className={({ isActive }) => `nav-link font-display font-bold text-base text-[#071B34] dark:text-white py-2 border-b border-slate-200 dark:border-white/10 ${isActive ? "active-nav-link" : ""}`} to="/services" onClick={() => setIsMenuOpen(false)}>Solutions</NavLink>
+              <NavLink className={({ isActive }) => `nav-link font-display font-bold text-base text-[#071B34] dark:text-white py-2 border-b border-slate-200 dark:border-white/10 ${isActive ? "active-nav-link" : ""}`} to="/blogs" onClick={() => setIsMenuOpen(false)}>Blogs</NavLink>
+              <NavLink className={({ isActive }) => `nav-link font-display font-bold text-base text-[#071B34] dark:text-white py-2 border-b border-slate-200 dark:border-white/10 ${isActive ? "active-nav-link" : ""}`} to="/careers" onClick={() => setIsMenuOpen(false)}>Career</NavLink>
             </>
           ) : (
             <>

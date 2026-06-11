@@ -69,7 +69,7 @@ const TEAM_MEMBERS = [
     quote: 'Building trust is about delivering superior, resilient work that actively empowers our clients.',
     skills: ['Executive Leadership', 'Strategic Planning', 'Business Modernization', 'Government Relations'],
     email: 'misha@peer-consulting.com',
-    linkedin: 'https://www.linkedin.com/company/peer-consulting/',
+    linkedin: 'https://www.linkedin.com/in/misha7/',
   },
   {
     key: 'vineela-mandava',
@@ -80,7 +80,7 @@ const TEAM_MEMBERS = [
     quote: "Great strategy succeeds when supported by strong operations, scalable processes, and consistent delivery",
     skills: ['Technical Operations', 'Enterprise Systems Architecture', 'Delivery Excellence', 'Agile Engineering'],
     email: 'vineela@peer-consulting.com',
-    linkedin: 'https://www.linkedin.com/company/peer-consulting/',
+    linkedin: 'https://www.linkedin.com/in/vineela-mandava-9391a3127/',
   },
   {
     key: 'vivek-philar',
@@ -91,7 +91,7 @@ const TEAM_MEMBERS = [
     quote: 'Accelerating transformation requires visibility, careful strategic planning, and absolute dedication to delivery.',
     skills: ['Corporate Strategy', 'Client Acquisition', 'Global Delivery Operations', 'Tech Advisory'],
     email: 'vivek@peer-consulting.com',
-    linkedin: 'https://www.linkedin.com/company/peer-consulting/',
+    linkedin: 'https://www.linkedin.com/in/vivek-philar/',
   },
   {
     key: 'naveen-marrivada',
@@ -113,7 +113,7 @@ const TEAM_MEMBERS = [
     quote: 'Aligning day-to-day operations with corporate quality benchmarks ensures reliability and trust.',
     skills: ['Services Management', 'Municipal Delivery', 'Operations Oversight', 'Quality Benchmarks'],
     email: 'omer@peer-consulting.com',
-    linkedin: 'https://www.linkedin.com/company/peer-consulting/',
+    linkedin: 'https://www.linkedin.com/in/omer-halilovic-43259b38/',
   },
   {
     key: 'seema-mittal',
@@ -135,7 +135,7 @@ const TEAM_MEMBERS = [
     quote: 'Operational stability is the backbone of exceptional client delivery.',
     skills: ['Corporate Finance', 'Human Resources', 'Compliance Management', 'Operational Risk Management'],
     email: 'sandeep@peer-consulting.com',
-    linkedin: 'https://www.linkedin.com/company/peer-consulting/',
+    linkedin: 'https://www.linkedin.com/in/sandeep-b-4b2389266/',
   },
 ];
 
@@ -332,12 +332,6 @@ function BioPanel({ member, isOpen, onClose }) {
 
                 {/* Contact */}
                 <div className="pt-7 border-t border-slate-100 dark:border-white/5 flex flex-wrap gap-3 bio-fade-up d5">
-                  <a
-                    href={`mailto:${m.email}`}
-                    className="flex items-center gap-2 px-5 py-3 rounded-xl bg-[#071B34] hover:bg-blue-900 dark:bg-blue-600 dark:hover:bg-blue-500 text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 active:scale-95"
-                  >
-                    <span className="material-icons text-sm">mail</span> Send Email
-                  </a>
                   {m.linkedin && (
                     <a
                       href={m.linkedin}
