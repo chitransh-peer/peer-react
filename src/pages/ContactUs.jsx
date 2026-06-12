@@ -10,6 +10,7 @@ export default function ContactUs() {
     email: '',
     subject: 'IT Staffing Needs',
     message: '',
+    _honeypot: '', // hidden anti-spam field — must stay empty
   });
   const [status, setStatus] = useState('idle'); // 'idle' | 'loading' | 'success' | 'error'
 
@@ -21,11 +22,22 @@ export default function ContactUs() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Honeypot check — bots fill hidden fields, humans don't
+    if (formData._honeypot) {
+      // Silently pretend success so bots don't know they were caught
+      setStatus('success');
+      setTimeout(() => setStatus('idle'), 5000);
+      return;
+    }
+
     setStatus('loading');
     try {
       // ✅ URLSearchParams works with no-cors; JSON body does NOT
       const params = new URLSearchParams();
-      Object.entries(formData).forEach(([key, val]) => params.append(key, val));
+      // Exclude the honeypot field from the actual submission
+      const { _honeypot, ...realData } = formData;
+      Object.entries(realData).forEach(([key, val]) => params.append(key, val));
 
       await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
@@ -35,7 +47,7 @@ export default function ContactUs() {
       });
 
       setStatus('success');
-      setFormData({ firstName: '', lastName: '', email: '', subject: 'IT Staffing Needs', message: '' });
+      setFormData({ firstName: '', lastName: '', email: '', subject: 'IT Staffing Needs', message: '', _honeypot: '' });
       setTimeout(() => setStatus('idle'), 5000);
     } catch (err) {
       console.error('Form submission error:', err);
@@ -81,6 +93,19 @@ export default function ContactUs() {
 
               <div className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg border border-slate-100 dark:border-slate-700">
                 <form className="space-y-6" onSubmit={handleSubmit}>
+                {/* Honeypot — hidden from real users, catches bots */}
+                <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }}>
+                  <label htmlFor="_honeypot">Leave this field empty</label>
+                  <input
+                    type="text"
+                    id="_honeypot"
+                    name="_honeypot"
+                    value={formData._honeypot}
+                    onChange={handleChange}
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="firstName" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">

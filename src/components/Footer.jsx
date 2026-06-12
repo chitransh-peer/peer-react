@@ -75,11 +75,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-4 text-left">
                 <span className="material-icons text-white/50 text-[20px]">phone</span>
-                <span className="text-white/70 text-sm">732-444-4645</span>
+                <a href="tel:+17324444645" className="text-white/70 text-sm hover:text-white transition-colors">732-444-4645</a>
               </li>
               <li className="flex items-center gap-4 text-left">
                 <span className="material-icons text-white/50 text-[20px]">mail</span>
-                <span className="text-white/70 text-sm hover:text-white transition-colors cursor-pointer">solutions@peer-consulting.com</span>
+                <a href="mailto:solutions@peer-consulting.com" className="text-white/70 text-sm hover:text-white transition-colors">solutions@peer-consulting.com</a>
               </li>
             </ul>
           </div>

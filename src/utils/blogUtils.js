@@ -88,12 +88,26 @@ export function parseMarkdown(md) {
     if (inOl) { result.push('</ol>'); inOl = false; }
   };
 
+/** Sanitize hrefs — only allow http, https, mailto */
+const sanitizeHref = (url) => {
+  try {
+    const u = new URL(url);
+    return ['http:', 'https:', 'mailto:'].includes(u.protocol) ? url : '#';
+  } catch {
+    // Relative URLs are fine
+    return url.startsWith('/') ? url : '#';
+  }
+};
+
   const inlineFormat = (text) =>
     text
       .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
       .replace(/\*(.+?)\*/g, '<em>$1</em>')
       .replace(/`(.+?)`/g, '<code class="bg-slate-100 text-[#071B34] px-1.5 py-0.5 rounded text-sm font-mono">$1</code>')
-      .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" class="text-[#4DA3FF] underline hover:text-[#071B34] transition-colors" target="_blank">$1</a>');
+      .replace(/\[(.+?)\]\((.+?)\)/g, (_, linkText, href) => {
+        const safeHref = sanitizeHref(href);
+        return `<a href="${safeHref}" class="text-[#4DA3FF] underline hover:text-[#071B34] transition-colors" target="_blank" rel="noopener noreferrer">${linkText}</a>`;
+      });
 
   for (const rawLine of lines) {
     const line = rawLine;

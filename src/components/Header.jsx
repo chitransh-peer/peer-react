@@ -103,6 +103,7 @@ export default function Header() {
               <NavLink className={({ isActive }) => `nav-link font-display font-bold text-base text-[#071B34] dark:text-white py-2 border-b border-slate-200 dark:border-white/10 ${isActive ? "active-nav-link" : ""}`} to="/services" onClick={() => setIsMenuOpen(false)}>Solutions</NavLink>
               <NavLink className={({ isActive }) => `nav-link font-display font-bold text-base text-[#071B34] dark:text-white py-2 border-b border-slate-200 dark:border-white/10 ${isActive ? "active-nav-link" : ""}`} to="/blogs" onClick={() => setIsMenuOpen(false)}>Blogs</NavLink>
               <NavLink className={({ isActive }) => `nav-link font-display font-bold text-base text-[#071B34] dark:text-white py-2 border-b border-slate-200 dark:border-white/10 ${isActive ? "active-nav-link" : ""}`} to="/careers" onClick={() => setIsMenuOpen(false)}>Career</NavLink>
+              <Link to="/contact" className="premium-cta-button mt-4 px-6 py-2.5 rounded-lg font-bold shadow-sm text-center active:scale-95" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
             </>
           ) : (
             <>
@@ -112,6 +113,7 @@ export default function Header() {
               <NavLink to="/itil-certification" className={({ isActive }) => `nav-link font-bold py-3 border-b border-slate-100 transition-all ${isActive ? "text-[#4DA3FF]" : "text-[#071B34] hover:text-[#4DA3FF]"}`} onClick={() => setIsMenuOpen(false)}>ITIL®</NavLink>
               <NavLink to="/ai-certification" className={({ isActive }) => `nav-link font-bold py-3 border-b border-slate-100 transition-all ${isActive ? "text-[#4DA3FF]" : "text-[#071B34] hover:text-[#4DA3FF]"}`} onClick={() => setIsMenuOpen(false)}>Artificial Intelligence</NavLink>
               <NavLink to="/ppm-agile-certification" className={({ isActive }) => `nav-link font-bold py-3 border-b border-slate-100 transition-all ${isActive ? "text-[#4DA3FF]" : "text-[#071B34] hover:text-[#4DA3FF]"}`} onClick={() => setIsMenuOpen(false)}>PPM & Agile</NavLink>
+              <Link to="/contact" className="premium-cta-button mt-4 px-6 py-2.5 rounded-lg font-bold shadow-sm text-center active:scale-95" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
             </>
           )}
         </div>

@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Python files (not part of the React app)
+venv/
+__pycache__/
+*.pyc
+*.pyo
+main.py
