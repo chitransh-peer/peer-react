@@ -199,20 +199,54 @@ const servicesList = [
 
 export default function Home() {
     const navigate = useNavigate();
-    const heroImages = [
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop", // Abstract tech
-        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop", // Cyber security/tech
-        "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop", // Office / business
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop"  // Digital / hardware
+    const heroSlides = [
+        {
+            // Training & ITIL — instructor-led classroom learning
+            url: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2070&auto=format&fit=crop",
+            scaleDir: "scale-from-left"
+        },
+        {
+            // Software Application Services — developer writing code
+            url: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2070&auto=format&fit=crop",
+            scaleDir: "scale-from-right"
+        },
+        {
+            // ERP & Enterprise Solutions — business analytics dashboard
+            url: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2070&auto=format&fit=crop",
+            scaleDir: "scale-from-left"
+        },
+        {
+            // Cloud & Digital Transformation — global network/cloud concept
+            url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2070&auto=format&fit=crop",
+            scaleDir: "scale-from-right"
+        },
+        {
+            // Quality Assurance — engineer reviewing code on screen
+            url: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop",
+            scaleDir: "scale-from-left"
+        },
+        {
+            // Business Consulting — executive strategy boardroom session
+            url: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2070&auto=format&fit=crop",
+            scaleDir: "scale-from-right"
+        },
     ];
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [prevImageIndex, setPrevImageIndex] = useState(null);
+    const [transitioning, setTransitioning] = useState(false);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
-        }, 4000);
+            setTransitioning(true);
+            setTimeout(() => {
+                setPrevImageIndex(currentImageIndex);
+                setCurrentImageIndex((prev) => (prev + 1) % heroSlides.length);
+                setTransitioning(false);
+            }, 100);
+        }, 4500);
         return () => clearInterval(interval);
-    }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [currentImageIndex]);
 
     return (
         <>
@@ -224,7 +258,7 @@ export default function Home() {
                 <div className="absolute bottom-10 right-1/3 w-64 h-64 bg-teal-400 rounded-full opacity-[0.07] hero-breathe pointer-events-none"></div>
 
                 <div className="container mx-auto px-4 sm:px-6 lg:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <div className="col-span-12 lg:col-span-8">
+                    <div className="col-span-12 lg:col-span-7">
                         <h1 className="text-white text-4xl sm:text-5xl lg:text-[72px] font-display font-bold leading-tight mb-6 tracking-tight">
                             Powering Digital Growth Through Trusted Technology
                         </h1>
@@ -250,22 +284,50 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="hidden lg:block lg:col-span-4 relative h-full min-h-[300px] rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.5)] overflow-hidden border border-white/10"
+                    <div className="hidden lg:block lg:col-span-5 relative h-full min-h-[480px] rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.5)] overflow-hidden border border-white/10"
                         style={{ background: 'linear-gradient(135deg, #0B2242 0%, #071B34 100%)' }}>
-                        {/* soft indigo glow bottom-left, blue glow top-right — matching About page style */}
+                        {/* soft indigo glow bottom-left, blue glow top-right */}
                         <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-blue-400 rounded-full blur-3xl opacity-40 z-10 pointer-events-none"></div>
                         <div className="absolute -top-10 -right-10 w-40 h-40 bg-indigo-400 rounded-full blur-3xl opacity-30 z-10 pointer-events-none"></div>
 
-                        {heroImages.map((img, index) => (
-                            <img
-                                key={index}
-                                alt={`Technology showcase ${index + 1}`}
-                                className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out ${index === currentImageIndex ? "opacity-100 scale-105" : "opacity-0 scale-100"
-                                    }`}
-                                src={img}
-                            />
-                        ))}
-                        <div className="absolute inset-0 bg-gradient-to-bl from-white/10 via-transparent to-[#071B34]/40 z-10 pointer-events-none"></div>
+                        {/* Ken Burns crossfade carousel */}
+                        {heroSlides.map((slide, index) => {
+                            const isActive = index === currentImageIndex;
+                            const isPrev = index === prevImageIndex;
+                            const fromRight = slide.scaleDir === 'scale-from-right';
+                            return (
+                                <div
+                                    key={index}
+                                    className="absolute inset-0"
+                                    style={{
+                                        opacity: isActive ? 1 : isPrev ? 0 : 0,
+                                        zIndex: isActive ? 2 : isPrev ? 1 : 0,
+                                        transition: isActive
+                                            ? 'opacity 1.2s cubic-bezier(0.4,0,0.2,1)'
+                                            : isPrev
+                                            ? 'opacity 1.2s cubic-bezier(0.4,0,0.2,1)'
+                                            : 'none',
+                                    }}
+                                >
+                                    <img
+                                        src={slide.url}
+                                        alt={slide.label}
+                                        className="absolute inset-0 w-full h-full object-cover"
+                                        style={{
+                                            transform: isActive
+                                                ? fromRight ? 'scale(1.08) translateX(-1%)' : 'scale(1.08) translateX(1%)'
+                                                : 'scale(1)',
+                                            transition: isActive
+                                                ? 'transform 5s cubic-bezier(0.25,0.46,0.45,0.94)'
+                                                : 'none',
+                                        }}
+                                    />
+                                </div>
+                            );
+                        })}
+
+                        {/* Dark gradient overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-bl from-white/10 via-transparent to-[#071B34]/50 z-10 pointer-events-none"></div>
                     </div>
                 </div>
             </section>
