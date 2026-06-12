@@ -70,7 +70,7 @@ export default function ItilFoundationBridgeV5() {
 
         <div className="container mx-auto px-6 relative z-10">
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-start">
 
             <div className="lg:col-span-8">
 
@@ -90,7 +90,7 @@ export default function ItilFoundationBridgeV5() {
 
               </div>
 
-              <h1 className="text-4xl md:text-6xl font-black font-display mb-6 tracking-tight leading-tight">
+              <h1 className="text-3xl md:text-4xl md:text-6xl font-black font-display mb-6 tracking-tight leading-tight">
 
                 ITIL Foundation <br />
 
@@ -208,7 +208,7 @@ export default function ItilFoundationBridgeV5() {
 
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
 
             {[
 
@@ -222,7 +222,7 @@ export default function ItilFoundationBridgeV5() {
 
             ].map((item, i) => (
 
-              <div key={i} className="bg-white dark:bg-surface-dark p-8 rounded-2xl shadow-subtle border border-gray-100 dark:border-white/5 hover:border-accent/20 transition-all group">
+              <div key={i} className="bg-white dark:bg-surface-dark p-8 rounded-2xl shadow-subtle border border-gray-100 dark:border-white/5 hover:border-accent/20 transition-all group flex flex-col h-full">
 
                 <div className="w-12 h-12 bg-gray-50 dark:bg-white/5 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:bg-accent/10 transition-colors">{item.icon}</div>
 
@@ -258,7 +258,7 @@ export default function ItilFoundationBridgeV5() {
 
               <div key={i} className="relative group p-8 bg-white dark:bg-surface-dark rounded-3xl shadow-subtle border border-gray-100 dark:border-white/5 hover:border-accent/30 transition-all overflow-hidden flex flex-col items-start text-left">
 
-                 <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                 <div className="relative sm:absolute sm:top-0 sm:right-0 flex justify-center mt-4 sm:mt-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
 
                     <span className="font-display font-black text-6xl italic text-primary dark:text-white">0{i+1}</span>
 
@@ -282,7 +282,7 @@ export default function ItilFoundationBridgeV5() {
 
         {/* Skills Section */}
 
-        <section className="mb-32 bg-[#071B34] rounded-[40px] p-12 text-white relative overflow-hidden group shadow-2xl">
+        <section className="mb-32 bg-[#071B34] rounded-[40px] p-6 md:p-12 text-white relative overflow-hidden group shadow-2xl">
 
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_rgba(232,52,28,0.1)_0%,_transparent_50%)]"></div>
 
@@ -370,7 +370,7 @@ export default function ItilFoundationBridgeV5() {
 
             <div className="md:col-span-4 bg-gradient-to-br from-accent/10 to-transparent border border-accent/20 p-8 rounded-3xl flex flex-col justify-center">
 
-               <div className="text-accent text-4xl mb-4">🌉</div>
+               <div className="text-accent text-3xl md:text-4xl mb-4">🌉</div>
 
                <h3 className="text-xl font-black font-display text-primary dark:text-white mb-2">Bridge Format</h3>
 
@@ -428,13 +428,13 @@ export default function ItilFoundationBridgeV5() {
 
       <footer className="container mx-auto px-6 pb-20">
 
-        <div className="bg-[#0b214a] border border-white/5 text-white rounded-[50px] p-16 text-center shadow-2xl relative overflow-hidden">
+        <div className="bg-[#0b214a] border border-white/5 text-white rounded-2xl p-6 md:p-16 text-center shadow-2xl relative overflow-hidden">
 
           <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-accent/20 rounded-full blur-[100px]"></div>
 
           <div className="relative z-10">
 
-            <h2 className="text-4xl md:text-5xl font-black font-display mb-6 tracking-tighter">Upgrade to <span className="text-accent underline decoration-accent/20 underline-offset-8">V5</span> Foundation</h2>
+            <h2 className="text-3xl md:text-4xl md:text-5xl font-black font-display mb-6 tracking-tighter">Upgrade to <span className="text-accent underline decoration-accent/20 underline-offset-8">V5</span> Foundation</h2>
 
             <p className="text-lg text-blue-100/60 mb-10 max-w-2xl mx-auto">The fastest way to stay certified. Our bridge program includes official exam materials and voucher.</p>
 

@@ -70,7 +70,7 @@ export default function ItilFoundation4() {
 
         <div className="container mx-auto px-6 relative z-10">
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-center">
 
             <div className="lg:col-span-8">
 
@@ -80,7 +80,7 @@ export default function ItilFoundation4() {
 
               </div>
 
-              <h1 className="text-5xl md:text-8xl font-black font-display mb-10 tracking-tight leading-none uppercase">
+              <h1 className="text-[26px] sm:text-4xl md:text-8xl font-black font-display mb-10 tracking-tight leading-none uppercase">
 
                 ITIL® 4 <br />
 
@@ -146,7 +146,7 @@ export default function ItilFoundation4() {
 
         <div className="container mx-auto px-6">
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-16">
 
             {[
 
@@ -160,7 +160,7 @@ export default function ItilFoundation4() {
 
               <div key={i} className="flex flex-col">
 
-                <span className="text-accent font-display font-black text-4xl mb-6 opacity-20 italic">0{i+1}</span>
+                <span className="text-accent font-display font-black text-3xl md:text-4xl mb-6 opacity-20 italic">0{i+1}</span>
 
                 <h3 className="font-display font-black text-lg uppercase tracking-tight mb-4">{item.title}</h3>
 
@@ -184,7 +184,7 @@ export default function ItilFoundation4() {
 
         <section className="mb-32">
 
-           <div className="bg-[#f0f4f8] dark:bg-white/5 rounded-[60px] p-2 flex flex-wrap lg:flex-nowrap gap-2">
+           <div className="bg-[#f0f4f8] dark:bg-white/5 rounded-2xl p-2 flex flex-wrap lg:flex-nowrap gap-2">
 
               {[
 
@@ -198,7 +198,7 @@ export default function ItilFoundation4() {
 
               ].map((item, i) => (
 
-                <div key={i} className="flex-1 min-w-[240px] bg-white dark:bg-surface-dark p-10 rounded-[55px] border border-gray-100 dark:border-white/5 group hover:shadow-2xl hover:-translate-y-2 transition-all">
+                <div key={i} className="flex-1 min-w-[240px] bg-white dark:bg-surface-dark p-10 rounded-[55px] border border-gray-100 dark:border-white/5 group hover:shadow-2xl hover:-translate-y-2 transition-all flex flex-col h-full">
 
                    <div className="w-14 h-14 bg-[#f8fafc] dark:bg-white/5 rounded-2xl flex items-center justify-center text-blue-500 mb-6 group-hover:bg-blue-500 group-hover:text-white transition-all shadow-sm">
 
@@ -226,7 +226,7 @@ export default function ItilFoundation4() {
 
            <div className="flex flex-col md:flex-row items-center gap-10 mb-16 px-4">
 
-              <h2 className="text-4xl font-black font-display tracking-tight uppercase leading-none">Learning <br/> <span className="text-accent underline decoration-accent/10 underline-offset-[8px]">Inventory</span></h2>
+              <h2 className="text-3xl md:text-4xl font-black font-display tracking-tight uppercase leading-none break-words">Learning <br/> <span className="text-accent underline decoration-accent/10 underline-offset-[8px]">Inventory</span></h2>
 
               <p className="max-w-md text-gray-500 dark:text-gray-400 text-sm italic">Comprehensive coverage of the ITIL 4 framework from fundamental concepts to operational practices.</p>
 
@@ -236,7 +236,7 @@ export default function ItilFoundation4() {
 
               {LEARN_POINTS.map((lp, i) => (
 
-                <div key={i} className="bg-white dark:bg-surface-dark p-10 rounded-[40px] shadow-subtle border border-gray-100 dark:border-white/5 hover:border-[#004b87]/30 group transition-all">
+                <div key={i} className="bg-white dark:bg-surface-dark p-10 rounded-[40px] shadow-subtle border border-gray-100 dark:border-white/5 hover:border-[#004b87]/30 group transition-all flex flex-col h-full">
 
                    <div className="text-2xl mb-8 group-hover:rotate-12 transition-transform duration-500">{lp.icon}</div>
 
@@ -258,9 +258,9 @@ export default function ItilFoundation4() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-32 items-stretch">
 
-           <div className="bg-[#071B34] p-16 rounded-[60px] text-white shadow-2xl relative overflow-hidden group">
+           <div className="bg-[#071B34] p-6 md:p-16 rounded-2xl text-white shadow-2xl relative overflow-hidden group">
 
-              <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500/10 rounded-full blur-[100px]"></div>
+              <div className="relative sm:absolute sm:top-0 sm:right-0 flex justify-center mt-4 sm:mt-0 w-80 h-80 bg-blue-500/10 rounded-full blur-[100px]"></div>
 
               <h3 className="text-[10px] font-black text-[#90caf9] uppercase tracking-[4px] mb-12">Capabilites Built</h3>
 
@@ -294,7 +294,7 @@ export default function ItilFoundation4() {
 
 
 
-           <div className="bg-white dark:bg-surface-dark p-16 rounded-[60px] border border-gray-100 dark:border-white/5 flex flex-col items-center justify-center">
+           <div className="bg-white dark:bg-surface-dark p-6 md:p-16 rounded-2xl border border-gray-100 dark:border-white/5 flex flex-col items-center justify-center">
 
               <h3 className="font-display font-black text-2xl uppercase tracking-tighter mb-10 text-center">Unlocks <br/> Opportunities</h3>
 
@@ -322,7 +322,7 @@ export default function ItilFoundation4() {
 
         <section className="mb-12">
 
-           <div className="bg-white dark:bg-surface-dark rounded-[70px] p-20 shadow-subtle border border-gray-100 dark:border-white/5 relative overflow-hidden text-center group">
+           <div className="bg-white dark:bg-surface-dark rounded-[70px] p-6 md:p-20 shadow-subtle border border-gray-100 dark:border-white/5 relative overflow-hidden text-center group">
 
               <div className="inline-block px-8 py-3 bg-red-500/5 text-red-500 border border-red-500/10 rounded-full text-[10px] font-black uppercase tracking-[3px] mb-16 mix-blend-multiply dark:mix-blend-normal">
 
@@ -332,7 +332,7 @@ export default function ItilFoundation4() {
 
               
 
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 max-w-5xl mx-auto mb-20">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12 max-w-5xl mx-auto mb-20">
 
                 {[
 
@@ -350,7 +350,7 @@ export default function ItilFoundation4() {
 
                      <span className={`material-icons text-5xl mb-6 transition-transform group-hover:scale-110 ${item.hit ? 'text-[#004b87]' : 'text-gray-100 dark:text-white/5'}`}>{item.icon}</span>
 
-                     <p className={`font-display font-black text-4xl mb-2 ${item.hit ? 'text-[#004b87]' : 'text-primary dark:text-white'}`}>{item.val}</p>
+                     <p className={`font-display font-black text-3xl md:text-4xl mb-2 ${item.hit ? 'text-[#004b87]' : 'text-primary dark:text-white'}`}>{item.val}</p>
 
                      <p className="text-[11px] font-black text-gray-400 uppercase tracking-widest font-body">{item.lab}</p>
 
@@ -380,17 +380,17 @@ export default function ItilFoundation4() {
 
       <footer className="container mx-auto px-6 pb-20">
 
-         <div className="bg-[#004b87] rounded-[80px] p-24 text-center shadow-2xl relative overflow-hidden group">
+         <div className="bg-[#004b87] rounded-2xl p-8 md:p-24 text-center shadow-2xl relative overflow-hidden group">
 
             <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-primary/30 to-transparent"></div>
 
             <div className="relative z-10">
 
-               <h2 className="text-6xl md:text-9xl font-black font-display text-white mb-10 tracking-tighter uppercase leading-[0.8] italic">Certification <br/> <span className="text-blue-100 not-italic">Starting Point</span></h2>
+               <h2 className="text-[26px] sm:text-4xl md:text-9xl font-black font-display text-white mb-10 tracking-tighter uppercase leading-[0.8] break-words italic">Certification <br/> <span className="text-blue-100 not-italic">Starting Point</span></h2>
 
                <p className="text-blue-100/50 mb-16 max-w-xl mx-auto text-xl font-medium leading-relaxed">Join Peer's flagship ITIL 4 Foundation program and gain the credentials recognized by employers worldwide.</p>
 
-               <Link to="/contact" className="inline-block bg-white hover:bg-accent hover:text-white text-primary font-black py-8 px-24 rounded-[35px] transition-all shadow-xl active:scale-95 text-[18px] uppercase tracking-[6px] ring-12 ring-white/10">
+               <Link to="/contact" className="inline-block bg-white hover:bg-accent hover:text-white text-primary font-black py-8 px-6 md:px-24 rounded-[35px] transition-all shadow-xl active:scale-95 text-[18px] uppercase tracking-widest md:tracking-[6px] ring-12 ring-white/10">
 
                   Book Course
 

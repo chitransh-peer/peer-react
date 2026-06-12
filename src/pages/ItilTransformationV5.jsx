@@ -74,7 +74,7 @@ export default function ItilTransformationV5() {
 
         <div className="container mx-auto px-6 relative z-10">
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-center">
 
             <div className="lg:col-span-8">
 
@@ -84,13 +84,13 @@ export default function ItilTransformationV5() {
 
               </div>
 
-              <h1 className="text-5xl md:text-8xl font-black font-display mb-8 tracking-tighter leading-[0.9] uppercase">
+              <h1 className="text-[26px] sm:text-4xl md:text-8xl font-black font-display mb-8 tracking-tighter leading-[0.9] uppercase">
 
                 ITIL <br />
 
                 <span className="text-accent underline decoration-white/10 underline-offset-[12px] italic">Transformation</span> <br />
 
-                <span className="text-white/40 block text-2xl tracking-[6px] mt-4">(Version 5)</span>
+                <span className="text-white/40 block text-2xl tracking-widest md:tracking-[6px] mt-4">(Version 5)</span>
 
               </h1>
 
@@ -152,7 +152,7 @@ export default function ItilTransformationV5() {
 
         <div className="container mx-auto px-6">
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-16">
 
             {[
 
@@ -164,7 +164,7 @@ export default function ItilTransformationV5() {
 
             ].map((item, i) => (
 
-              <div key={i} className="group">
+              <div key={i} className="group flex flex-col h-full">
 
                 <div className="w-12 h-1 bg-accent mb-8 group-hover:w-20 transition-all duration-500 rounded-full"></div>
 
@@ -204,7 +204,7 @@ export default function ItilTransformationV5() {
 
               ].map((item, i) => (
 
-                <div key={i} className="bg-white dark:bg-surface-dark p-10 rounded-[50px] shadow-subtle border border-gray-100 dark:border-white/5 text-center transition-all hover:scale-105 group">
+                <div key={i} className="bg-white dark:bg-surface-dark p-10 rounded-2xl shadow-subtle border border-gray-100 dark:border-white/5 text-center transition-all hover:scale-105 group flex flex-col h-full">
 
                    <span className="material-icons text-3xl text-accent mb-6 opacity-30 group-hover:opacity-100 transition-opacity">{item.icon}</span>
 
@@ -228,7 +228,7 @@ export default function ItilTransformationV5() {
 
            <div className="flex flex-col md:flex-row items-center gap-6 mb-20">
 
-              <h2 className="text-4xl font-black font-display tracking-tight uppercase">Master the <span className="text-accent underline decoration-accent/10 underline-offset-[10px]">Change</span></h2>
+              <h2 className="text-3xl md:text-4xl font-black font-display tracking-tight uppercase">Master the <span className="text-accent underline decoration-accent/10 underline-offset-[10px]">Change</span></h2>
 
               <div className="h-px flex-grow bg-gradient-to-r from-gray-200 to-transparent dark:from-white/10"></div>
 
@@ -238,9 +238,9 @@ export default function ItilTransformationV5() {
 
               {LEARN_POINTS.map((lp, i) => (
 
-                <div key={i} className="p-10 bg-[#f8fafc] dark:bg-white/5 rounded-[60px] border border-transparent hover:border-accent/30 hover:bg-white dark:hover:bg-surface-dark transition-all group relative overflow-hidden">
+                <div key={i} className="p-10 bg-[#f8fafc] dark:bg-white/5 rounded-2xl border border-transparent hover:border-accent/30 hover:bg-white dark:hover:bg-surface-dark transition-all group relative overflow-hidden flex flex-col h-full">
 
-                   <div className="absolute top-8 right-8 text-7xl font-display font-black text-gray-100 dark:text-white/5 opacity-40 group-hover:opacity-100 transition-opacity">0{i+1}</div>
+                   <div className="relative sm:absolute sm:top-8 sm:right-8 flex justify-center mt-4 sm:mt-0 text-7xl font-display font-black text-gray-100 dark:text-white/5 opacity-40 group-hover:opacity-100 transition-opacity">0{i+1}</div>
 
                    <div className="text-3xl mb-10 relative z-10">{lp.icon}</div>
 
@@ -262,11 +262,11 @@ export default function ItilTransformationV5() {
 
         <section className="mb-32 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
 
-           <div className="lg:col-span-8 bg-[#071B34] p-16 rounded-[70px] text-white relative overflow-hidden group shadow-2xl">
+           <div className="lg:col-span-8 bg-[#071B34] p-6 md:p-16 rounded-[70px] text-white relative overflow-hidden group shadow-2xl">
 
               <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-accent/20 rounded-full blur-[100px] group-hover:bg-accent/40 transition-all duration-1000"></div>
 
-              <h3 className="text-[10px] font-black text-accent-blue uppercase tracking-[6px] mb-12 relative z-10">Transitional Skills</h3>
+              <h3 className="text-[10px] font-black text-accent-blue uppercase tracking-widest md:tracking-[6px] mb-12 relative z-10">Transitional Skills</h3>
 
               <div className="space-y-16 relative z-10">
 
@@ -288,7 +288,7 @@ export default function ItilTransformationV5() {
 
                       <div>
 
-                         <h4 className="font-display font-black text-xl mb-4 tracking-tight uppercase leading-none">{skill.title}</h4>
+                         <h4 className="font-display font-black text-xl mb-4 tracking-tight uppercase leading-none break-words">{skill.title}</h4>
 
                          <p className="text-blue-100/50 text-sm leading-relaxed max-w-lg">{skill.desc}</p>
 
@@ -304,7 +304,7 @@ export default function ItilTransformationV5() {
 
            
 
-           <div className="lg:col-span-4 bg-white dark:bg-surface-dark p-12 rounded-[70px] border border-gray-100 dark:border-white/5 flex flex-col items-center">
+           <div className="lg:col-span-4 bg-white dark:bg-surface-dark p-6 md:p-12 rounded-[70px] border border-gray-100 dark:border-white/5 flex flex-col items-center">
 
               <h3 className="font-display font-black text-2xl uppercase tracking-tighter mb-12 text-center text-primary dark:text-white">Career Paths</h3>
 
@@ -312,7 +312,7 @@ export default function ItilTransformationV5() {
 
                  {CAREER_TAGS.map((tag, i) => (
 
-                   <div key={i} className="flex items-center justify-between p-5 bg-[#f8fafc] dark:bg-white/5 rounded-3xl group/tag border border-transparent hover:border-accent hover:bg-white dark:hover:bg-primary transition-all cursor-default">
+                   <div key={i} className="flex items-center justify-between p-5 bg-[#f8fafc] dark:bg-white/5 rounded-3xl group/tag border border-transparent hover:border-accent hover:bg-white dark:hover:bg-primary transition-all cursor-default flex flex-col h-full">
 
                       <span className="text-[10px] font-black uppercase tracking-widest text-gray-500 group-hover/tag:text-primary dark:group-hover/tag:text-white">{tag}</span>
 
@@ -334,13 +334,13 @@ export default function ItilTransformationV5() {
 
         <section className="mb-12">
 
-           <div className="bg-white dark:bg-surface-dark rounded-[80px] p-20 shadow-subtle border border-gray-100 dark:border-white/5 relative overflow-hidden text-center">
+           <div className="bg-white dark:bg-surface-dark rounded-2xl p-6 md:p-20 shadow-subtle border border-gray-100 dark:border-white/5 relative overflow-hidden text-center">
 
               <div className="flex items-center justify-center gap-6 mb-16">
 
                  <div className="h-px w-20 bg-gray-200"></div>
 
-                 <h2 className="text-4xl font-black font-display uppercase tracking-tight">Exam <span className="text-accent underline decoration-accent/20 underline-offset-[16px]">Board</span></h2>
+                 <h2 className="text-3xl md:text-4xl font-black font-display uppercase tracking-tight">Exam <span className="text-accent underline decoration-accent/20 underline-offset-[16px]">Board</span></h2>
 
                  <div className="h-px w-20 bg-gray-200"></div>
 
@@ -348,7 +348,7 @@ export default function ItilTransformationV5() {
 
               
 
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-16 max-w-5xl mx-auto mb-16">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-16 max-w-5xl mx-auto mb-16">
 
                 {[
 
@@ -366,7 +366,7 @@ export default function ItilTransformationV5() {
 
                      <span className={`material-icons text-5xl mb-6 transition-transform group-hover:scale-110 ${item.hit ? 'text-accent' : 'text-gray-100 dark:text-white/5'}`}>{item.icon}</span>
 
-                     <p className={`font-display font-black text-4xl mb-2 ${item.hit ? 'text-accent' : 'text-primary dark:text-white'}`}>{item.val}</p>
+                     <p className={`font-display font-black text-3xl md:text-4xl mb-2 ${item.hit ? 'text-accent' : 'text-primary dark:text-white'}`}>{item.val}</p>
 
                      <p className="text-[11px] font-black text-gray-400 uppercase tracking-widest">{item.lab}</p>
 
@@ -398,17 +398,17 @@ export default function ItilTransformationV5() {
 
       <footer className="container mx-auto px-6 pb-20">
 
-         <div className="bg-[#071B34] p-24 rounded-[80px] text-center shadow-2xl relative overflow-hidden group">
+         <div className="bg-[#071B34] p-8 md:p-24 rounded-2xl text-center shadow-2xl relative overflow-hidden group">
 
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_rgba(232,52,28,0.15),_transparent_70%)]"></div>
 
             <div className="relative z-10">
 
-               <h2 className="text-6xl md:text-9xl font-black font-display text-white mb-12 tracking-tighter uppercase leading-[0.8] italic">Lead the <br/> <span className="text-accent not-italic">Transformation</span></h2>
+               <h2 className="text-[26px] sm:text-4xl md:text-9xl font-black font-display text-white mb-12 tracking-tighter uppercase leading-[0.8] break-words italic">Lead the <br/> <span className="text-accent not-italic">Transformation</span></h2>
 
                <p className="text-blue-100/50 mb-12 max-w-2xl mx-auto text-xl leading-relaxed">Join Peer's elite Specialist program and drive measurable value at scale in AI-driven environments.</p>
 
-               <Link to="/contact" className="inline-block bg-accent hover:bg-white hover:!text-primary text-white font-black py-8 px-20 rounded-[40px] transition-all shadow-xl active:scale-95 text-[16px] uppercase tracking-[6px] ring-12 ring-white/5">
+               <Link to="/contact" className="inline-block bg-accent hover:bg-white hover:!text-primary text-white font-black py-8 px-20 rounded-[40px] transition-all shadow-xl active:scale-95 text-[16px] uppercase tracking-widest md:tracking-[6px] ring-12 ring-white/5">
 
                   Secure Enrollment
 

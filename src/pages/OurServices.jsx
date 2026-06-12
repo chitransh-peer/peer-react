@@ -32,7 +32,7 @@ export default function OurServices() {
 
   return (
     <>
-      <section className="bg-[#071B34] text-white relative overflow-hidden page-hero">
+      <section className="bg-[#071B34] text-white relative overflow-hidden py-16 md:py-24 lg:py-32 page-hero">
 
         <div className="absolute -right-20 -top-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
         <div className="absolute -left-20 top-20 w-80 h-80 bg-blue-400/10 rounded-full blur-3xl"></div>

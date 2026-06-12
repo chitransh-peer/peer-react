@@ -72,7 +72,7 @@ export default function ItilProductV5() {
 
         <div className="container mx-auto px-6 relative z-10">
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-center">
 
             <div className="lg:col-span-8">
 
@@ -82,7 +82,7 @@ export default function ItilProductV5() {
 
               </div>
 
-              <h1 className="text-5xl md:text-7xl font-black font-display mb-6 tracking-tight leading-tight uppercase">
+              <h1 className="text-[26px] sm:text-4xl md:text-7xl font-black font-display mb-6 tracking-tight leading-tight uppercase">
 
                 ITIL Product <br />
 
@@ -146,7 +146,7 @@ export default function ItilProductV5() {
 
         <div className="container mx-auto px-6">
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
 
             {[
 
@@ -222,7 +222,7 @@ export default function ItilProductV5() {
 
           <div className="flex items-center gap-6 mb-16">
 
-            <h2 className="text-4xl font-black font-display text-primary dark:text-white tracking-tight uppercase">What You Will <span className="text-accent underline decoration-accent/20 underline-offset-8">Learn</span></h2>
+            <h2 className="text-3xl md:text-4xl font-black font-display text-primary dark:text-white tracking-tight uppercase">What You Will <span className="text-accent underline decoration-accent/20 underline-offset-8">Learn</span></h2>
 
             <div className="h-px flex-grow bg-gray-200 dark:bg-white/10"></div>
 
@@ -232,7 +232,7 @@ export default function ItilProductV5() {
 
             {LEARN_POINTS.map((item, i) => (
 
-              <div key={i} className="bg-white dark:bg-surface-dark p-10 rounded-[40px] shadow-subtle border border-gray-100 dark:border-white/5 group hover:border-accent transition-all relative overflow-hidden">
+              <div key={i} className="bg-white dark:bg-surface-dark p-10 rounded-[40px] shadow-subtle border border-gray-100 dark:border-white/5 group hover:border-accent transition-all relative overflow-hidden flex flex-col h-full">
 
                 <div className="absolute -top-4 -right-4 w-20 h-20 bg-accent/5 rounded-full blur-xl group-hover:bg-accent/10 transition-all"></div>
 
@@ -254,9 +254,9 @@ export default function ItilProductV5() {
 
         {/* Skills & Careers */}
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 mb-32">
 
-          <div className="bg-[#071B34] p-12 rounded-[50px] shadow-2xl text-white relative overflow-hidden">
+          <div className="bg-[#071B34] p-6 md:p-12 rounded-2xl shadow-2xl text-white relative overflow-hidden">
 
              <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_left,_rgba(232,52,28,0.1),_transparent_70%)]"></div>
 
@@ -288,7 +288,7 @@ export default function ItilProductV5() {
 
 
 
-          <div className="bg-white dark:bg-surface-dark p-12 rounded-[50px] shadow-subtle border border-gray-100 dark:border-white/5">
+          <div className="bg-white dark:bg-surface-dark p-6 md:p-12 rounded-2xl shadow-subtle border border-gray-100 dark:border-white/5">
 
              <h3 className="text-[10px] font-black text-accent uppercase tracking-[4px] mb-12">Career Opportunities</h3>
 
@@ -316,9 +316,9 @@ export default function ItilProductV5() {
 
         <section className="mb-24">
 
-          <div className="bg-white dark:bg-surface-dark rounded-[60px] p-16 shadow-subtle border border-gray-100 dark:border-white/5 relative overflow-hidden">
+          <div className="bg-white dark:bg-surface-dark rounded-2xl p-6 md:p-16 shadow-subtle border border-gray-100 dark:border-white/5 relative overflow-hidden">
 
-             <div className="absolute top-0 right-0 p-8">
+             <div className="relative sm:absolute sm:top-0 sm:right-0 mt-4 sm:mt-0 p-0 sm:p-8 flex justify-center w-full sm:w-auto">
 
                 <div className="bg-green-500/10 text-green-600 px-6 py-3 rounded-full text-[10px] font-black uppercase tracking-[3px] border border-green-500/20">
 
@@ -334,7 +334,7 @@ export default function ItilProductV5() {
 
              </div>
 
-             <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 max-w-4xl mx-auto">
+             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12 max-w-4xl mx-auto">
 
                {[
 
@@ -348,7 +348,7 @@ export default function ItilProductV5() {
 
                ].map((m, i) => (
 
-                 <div key={i} className="text-center group">
+                 <div key={i} className="text-center group flex flex-col h-full">
 
                     <span className="material-icons text-3xl mb-4 text-gray-200 dark:text-white/10 group-hover:text-accent transition-colors">{m.icon}</span>
 
@@ -380,13 +380,13 @@ export default function ItilProductV5() {
 
       <footer className="container mx-auto px-6 pb-20">
 
-         <div className="bg-accent rounded-[60px] p-20 text-center shadow-2xl relative overflow-hidden group">
+         <div className="bg-accent rounded-2xl p-6 md:p-20 text-center shadow-2xl relative overflow-hidden group">
 
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.1)_1px,_transparent_1px)] bg-[length:32px_32px] opacity-20"></div>
 
             <div className="relative z-10">
 
-               <h2 className="text-5xl md:text-7xl font-black font-display text-white mb-8 tracking-tighter uppercase leading-none">Deliver Value<br/> <span className="text-primary italic">Consistently</span></h2>
+               <h2 className="text-[26px] sm:text-4xl md:text-7xl font-black font-display text-white mb-8 tracking-tighter uppercase leading-none break-words">Deliver Value<br/> <span className="text-primary italic">Consistently</span></h2>
 
                <p className="text-white/80 mb-12 max-w-xl mx-auto text-lg font-medium">Join our expert-led ITIL Product V5 training and master the full lifecycle of digital product management.</p>
 

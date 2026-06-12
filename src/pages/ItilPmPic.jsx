@@ -76,7 +76,7 @@ export default function ItilPmPic() {
 
         <div className="container mx-auto px-6 relative z-10">
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-center">
 
             <div className="lg:col-span-8">
 
@@ -86,7 +86,7 @@ export default function ItilPmPic() {
 
               </div>
 
-              <h1 className="text-4xl md:text-5xl font-black font-display mb-2 tracking-tight leading-tight uppercase text-white/90">
+              <h1 className="text-3xl md:text-4xl md:text-5xl font-black font-display mb-2 tracking-tight leading-tight uppercase text-white/90">
 
                 <span className="text-accent underline decoration-white/20 underline-offset-8 block text-lg tracking-[4px] mb-4 uppercase not-italic">Practice Manager</span>
 
@@ -204,7 +204,7 @@ export default function ItilPmPic() {
 
             ].map((item, i) => (
 
-              <div key={i} className="bg-white dark:bg-surface-dark p-8 rounded-[32px] shadow-subtle border border-gray-100 dark:border-white/5 text-center group hover:bg-primary transition-all duration-500">
+              <div key={i} className="bg-white dark:bg-surface-dark p-8 rounded-[32px] shadow-subtle border border-gray-100 dark:border-white/5 text-center group hover:bg-primary transition-all duration-500 flex flex-col h-full">
 
                 <span className="material-icons text-accent mb-4 text-3xl group-hover:text-white transition-colors">{item.icon}</span>
 
@@ -228,7 +228,7 @@ export default function ItilPmPic() {
 
            <div className="flex flex-col md:flex-row items-baseline gap-6 mb-16">
 
-              <h2 className="text-4xl font-black font-display text-primary dark:text-white tracking-tight uppercase">Learning <span className="text-accent">Journey</span></h2>
+              <h2 className="text-3xl md:text-4xl font-black font-display text-primary dark:text-white tracking-tight uppercase">Learning <span className="text-accent">Journey</span></h2>
 
               <div className="h-px flex-grow bg-gradient-to-r from-gray-200 to-transparent dark:from-white/10"></div>
 
@@ -238,7 +238,7 @@ export default function ItilPmPic() {
 
              {LEARN_POINTS.map((item, i) => (
 
-               <div key={i} className="relative p-1 bg-gradient-to-b from-gray-100 to-transparent dark:from-white/5 rounded-[40px] hover:from-accent hover:to-accent/50 transition-all duration-500">
+               <div key={i} className="relative p-1 bg-gradient-to-b from-gray-100 to-transparent dark:from-white/5 rounded-[40px] hover:from-accent hover:to-accent/50 transition-all duration-500 flex flex-col h-full">
 
                   <div className="bg-white dark:bg-surface-dark p-8 rounded-[39px] h-full flex flex-col group">
 
@@ -266,7 +266,7 @@ export default function ItilPmPic() {
 
            {/* Skills */}
 
-           <div className="lg:col-span-7 bg-[#071B34] p-12 rounded-[50px] shadow-2xl relative overflow-hidden group">
+           <div className="lg:col-span-7 bg-[#071B34] p-6 md:p-12 rounded-2xl shadow-2xl relative overflow-hidden group">
 
               <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-accent/20 rounded-full blur-[100px] group-hover:bg-accent/40 transition-all duration-700"></div>
 
@@ -302,7 +302,7 @@ export default function ItilPmPic() {
 
            <div className="lg:col-span-5 flex flex-col gap-8">
 
-              <div className="bg-white dark:bg-surface-dark p-10 rounded-[50px] shadow-subtle border border-gray-100 dark:border-white/5 flex-grow">
+              <div className="bg-white dark:bg-surface-dark p-10 rounded-2xl shadow-subtle border border-gray-100 dark:border-white/5 flex-grow">
 
                  <h3 className="text-black dark:text-white font-black text-2xl font-display mb-8">Career Paths</h3>
 
@@ -310,7 +310,7 @@ export default function ItilPmPic() {
 
                    {CAREER_TAGS.map((tag, i) => (
 
-                     <div key={i} className="flex items-center justify-between p-4 bg-gray-50 dark:bg-white/5 rounded-2xl hover:bg-accent/5 hover:border-accent/20 border border-transparent transition-all cursor-default">
+                     <div key={i} className="flex items-center justify-between p-4 bg-gray-50 dark:bg-white/5 rounded-2xl hover:bg-accent/5 hover:border-accent/20 border border-transparent transition-all cursor-default flex flex-col h-full">
 
                         <span className="text-[10px] font-black uppercase tracking-wider text-primary dark:text-white">{tag}</span>
 
@@ -334,11 +334,11 @@ export default function ItilPmPic() {
 
         <section className="mb-12">
 
-            <div className="bg-[#f8fafc] dark:bg-surface-dark/50 border border-gray-100 dark:border-white/5 rounded-[50px] p-12 text-center shadow-inner">
+            <div className="bg-[#f8fafc] dark:bg-surface-dark/50 border border-gray-100 dark:border-white/5 rounded-2xl p-6 md:p-12 text-center shadow-inner">
 
                <h2 className="text-3xl font-black font-display text-primary dark:text-white mb-16 uppercase tracking-widest">Exam <span className="text-accent underline decoration-accent/20 underline-offset-8">Metrics</span></h2>
 
-               <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 max-w-4xl mx-auto">
+               <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12 max-w-4xl mx-auto">
 
                  {[
 
@@ -354,7 +354,7 @@ export default function ItilPmPic() {
 
                    <div key={i} className="flex flex-col items-center">
 
-                      <span className={`material-icons text-4xl mb-4 ${item.hit ? 'text-accent animate-bounce' : 'text-primary/20 dark:text-white/10'}`}>{item.icon}</span>
+                      <span className={`material-icons text-3xl md:text-4xl mb-4 ${item.hit ? 'text-accent animate-bounce' : 'text-primary/20 dark:text-white/10'}`}>{item.icon}</span>
 
                       <p className={`font-display font-black text-2xl mb-1 ${item.hit ? 'text-accent' : 'text-primary dark:text-white'}`}>{item.val}</p>
 
@@ -384,13 +384,13 @@ export default function ItilPmPic() {
 
       <footer className="container mx-auto px-6 pb-20">
 
-         <div className="bg-primary p-20 rounded-[60px] text-center shadow-2xl relative overflow-hidden">
+         <div className="bg-primary p-6 md:p-20 rounded-2xl text-center shadow-2xl relative overflow-hidden">
 
-            <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_rgba(232,52,28,0.15),_transparent_70%)]"></div>
+            <div className="relative sm:absolute sm:top-0 sm:right-0 flex justify-center mt-4 sm:mt-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_rgba(232,52,28,0.15),_transparent_70%)]"></div>
 
             <div className="relative z-10">
 
-               <h2 className="text-5xl md:text-7xl font-black font-display text-white mb-8 tracking-tighter uppercase leading-none">Plan for <br/> <span className="text-accent underline decoration-white/10 underline-offset-8 italic">Success</span></h2>
+               <h2 className="text-[26px] sm:text-4xl md:text-7xl font-black font-display text-white mb-8 tracking-tighter uppercase leading-none break-words">Plan for <br/> <span className="text-accent underline decoration-white/10 underline-offset-8 italic">Success</span></h2>
 
                <p className="text-blue-100/50 mb-12 max-w-xl mx-auto text-lg">Master the practices for planning changes, deploying services, and maintaining control with Peer's expert-led module.</p>
 

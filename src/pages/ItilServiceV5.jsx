@@ -72,7 +72,7 @@ export default function ItilServiceV5() {
 
         <div className="container mx-auto px-6 relative z-10">
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-center">
 
             <div className="lg:col-span-8">
 
@@ -82,7 +82,7 @@ export default function ItilServiceV5() {
 
               </div>
 
-              <h1 className="text-5xl md:text-7xl font-black font-display mb-6 tracking-tight leading-tight uppercase">
+              <h1 className="text-[26px] sm:text-4xl md:text-7xl font-black font-display mb-6 tracking-tight leading-tight uppercase">
 
                 ITIL Service <br />
 
@@ -150,7 +150,7 @@ export default function ItilServiceV5() {
 
          <div className="container mx-auto px-6">
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 divide-y md:divide-y-0 md:divide-x divide-gray-100 dark:divide-white/5">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12 divide-y md:divide-y-0 md:divide-x divide-gray-100 dark:divide-white/5">
 
                {[
 
@@ -162,7 +162,7 @@ export default function ItilServiceV5() {
 
                ].map((item, i) => (
 
-                 <div key={i} className="py-4 md:px-8 first:pl-0">
+                 <div key={i} className="py-4 md:px-8 first:pl-0 flex flex-col h-full">
 
                     <h3 className="font-display font-black text-sm uppercase tracking-wider mb-2 text-primary dark:text-white">{item.q}</h3>
 
@@ -200,7 +200,7 @@ export default function ItilServiceV5() {
 
               ].map((item, i) => (
 
-                <div key={i} className="bg-[#f8fafc] dark:bg-white/5 p-10 rounded-[40px] border border-gray-100 dark:border-white/5 group hover:shadow-xl hover:border-accent/20 transition-all text-center">
+                <div key={i} className="bg-[#f8fafc] dark:bg-white/5 p-10 rounded-[40px] border border-gray-100 dark:border-white/5 group hover:shadow-xl hover:border-accent/20 transition-all text-center flex flex-col h-full">
 
                    <span className="material-icons text-3xl text-accent mb-6 opacity-40 group-hover:opacity-100 transition-opacity">{item.icon}</span>
 
@@ -224,7 +224,7 @@ export default function ItilServiceV5() {
 
            <div className="text-center mb-16">
 
-              <h2 className="text-4xl font-black font-display tracking-tight uppercase">What You Will <span className="text-accent underline decoration-accent/10 underline-offset-8">Master</span></h2>
+              <h2 className="text-3xl md:text-4xl font-black font-display tracking-tight uppercase">What You Will <span className="text-accent underline decoration-accent/10 underline-offset-8">Master</span></h2>
 
            </div>
 
@@ -232,7 +232,7 @@ export default function ItilServiceV5() {
 
               {LEARN_POINTS.map((lp, i) => (
 
-                <div key={i} className="bg-white dark:bg-surface-dark p-10 rounded-[48px] shadow-subtle border border-gray-100 dark:border-white/5 hover:scale-[1.02] transition-transform group">
+                <div key={i} className="bg-white dark:bg-surface-dark p-10 rounded-[48px] shadow-subtle border border-gray-100 dark:border-white/5 hover:scale-[1.02] transition-transform group flex flex-col h-full">
 
                    <div className="w-14 h-14 bg-gray-50 dark:bg-white/5 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-accent group-hover:text-white transition-all shadow-sm">{lp.icon}</div>
 
@@ -254,11 +254,11 @@ export default function ItilServiceV5() {
 
         <section className="mb-32 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
 
-           <div className="lg:col-span-8 bg-[#071B34] p-16 rounded-[60px] text-white relative overflow-hidden">
+           <div className="lg:col-span-8 bg-[#071B34] p-6 md:p-16 rounded-2xl text-white relative overflow-hidden">
 
-              <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-[120px] -mr-48 -mt-48"></div>
+              <div className="relative sm:absolute sm:top-0 sm:right-0 flex justify-center mt-4 sm:mt-0 w-96 h-96 bg-accent/20 rounded-full blur-[120px] -mr-48 -mt-48"></div>
 
-              <h3 className="text-[10px] font-black text-accent-blue uppercase tracking-[5px] mb-12">Specialist Skills</h3>
+              <h3 className="text-[10px] font-black text-accent-blue uppercase tracking-widest md:tracking-[5px] mb-12">Specialist Skills</h3>
 
               <div className="space-y-12">
 
@@ -284,7 +284,7 @@ export default function ItilServiceV5() {
 
            </div>
 
-           <div className="lg:col-span-4 bg-white dark:bg-surface-dark p-12 rounded-[60px] border border-gray-100 dark:border-white/5 flex flex-col justify-center">
+           <div className="lg:col-span-4 bg-white dark:bg-surface-dark p-6 md:p-12 rounded-2xl border border-gray-100 dark:border-white/5 flex flex-col justify-center">
 
               <h3 className="font-display font-black text-2xl uppercase tracking-tighter mb-10 text-center">Unlocked<br/>Roles</h3>
 
@@ -312,9 +312,9 @@ export default function ItilServiceV5() {
 
         <section className="mb-12">
 
-           <div className="bg-[#f8fafc] dark:bg-white/5 rounded-[60px] p-20 shadow-inner relative overflow-hidden group">
+           <div className="bg-[#f8fafc] dark:bg-white/5 rounded-2xl p-6 md:p-20 shadow-inner relative overflow-hidden group">
 
-              <div className="absolute right-12 top-12 flex items-center gap-3 bg-white dark:bg-surface-dark px-6 py-3 rounded-full border border-gray-200 dark:border-white/10 shadow-sm transition-transform group-hover:-translate-y-2">
+              <div className="relative sm:absolute sm:right-12 sm:top-12 flex justify-center mt-4 sm:mt-0 flex items-center gap-3 bg-white dark:bg-surface-dark px-6 py-3 rounded-full border border-gray-200 dark:border-white/10 shadow-sm transition-transform group-hover:-translate-y-2">
 
                  <span className="material-icons text-green-500 text-sm">menu_book</span>
 
@@ -330,7 +330,7 @@ export default function ItilServiceV5() {
 
               </div>
 
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 max-w-4xl mx-auto">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12 max-w-4xl mx-auto">
 
                 {[
 
@@ -346,7 +346,7 @@ export default function ItilServiceV5() {
 
                   <div key={i} className="flex flex-col items-center">
 
-                     <span className={`material-icons text-4xl mb-6 ${item.best ? 'text-accent' : 'text-gray-200 dark:text-white/10'}`}>{item.icon}</span>
+                     <span className={`material-icons text-3xl md:text-4xl mb-6 ${item.best ? 'text-accent' : 'text-gray-200 dark:text-white/10'}`}>{item.icon}</span>
 
                      <p className={`font-display font-black text-3xl mb-1 ${item.best ? 'text-accent' : 'text-primary dark:text-white'}`}>{item.val}</p>
 
@@ -376,13 +376,13 @@ export default function ItilServiceV5() {
 
       <footer className="container mx-auto px-6 pb-20">
 
-         <div className="bg-primary p-24 rounded-[70px] text-center shadow-2xl relative overflow-hidden group">
+         <div className="bg-primary p-8 md:p-24 rounded-[70px] text-center shadow-2xl relative overflow-hidden group">
 
-            <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-accent/20 to-transparent"></div>
+            <div className="relative sm:absolute sm:top-0 sm:right-0 flex justify-center mt-4 sm:mt-0 w-1/2 h-full bg-gradient-to-l from-accent/20 to-transparent"></div>
 
             <div className="relative z-10">
 
-               <h2 className="text-5xl md:text-8xl font-black font-display text-white mb-10 tracking-tighter uppercase leading-none italic">Elevate Your<br/> <span className="text-accent not-italic">Service Strategy</span></h2>
+               <h2 className="text-[26px] sm:text-4xl md:text-8xl font-black font-display text-white mb-10 tracking-tighter uppercase leading-none break-words italic">Elevate Your<br/> <span className="text-accent not-italic">Service Strategy</span></h2>
 
                <p className="text-blue-100/60 mb-12 max-w-xl mx-auto text-lg leading-relaxed">Join Peer's elite Specialist program and master the mechanics of world-class digital services.</p>
 

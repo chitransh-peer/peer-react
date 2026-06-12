@@ -236,7 +236,7 @@ export default function ItilOverview() {
 
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-black font-display mb-6 tracking-tight">
+          <h1 className="text-3xl md:text-4xl md:text-6xl font-black font-display mb-6 tracking-tight">
 
             IT Training & <span className="text-accent">Certifications</span>
 
@@ -308,7 +308,7 @@ export default function ItilOverview() {
 
             <p className="text-accent font-bold uppercase tracking-widest text-sm mb-3">Our Training Portfolio</p>
 
-            <h2 className="text-3xl md:text-5xl font-black font-display text-primary dark:text-white mb-6 tracking-tight">
+            <h2 className="text-[26px] sm:text-4xl md:text-5xl font-black font-display text-primary dark:text-white mb-6 tracking-tight">
 
               Three Certification Families
 
@@ -330,19 +330,19 @@ export default function ItilOverview() {
 
             {FAMILIES.map((fam) => (
 
-              <div key={fam.cls} className="bg-white dark:bg-surface-dark rounded-2xl overflow-hidden shadow-subtle border border-gray-100 dark:border-white/5 group hover:-translate-y-2 transition-all duration-300">
+              <div key={fam.cls} className="bg-white dark:bg-surface-dark rounded-2xl overflow-hidden shadow-subtle border border-gray-100 dark:border-white/5 group hover:-translate-y-2 transition-all duration-300 flex flex-col h-full">
 
                 <div className={`p-8 ${fam.bg} dark:bg-opacity-10 border-b-4 ${fam.color}`}>
 
-                  <span className={`material-icons text-4xl mb-4 ${fam.text}`}>{fam.icon}</span>
+                  <span className={`material-icons text-3xl md:text-4xl mb-4 ${fam.text}`}>{fam.icon}</span>
 
                   <h3 className="text-2xl font-black font-display text-primary dark:text-white mb-2">{fam.title}</h3>
 
-                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{fam.subtitle}</p>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed flex-grow">{fam.subtitle}</p>
 
                 </div>
 
-                <div className="p-8">
+                <div className="p-8 flex flex-col flex-grow">
 
                   <ul className="space-y-4 mb-8 text-sm font-medium text-gray-700 dark:text-gray-300">
 
@@ -390,7 +390,7 @@ export default function ItilOverview() {
 
             <p className="text-accent font-bold uppercase tracking-widest text-sm mb-3">Why Trust Us</p>
 
-            <h2 className="text-3xl md:text-5xl font-black font-display text-primary dark:text-white mb-6 tracking-tight">
+            <h2 className="text-[26px] sm:text-4xl md:text-5xl font-black font-display text-primary dark:text-white mb-6 tracking-tight">
 
               Official PeopleCert Training Partner
 
@@ -414,13 +414,13 @@ export default function ItilOverview() {
 
             {ACC_CARDS.map((card, i) => (
 
-              <div key={i} className="bg-primary-light dark:bg-surface-dark p-8 rounded-2xl border-t-8 border-accent shadow-subtle">
+              <div key={i} className="bg-primary-light dark:bg-surface-dark p-8 rounded-2xl border-t-8 border-accent shadow-subtle flex flex-col h-full">
 
                 <h3 className="text-xl font-black font-display text-primary dark:text-white mb-4">{card.title}</h3>
 
-                <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 leading-relaxed">{card.desc}</p>
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 leading-relaxed flex-grow">{card.desc}</p>
 
-                <div className="space-y-2 mb-6">
+                <div className="space-y-2 mb-6 flex-grow">
 
                   <p className="text-sm font-medium"><span className="text-gray-500">Registry ID:</span> {card.registryId}</p>
 
@@ -456,7 +456,7 @@ export default function ItilOverview() {
 
           <p className="text-accent font-bold uppercase tracking-widest text-sm mb-3">The Peer Advantage</p>
 
-          <h2 className="text-3xl md:text-5xl font-black font-display text-primary dark:text-white mb-16 tracking-tight">
+          <h2 className="text-[26px] sm:text-4xl md:text-5xl font-black font-display text-primary dark:text-white mb-16 tracking-tight">
 
             Why Learn with Peer Consulting?
 
@@ -464,17 +464,17 @@ export default function ItilOverview() {
 
 
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
 
             {WHY_ITEMS.map((item, i) => (
 
-              <div key={i} className="bg-white dark:bg-surface-dark p-8 rounded-2xl shadow-subtle border border-gray-100 dark:border-white/5 text-center">
+              <div key={i} className="bg-white dark:bg-surface-dark p-8 rounded-2xl shadow-subtle border border-gray-100 dark:border-white/5 text-center flex flex-col h-full">
 
-                <span className="material-icons text-4xl text-accent mb-6 leading-none">{item.icon}</span>
+                <span className="material-icons text-3xl md:text-4xl text-accent mb-6 leading-none">{item.icon}</span>
 
                 <h4 className="text-lg font-black font-display text-primary dark:text-white mb-3">{item.title}</h4>
 
-                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed flex-grow">{item.desc}</p>
 
               </div>
 

@@ -360,7 +360,7 @@ export default function AiTraining() {
 
            {/* Animated blobs for AI theme */}
 
-           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#6a1b9a]/20 rounded-full blur-[120px] -mr-48 -mt-48 animate-pulse"></div>
+           <div className="relative sm:absolute sm:top-0 sm:right-0 flex justify-center mt-4 sm:mt-0 w-[500px] h-[500px] bg-[#6a1b9a]/20 rounded-full blur-[120px] -mr-48 -mt-48 animate-pulse"></div>
 
            <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-accent/20 rounded-full blur-[100px] -ml-24 -mb-24 animate-pulse" style={{animationDelay: '1s'}}></div>
 
@@ -370,7 +370,7 @@ export default function AiTraining() {
 
         <div className="container mx-auto px-6 lg:px-12 relative z-10 w-full">
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-16 items-center">
 
             <div className="lg:col-span-8">
 
@@ -380,7 +380,7 @@ export default function AiTraining() {
 
               </div>
 
-              <h1 className="text-5xl md:text-7xl font-black font-display mb-8 tracking-tighter leading-[0.95]">
+              <h1 className="text-[26px] sm:text-4xl md:text-7xl font-black font-display mb-8 tracking-tighter leading-[0.95]">
 
                 AI for <span className="text-[#ce93d8] italic">Business</span><br />
 
@@ -530,7 +530,7 @@ export default function AiTraining() {
 
                 <p className="text-[#6a1b9a] font-black uppercase tracking-[0.3em] text-[10px] mb-3">Mastering the future</p>
 
-                <h2 className="text-3xl md:text-5xl font-black font-display text-primary dark:text-white mb-6 tracking-tight">Full <span className="text-gray-400">Curriculum</span></h2>
+                <h2 className="text-[26px] sm:text-4xl md:text-5xl font-black font-display text-primary dark:text-white mb-6 tracking-tight">Full <span className="text-gray-400">Curriculum</span></h2>
 
                 <p className="text-gray-600 dark:text-gray-400 max-w-2xl text-sm leading-relaxed">
 
@@ -606,7 +606,7 @@ export default function AiTraining() {
 
                   {DETAILS.map((row, i) => (
 
-                    <div key={i} className="flex items-center justify-between py-3">
+                    <div key={i} className="flex items-center justify-between py-3 flex flex-col h-full">
 
                       <div className="flex items-center gap-3">
 

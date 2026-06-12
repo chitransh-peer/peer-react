@@ -72,7 +72,7 @@ export default function ItilStrategyV5() {
 
         <div className="container mx-auto px-6 relative z-10">
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-center">
 
             <div className="lg:col-span-8">
 
@@ -82,7 +82,7 @@ export default function ItilStrategyV5() {
 
               </div>
 
-              <h1 className="text-5xl md:text-8xl font-black font-display mb-6 tracking-tighter leading-none uppercase">
+              <h1 className="text-[26px] sm:text-4xl md:text-8xl font-black font-display mb-6 tracking-tighter leading-none uppercase">
 
                 ITIL Strategy <br />
 
@@ -148,7 +148,7 @@ export default function ItilStrategyV5() {
 
          <div className="container mx-auto px-6">
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
 
                {[
 
@@ -198,9 +198,9 @@ export default function ItilStrategyV5() {
 
               ].map((item, i) => (
 
-                <div key={i} className="bg-white dark:bg-surface-dark p-8 rounded-[40px] shadow-subtle border border-gray-100 dark:border-white/5 text-center group hover:bg-primary transition-all duration-500">
+                <div key={i} className="bg-white dark:bg-surface-dark p-8 rounded-[40px] shadow-subtle border border-gray-100 dark:border-white/5 text-center group hover:bg-primary transition-all duration-500 flex flex-col h-full">
 
-                   <span className="material-icons-outlined text-4xl text-accent mb-6 group-hover:text-white transition-colors">{item.icon}</span>
+                   <span className="material-icons-outlined text-3xl md:text-4xl text-accent mb-6 group-hover:text-white transition-colors">{item.icon}</span>
 
                    <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1 group-hover:text-white/40">{item.label}</p>
 
@@ -222,7 +222,7 @@ export default function ItilStrategyV5() {
 
            <div className="inline-flex items-center gap-4 mb-16">
 
-              <h2 className="text-4xl font-black font-display tracking-tight uppercase">Strategic <span className="text-accent underline decoration-accent/10 underline-offset-8">Outcomes</span></h2>
+              <h2 className="text-3xl md:text-4xl font-black font-display tracking-tight uppercase">Strategic <span className="text-accent underline decoration-accent/10 underline-offset-8">Outcomes</span></h2>
 
               <div className="h-0.5 w-32 bg-accent/20"></div>
 
@@ -232,9 +232,9 @@ export default function ItilStrategyV5() {
 
               {LEARN_POINTS.map((lp, i) => (
 
-                <div key={i} className="relative group p-10 bg-white dark:bg-surface-dark rounded-[50px] shadow-subtle border border-gray-100 dark:border-white/5 hover:border-accent/40 transition-all">
+                <div key={i} className="relative group p-10 bg-white dark:bg-surface-dark rounded-2xl shadow-subtle border border-gray-100 dark:border-white/5 hover:border-accent/40 transition-all flex flex-col h-full">
 
-                   <div className="absolute top-8 right-8 text-6xl font-display font-black text-gray-50 dark:text-white/5 opacity-50 italic group-hover:text-accent/5 transition-colors">0{i+1}</div>
+                   <div className="relative sm:absolute sm:top-8 sm:right-8 flex justify-center mt-4 sm:mt-0 text-6xl font-display font-black text-gray-50 dark:text-white/5 opacity-50 italic group-hover:text-accent/5 transition-colors">0{i+1}</div>
 
                    <div className="text-3xl mb-8 relative z-10">{lp.icon}</div>
 
@@ -256,7 +256,7 @@ export default function ItilStrategyV5() {
 
         <section className="mb-32">
 
-           <div className="bg-[#0d1b2a] p-16 rounded-[70px] shadow-2xl relative overflow-hidden">
+           <div className="bg-[#0d1b2a] p-6 md:p-16 rounded-[70px] shadow-2xl relative overflow-hidden">
 
               <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-accent/10 rounded-full blur-[120px]"></div>
 
@@ -264,7 +264,7 @@ export default function ItilStrategyV5() {
 
                  <div>
 
-                    <h3 className="text-[11px] font-black text-accent-blue uppercase tracking-[5px] mb-12">Core Skillsets</h3>
+                    <h3 className="text-[11px] font-black text-accent-blue uppercase tracking-widest md:tracking-[5px] mb-12">Core Skillsets</h3>
 
                     <div className="space-y-12">
 
@@ -292,7 +292,7 @@ export default function ItilStrategyV5() {
 
                  
 
-                 <div className="bg-white/5 backdrop-blur-xl p-12 rounded-[50px] border border-white/10">
+                 <div className="bg-white/5 backdrop-blur-xl p-6 md:p-12 rounded-2xl border border-white/10">
 
                     <h4 className="font-display font-black text-2xl text-white mb-10 text-center uppercase tracking-tighter italic">Leadership Roles</h4>
 
@@ -324,15 +324,15 @@ export default function ItilStrategyV5() {
 
         <section className="mb-12">
 
-           <div className="bg-white dark:bg-surface-dark rounded-[60px] p-20 shadow-subtle border border-gray-100 dark:border-white/5 relative overflow-hidden group">
+           <div className="bg-white dark:bg-surface-dark rounded-2xl p-6 md:p-20 shadow-subtle border border-gray-100 dark:border-white/5 relative overflow-hidden group">
 
-              <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-[80px] -mr-32 -mt-32"></div>
+              <div className="relative sm:absolute sm:top-0 sm:right-0 flex justify-center mt-4 sm:mt-0 w-64 h-64 bg-accent/5 rounded-full blur-[80px] -mr-32 -mt-32"></div>
 
               <div className="flex flex-wrap justify-center items-center gap-4 mb-20">
 
                  <div className="h-0.5 w-12 bg-gray-200"></div>
 
-                 <h2 className="text-4xl font-black font-display uppercase tracking-tighter">Exam <span className="text-accent underline decoration-accent/20 underline-offset-[14px]">Metrics</span></h2>
+                 <h2 className="text-3xl md:text-4xl font-black font-display uppercase tracking-tighter">Exam <span className="text-accent underline decoration-accent/20 underline-offset-[14px]">Metrics</span></h2>
 
                  <div className="h-0.5 w-12 bg-gray-200"></div>
 
@@ -340,7 +340,7 @@ export default function ItilStrategyV5() {
 
               
 
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-16 max-w-5xl mx-auto mb-20">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-16 max-w-5xl mx-auto mb-20">
 
                 {[
 
@@ -356,7 +356,7 @@ export default function ItilStrategyV5() {
 
                   <div key={i} className="flex flex-col items-center">
 
-                     <span className={`material-icons text-4xl mb-6 ${item.star ? 'text-accent' : 'text-gray-300 dark:text-white/10'}`}>{item.icon}</span>
+                     <span className={`material-icons text-3xl md:text-4xl mb-6 ${item.star ? 'text-accent' : 'text-gray-300 dark:text-white/10'}`}>{item.icon}</span>
 
                      <p className={`font-display font-black text-3xl mb-1 ${item.star ? 'text-accent' : 'text-primary dark:text-white'}`}>{item.val}</p>
 
@@ -390,7 +390,7 @@ export default function ItilStrategyV5() {
 
       <footer className="container mx-auto px-6 pb-20">
 
-         <div className="bg-accent p-24 rounded-[70px] text-center shadow-2xl relative overflow-hidden group">
+         <div className="bg-accent p-8 md:p-24 rounded-[70px] text-center shadow-2xl relative overflow-hidden group">
 
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(13,27,42,0.1)_1px,_transparent_1px)] bg-[length:32px_32px]"></div>
 
@@ -400,7 +400,7 @@ export default function ItilStrategyV5() {
 
                <p className="text-white/80 mb-12 max-w-xl mx-auto text-xl font-medium leading-relaxed">Join Peer's elite Strategic Leader program and master the alignment of technology with business value at the highest level.</p>
 
-               <Link to="/contact" className="inline-block bg-primary hover:bg-white hover:!text-primary text-white font-black py-8 px-20 rounded-[35px] transition-all shadow-xl active:scale-95 text-[15px] uppercase tracking-[5px] ring-8 ring-white/10">
+               <Link to="/contact" className="inline-block bg-primary hover:bg-white hover:!text-primary text-white font-black py-8 px-20 rounded-[35px] transition-all shadow-xl active:scale-95 text-[15px] uppercase tracking-widest md:tracking-[5px] ring-8 ring-white/10">
 
                   Secure Your Training
 

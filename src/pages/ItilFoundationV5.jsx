@@ -72,7 +72,7 @@ export default function ItilFoundationV5() {
 
         <div className="container mx-auto px-6 relative z-10">
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-center">
 
             <div className="lg:col-span-8">
 
@@ -82,13 +82,13 @@ export default function ItilFoundationV5() {
 
               </div>
 
-              <h1 className="text-5xl md:text-8xl font-black font-display mb-10 tracking-tighter leading-none uppercase">
+              <h1 className="text-[26px] sm:text-4xl md:text-8xl font-black font-display mb-10 tracking-tighter leading-none uppercase">
 
                 ITIL <br />
 
                 <span className="text-accent underline decoration-white/10 underline-offset-[12px] italic">Foundation</span> <br />
 
-                <span className="text-white/40 block text-2xl tracking-[6px] mt-4 font-body">(Version 5)</span>
+                <span className="text-white/40 block text-2xl tracking-widest md:tracking-[6px] mt-4 font-body">(Version 5)</span>
 
               </h1>
 
@@ -152,7 +152,7 @@ export default function ItilFoundationV5() {
 
          <div className="container mx-auto px-6">
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center uppercase tracking-tighter">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12 text-center uppercase tracking-tighter">
 
                {[
 
@@ -219,7 +219,7 @@ export default function ItilFoundationV5() {
         <div className="container mx-auto px-6">
            <div className="flex flex-col md:flex-row items-baseline gap-4 mb-20">
 
-              <h2 className="text-4xl md:text-5xl font-black font-display tracking-tighter uppercase">Master the <span className="text-accent underline decoration-accent/10 underline-offset-[12px] italic">Framework</span></h2>
+              <h2 className="text-3xl md:text-4xl md:text-5xl font-black font-display tracking-tighter uppercase">Master the <span className="text-accent underline decoration-accent/10 underline-offset-[12px] italic">Framework</span></h2>
 
               <div className="h-0.5 flex-grow bg-gray-100 dark:bg-white/5"></div>
 
@@ -229,7 +229,7 @@ export default function ItilFoundationV5() {
 
               {LEARN_POINTS.map((lp, i) => (
 
-                <div key={i} className="relative p-6 bg-white dark:bg-[#0a1628] rounded-xl border border-gray-200 dark:border-white/10 hover:border-accent hover:shadow-md group transition-all duration-300 overflow-hidden">
+                <div key={i} className="relative p-6 bg-white dark:bg-[#0a1628] rounded-xl border border-gray-200 dark:border-white/10 hover:border-accent hover:shadow-md group transition-all duration-300 overflow-hidden flex flex-col h-full">
                    {/* Dark wipe — left to right */}
                    <div className="absolute inset-0 bg-[#071B34] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out z-0" />
                    <div className="relative z-10">
@@ -257,7 +257,7 @@ export default function ItilFoundationV5() {
 
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[120px] pointer-events-none"></div>
 
-              <h3 className="text-[15px] font-black text-accent-blue uppercase tracking-[6px] mb-16 relative z-10">Strategic Mindsets Acquired</h3>
+              <h3 className="text-[15px] font-black text-accent-blue uppercase tracking-widest md:tracking-[6px] mb-16 relative z-10">Strategic Mindsets Acquired</h3>
 
               <div className="space-y-12 relative z-10">
 
@@ -312,9 +312,9 @@ export default function ItilFoundationV5() {
       {/* Exam Metrics — white */}
       <section className="py-20 bg-white dark:bg-[#07101f]">
         <div className="container mx-auto px-6">
-           <div className="bg-[#f8fafc] dark:bg-white/5 rounded-[80px] p-24 shadow-inner relative overflow-hidden text-center group">
+           <div className="bg-[#f8fafc] dark:bg-white/5 rounded-2xl p-8 md:p-24 shadow-inner relative overflow-hidden text-center group">
 
-              <div className="absolute top-0 right-0 p-12 opacity-40 group-hover:opacity-100 transition-opacity">
+              <div className="relative sm:absolute sm:top-0 sm:right-0 flex justify-center mt-4 sm:mt-0 p-6 md:p-12 opacity-40 group-hover:opacity-100 transition-opacity">
 
                  <div className="bg-red-500/10 text-red-500 px-6 py-3 rounded-full text-xs font-black uppercase tracking-[4px] border border-red-500/20">
 
@@ -328,15 +328,15 @@ export default function ItilFoundationV5() {
 
               <div className="mb-20">
 
-                 <h2 className="text-4xl font-black font-display uppercase tracking-tight mb-4 leading-none">Exam <span className="text-accent underline decoration-accent/10 underline-offset-[14px]">Metrics</span></h2>
+                 <h2 className="text-3xl md:text-4xl font-black font-display uppercase tracking-tight mb-4 leading-none">Exam <span className="text-accent underline decoration-accent/10 underline-offset-[14px]">Metrics</span></h2>
 
-                 <p className="text-gray-400 text-xs font-bold uppercase tracking-[6px]">PeopleCert Official Assessment</p>
+                 <p className="text-gray-400 text-xs font-bold uppercase tracking-widest md:tracking-[6px]">PeopleCert Official Assessment</p>
 
               </div>
 
               
 
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-16 max-w-5xl mx-auto mb-20 relative">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-16 max-w-5xl mx-auto mb-20 relative">
 
                 {[
 
@@ -352,9 +352,9 @@ export default function ItilFoundationV5() {
 
                   <div key={i} className="flex flex-col items-center relative z-10">
 
-                     <span className={`material-icons text-4xl mb-6 ${item.hit ? 'text-accent' : 'text-gray-200 dark:text-white/5'}`}>{item.icon}</span>
+                     <span className={`material-icons text-3xl md:text-4xl mb-6 ${item.hit ? 'text-accent' : 'text-gray-200 dark:text-white/5'}`}>{item.icon}</span>
 
-                     <p className={`font-display font-black text-4xl mb-2 ${item.hit ? 'text-accent' : 'text-primary dark:text-white'}`}>{item.val}</p>
+                     <p className={`font-display font-black text-3xl md:text-4xl mb-2 ${item.hit ? 'text-accent' : 'text-primary dark:text-white'}`}>{item.val}</p>
 
                      <p className="text-[15px] font-black text-gray-400 uppercase tracking-widest">{item.lab}</p>
 
@@ -381,17 +381,17 @@ export default function ItilFoundationV5() {
 
       <footer className="container mx-auto px-6 pb-20">
 
-         <div className="bg-accent rounded-[100px] p-24 text-center shadow-2xl relative overflow-hidden group">
+         <div className="bg-accent rounded-[100px] p-8 md:p-24 text-center shadow-2xl relative overflow-hidden group">
 
             <div className="absolute inset-0 bg-[#0d1b2a] opacity-0 group-hover:opacity-10 transition-opacity duration-1000"></div>
 
             <div className="relative z-10">
 
-               <h2 className="text-6xl md:text-9xl font-black font-display text-white mb-12 tracking-tighter uppercase leading-[0.8] italic">Launch Your <br/> <span className="text-primary not-italic">Journey</span></h2>
+               <h2 className="text-[26px] sm:text-4xl md:text-9xl font-black font-display text-white mb-12 tracking-tighter uppercase leading-[0.8] break-words italic">Launch Your <br/> <span className="text-primary not-italic">Journey</span></h2>
 
                <p className="text-white/80 mb-16 max-w-xl mx-auto text-3xl font-medium leading-relaxed">Join Peer's world-leading Foundation program and master the modern standard of service excellence.</p>
 
-               <Link to="/contact" className="inline-block bg-primary hover:bg-white hover:!text-primary text-white font-black py-9 px-24 rounded-[40px] transition-all shadow-xl active:scale-95 text-[18px] uppercase tracking-[8px] ring-[24px] ring-white/5">
+               <Link to="/contact" className="inline-block bg-primary hover:bg-white hover:!text-primary text-white font-black py-4 px-6 sm:px-8 md:py-9 md:px-24 rounded-full transition-all shadow-xl active:scale-95 text-[18px] uppercase tracking-widest md:tracking-[8px] ring-[24px] ring-white/5">
 
                   Enroll Today
 

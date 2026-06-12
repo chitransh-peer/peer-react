@@ -74,7 +74,7 @@ export default function ItilPmCai() {
 
         <div className="container mx-auto px-6 relative z-10">
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-center">
 
             <div className="lg:col-span-8">
 
@@ -84,7 +84,7 @@ export default function ItilPmCai() {
 
               </div>
 
-              <h1 className="text-4xl md:text-5xl font-black font-display mb-2 tracking-tight leading-tight uppercase">
+              <h1 className="text-3xl md:text-4xl md:text-5xl font-black font-display mb-2 tracking-tight leading-tight uppercase">
 
                 <span className="text-white/40 block text-lg tracking-[4px] mb-2">Practice Manager</span>
 
@@ -194,7 +194,7 @@ export default function ItilPmCai() {
 
             ].map((item, i) => (
 
-              <div key={i} className="bg-white dark:bg-surface-dark p-6 rounded-2xl shadow-subtle border border-gray-100 dark:border-white/5 text-center transition-all hover:scale-105">
+              <div key={i} className="bg-white dark:bg-surface-dark p-6 rounded-2xl shadow-subtle border border-gray-100 dark:border-white/5 text-center transition-all hover:scale-105 flex flex-col h-full">
 
                 <div className="text-2xl mb-3">{item.icon}</div>
 
@@ -248,11 +248,11 @@ export default function ItilPmCai() {
 
         {/* Skills Section */}
 
-        <section className="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <section className="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12">
 
-          <div className="bg-primary text-white p-12 rounded-[40px] shadow-2xl relative overflow-hidden">
+          <div className="bg-primary text-white p-6 md:p-12 rounded-[40px] shadow-2xl relative overflow-hidden">
 
-             <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-[80px]"></div>
+             <div className="relative sm:absolute sm:top-0 sm:right-0 flex justify-center mt-4 sm:mt-0 w-64 h-64 bg-accent/20 rounded-full blur-[80px]"></div>
 
              <h3 className="text-xs font-black uppercase tracking-[4px] text-accent-blue mb-8">Acquired Skills</h3>
 
@@ -282,7 +282,7 @@ export default function ItilPmCai() {
 
           
 
-          <div className="bg-white dark:bg-surface-dark p-12 rounded-[40px] shadow-subtle border border-gray-100 dark:border-white/5">
+          <div className="bg-white dark:bg-surface-dark p-6 md:p-12 rounded-[40px] shadow-subtle border border-gray-100 dark:border-white/5">
 
              <h3 className="text-xs font-black uppercase tracking-[4px] text-accent mb-8">Career Paths</h3>
 
@@ -314,7 +314,7 @@ export default function ItilPmCai() {
 
         <section className="mb-12">
 
-          <div className="bg-white dark:bg-surface-dark border border-gray-100 dark:border-white/5 p-12 rounded-[50px] shadow-subtle">
+          <div className="bg-white dark:bg-surface-dark border border-gray-100 dark:border-white/5 p-6 md:p-12 rounded-2xl shadow-subtle">
 
             <div className="text-center mb-12">
 
@@ -336,7 +336,7 @@ export default function ItilPmCai() {
 
               ].map((item, i) => (
 
-                <div key={i} className="text-center group">
+                <div key={i} className="text-center group flex flex-col h-full">
 
                   <div className="text-3xl mb-4 group-hover:scale-110 transition-transform">{item.icon}</div>
 
@@ -374,13 +374,13 @@ export default function ItilPmCai() {
 
       <footer className="container mx-auto px-6 pb-20">
 
-        <div className="bg-accent rounded-[50px] p-16 text-center shadow-2xl relative overflow-hidden group">
+        <div className="bg-accent rounded-2xl p-6 md:p-16 text-center shadow-2xl relative overflow-hidden group">
 
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.1)_1px,_transparent_1px)] bg-[length:24px_24px] opacity-20"></div>
 
           <div className="relative z-10">
 
-            <h2 className="text-4xl md:text-5xl font-black font-display text-white mb-6 tracking-tighter uppercase">Master the <span className="text-primary italic">Collaborate</span> Practice</h2>
+            <h2 className="text-3xl md:text-4xl md:text-5xl font-black font-display text-white mb-6 tracking-tighter uppercase">Master the <span className="text-primary italic">Collaborate</span> Practice</h2>
 
             <p className="text-white/80 mb-10 max-w-xl mx-auto font-medium">Join our next cohort and get certified in Collaborate, Assure & Improve.</p>
 

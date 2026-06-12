@@ -300,7 +300,7 @@ export default function PPMAgile() {
 
         <div className="absolute inset-0">
 
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-accent/10 to-transparent"></div>
+          <div className="relative sm:absolute sm:top-0 sm:right-0 flex justify-center mt-4 sm:mt-0 w-1/2 h-full bg-gradient-to-l from-accent/10 to-transparent"></div>
 
         </div>
 
@@ -308,7 +308,7 @@ export default function PPMAgile() {
 
         <div className="container mx-auto px-6 lg:px-12 relative z-10 w-full">
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-16 items-center">
 
             <div className="lg:col-span-7">
 
@@ -318,7 +318,7 @@ export default function PPMAgile() {
 
               </div>
 
-              <h1 className="text-5xl md:text-7xl font-black font-display mb-8 leading-[0.9] tracking-tighter">
+              <h1 className="text-[26px] sm:text-4xl md:text-7xl font-black font-display mb-8 leading-[0.9] tracking-tighter">
 
                 PPM & <span className="text-accent underline decoration-white/20 underline-offset-8">Agile</span><br />
 
@@ -506,7 +506,7 @@ export default function PPMAgile() {
 
                 <p className="text-accent font-black uppercase tracking-[0.3em] text-[10px] mb-3">Detailed Curriculum</p>
 
-                <h2 className="text-3xl md:text-5xl font-black font-display text-primary dark:text-white mb-6 tracking-tight">24 Hours of <span className="text-gray-400">Expert Training</span></h2>
+                <h2 className="text-[26px] sm:text-4xl md:text-5xl font-black font-display text-primary dark:text-white mb-6 tracking-tight">24 Hours of <span className="text-gray-400">Expert Training</span></h2>
 
                 <p className="text-gray-600 dark:text-gray-400 max-w-2xl font-body leading-relaxed">
 
@@ -536,9 +536,9 @@ export default function PPMAgile() {
 
                <div className="p-12 rounded-[40px] bg-[#0a1120] text-white relative overflow-hidden group">
 
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-[100px] group-hover:bg-accent/30 transition-all duration-700"></div>
+                  <div className="relative sm:absolute sm:top-0 sm:right-0 flex justify-center mt-4 sm:mt-0 w-64 h-64 bg-accent/20 rounded-full blur-[100px] group-hover:bg-accent/30 transition-all duration-700"></div>
 
-                  <div className="relative z-10 flex flex-col md:flex-row gap-12 items-center">
+                  <div className="relative z-10 flex flex-col md:flex-row gap-6 md:gap-12 items-center">
 
                      <div className="md:w-1/2">
 
@@ -616,7 +616,7 @@ export default function PPMAgile() {
 
                   {DETAILS.map((row, i) => (
 
-                    <div key={i} className="flex items-center justify-between py-4 border-b border-gray-50 dark:border-white/10 last:border-0 group">
+                    <div key={i} className="flex items-center justify-between py-4 border-b border-gray-50 dark:border-white/10 last:border-0 group flex flex-col h-full">
 
                       <div className="flex items-center gap-3">
 
@@ -654,7 +654,7 @@ export default function PPMAgile() {
 
               <div className="bg-[#071B34] p-8 rounded-[32px] text-white overflow-hidden relative group">
 
-                <div className="absolute top-0 right-0 w-32 h-32 bg-accent/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+                <div className="relative sm:absolute sm:top-0 sm:right-0 flex justify-center mt-4 sm:mt-0 w-32 h-32 bg-accent/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
 
                 <h4 className="text-sm font-black uppercase tracking-widest mb-6 relative z-10">Industry Recognition</h4>
 
@@ -692,7 +692,7 @@ export default function PPMAgile() {
 
            <p className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-400 mb-12">Global Recognition Partners</p>
 
-           <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-30 grayscale hover:grayscale-0 transition-all duration-500">
+           <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12 md:gap-24 opacity-30 grayscale hover:grayscale-0 transition-all duration-500">
 
               <span className="text-2xl font-black font-display tracking-tighter">PMI©</span>
 

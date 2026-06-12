@@ -82,7 +82,7 @@ export default function Itil4SpecialistMsf() {
 
         <div className="container mx-auto px-6 relative z-10">
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-center">
 
             <div className="lg:col-span-8">
 
@@ -92,7 +92,7 @@ export default function Itil4SpecialistMsf() {
 
               </div>
 
-              <h1 className="text-4xl md:text-7xl font-black font-display mb-6 tracking-tight leading-none uppercase">
+              <h1 className="text-3xl md:text-[26px] sm:text-4xl md:text-7xl font-black font-display mb-6 tracking-tight leading-none uppercase">
 
                 <span className="block text-xl text-white/50 tracking-[4px] mb-4 font-body lowercase italic">Monitor, Support & Fulfil</span>
 
@@ -184,7 +184,7 @@ export default function Itil4SpecialistMsf() {
 
          <div className="container mx-auto px-6">
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12 text-center">
 
                {[
 
@@ -196,7 +196,7 @@ export default function Itil4SpecialistMsf() {
 
                ].map((v, i) => (
 
-                 <div key={i} className="group">
+                 <div key={i} className="group flex flex-col h-full">
 
                     <div className="inline-block p-4 bg-[#f8fafc] dark:bg-white/5 rounded-2xl mb-6 group-hover:bg-accent group-hover:text-white transition-all shadow-sm">
 
@@ -242,7 +242,7 @@ export default function Itil4SpecialistMsf() {
 
               ].map((item, i) => (
 
-                <div key={i} className="bg-white dark:bg-surface-dark p-8 rounded-[40px] shadow-subtle border border-gray-100 dark:border-white/5 text-center group hover:bg-primary transition-all duration-300">
+                <div key={i} className="bg-white dark:bg-surface-dark p-8 rounded-[40px] shadow-subtle border border-gray-100 dark:border-white/5 text-center group hover:bg-primary transition-all duration-300 flex flex-col h-full">
 
                    <span className="material-icons-outlined text-accent mb-4 group-hover:text-white transition-colors">{item.icon}</span>
 
@@ -266,7 +266,7 @@ export default function Itil4SpecialistMsf() {
 
            <div className="flex flex-col md:flex-row items-baseline gap-6 mb-20 px-4">
 
-              <h2 className="text-4xl md:text-5xl font-black font-display tracking-tighter uppercase italic">Curriculum <span className="text-accent underline decoration-accent/10 underline-offset-[16px] not-italic">Matrix</span></h2>
+              <h2 className="text-3xl md:text-4xl md:text-5xl font-black font-display tracking-tighter uppercase italic">Curriculum <span className="text-accent underline decoration-accent/10 underline-offset-[16px] not-italic">Matrix</span></h2>
 
               <div className="h-0.5 flex-grow bg-gradient-to-r from-gray-200 to-transparent dark:from-white/5"></div>
 
@@ -276,7 +276,7 @@ export default function Itil4SpecialistMsf() {
 
               {LEARN_POINTS.map((lp, i) => (
 
-                <div key={i} className="p-10 bg-white dark:bg-surface-dark rounded-[50px] shadow-subtle border border-gray-100 dark:border-white/5 hover:scale-105 transition-all">
+                <div key={i} className="p-10 bg-white dark:bg-surface-dark rounded-2xl shadow-subtle border border-gray-100 dark:border-white/5 hover:scale-105 transition-all flex flex-col h-full">
 
                    <div className="text-3xl mb-8">{lp.icon}</div>
 
@@ -298,11 +298,11 @@ export default function Itil4SpecialistMsf() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-32 items-stretch px-4">
 
-           <div className="lg:col-span-7 bg-[#071B34] p-16 rounded-[70px] text-white shadow-2xl relative overflow-hidden group">
+           <div className="lg:col-span-7 bg-[#071B34] p-6 md:p-16 rounded-[70px] text-white shadow-2xl relative overflow-hidden group">
 
-              <div className="absolute top-0 right-0 w-80 h-80 bg-accent/10 rounded-full blur-[120px]"></div>
+              <div className="relative sm:absolute sm:top-0 sm:right-0 flex justify-center mt-4 sm:mt-0 w-80 h-80 bg-accent/10 rounded-full blur-[120px]"></div>
 
-              <h3 className="text-[11px] font-black text-accent-blue uppercase tracking-[6px] mb-16 relative z-10">Advanced Capabilities</h3>
+              <h3 className="text-[11px] font-black text-accent-blue uppercase tracking-widest md:tracking-[6px] mb-16 relative z-10">Advanced Capabilities</h3>
 
               <div className="space-y-16 relative z-10">
 
@@ -318,7 +318,7 @@ export default function Itil4SpecialistMsf() {
 
                       <div>
 
-                         <h4 className="font-display font-black text-xl mb-4 tracking-tight uppercase leading-none">{skill.title}</h4>
+                         <h4 className="font-display font-black text-xl mb-4 tracking-tight uppercase leading-none break-words">{skill.title}</h4>
 
                          <p className="text-blue-100/40 text-[14px] leading-relaxed max-w-sm">{skill.desc}</p>
 
@@ -334,7 +334,7 @@ export default function Itil4SpecialistMsf() {
 
 
 
-           <div className="lg:col-span-5 bg-white dark:bg-surface-dark p-12 rounded-[70px] border border-gray-100 dark:border-white/5 flex flex-col items-center">
+           <div className="lg:col-span-5 bg-white dark:bg-surface-dark p-6 md:p-12 rounded-[70px] border border-gray-100 dark:border-white/5 flex flex-col items-center">
 
               <h3 className="font-display font-black text-2xl uppercase tracking-tighter mb-12 text-center text-primary dark:text-white">MSF Career Paths</h3>
 
@@ -342,7 +342,7 @@ export default function Itil4SpecialistMsf() {
 
                  {CAREER_TAGS.map((tag, i) => (
 
-                   <div key={i} className="flex items-center justify-between p-5 bg-[#f8fafc] dark:bg-white/5 rounded-3xl border border-transparent hover:border-accent hover:bg-white dark:hover:bg-primary transition-all cursor-default shadow-sm group/tag">
+                   <div key={i} className="flex items-center justify-between p-5 bg-[#f8fafc] dark:bg-white/5 rounded-3xl border border-transparent hover:border-accent hover:bg-white dark:hover:bg-primary transition-all cursor-default shadow-sm group/tag flex flex-col h-full">
 
                       <span className="text-[10px] font-black uppercase tracking-widest text-gray-500 group-hover/tag:text-primary dark:group-hover/tag:text-white">{tag}</span>
 
@@ -364,11 +364,11 @@ export default function Itil4SpecialistMsf() {
 
         <section className="mb-12">
 
-           <div className="bg-[#f8fafc] dark:bg-white/5 rounded-[80px] p-24 shadow-inner relative overflow-hidden group border border-gray-100 dark:border-white/5">
+           <div className="bg-[#f8fafc] dark:bg-white/5 rounded-2xl p-8 md:p-24 shadow-inner relative overflow-hidden group border border-gray-100 dark:border-white/5">
 
-              <div className="absolute right-12 top-12 opacity-40 hover:opacity-100 transition-opacity">
+              <div className="relative sm:absolute sm:right-12 sm:top-12 flex justify-center mt-4 sm:mt-0 opacity-40 hover:opacity-100 transition-opacity">
 
-                 <div className="bg-[#071B34] text-white px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-[5px] shadow-2xl">
+                 <div className="bg-[#071B34] text-white px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-widest md:tracking-[5px] shadow-2xl">
 
                     PeopleCert Official
 
@@ -378,15 +378,15 @@ export default function Itil4SpecialistMsf() {
 
               <div className="text-center mb-20 max-w-2xl mx-auto">
 
-                 <h2 className="text-3xl md:text-5xl font-black font-display mb-6 uppercase tracking-tighter italic">Exam <span className="text-accent underline decoration-accent/10 underline-offset-[16px] not-italic">Essentials</span></h2>
+                 <h2 className="text-[26px] sm:text-4xl md:text-5xl font-black font-display mb-6 uppercase tracking-tighter italic">Exam <span className="text-accent underline decoration-accent/10 underline-offset-[16px] not-italic">Essentials</span></h2>
 
-                 <p className="text-gray-400 text-[10px] font-bold uppercase tracking-[8px] leading-relaxed">Closed book examination · No reference materials permitted</p>
+                 <p className="text-gray-400 text-[10px] font-bold uppercase tracking-widest md:tracking-[8px] leading-relaxed">Closed book examination · No reference materials permitted</p>
 
               </div>
 
               
 
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 max-w-5xl mx-auto mb-16 px-4">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12 max-w-5xl mx-auto mb-16 px-4">
 
                 {[
 
@@ -404,7 +404,7 @@ export default function Itil4SpecialistMsf() {
 
                      <span className={`material-icons text-5xl mb-6 transition-transform group-hover:scale-110 ${item.hit ? 'text-accent' : 'text-gray-200 dark:text-white/5'}`}>{item.icon}</span>
 
-                     <p className={`font-display font-black text-4xl mb-2 ${item.hit ? 'text-accent' : 'text-primary dark:text-white'}`}>{item.val}</p>
+                     <p className={`font-display font-black text-3xl md:text-4xl mb-2 ${item.hit ? 'text-accent' : 'text-primary dark:text-white'}`}>{item.val}</p>
 
                      <p className="text-[11px] font-black text-gray-400 uppercase tracking-widest">{item.lab}</p>
 
@@ -430,17 +430,17 @@ export default function Itil4SpecialistMsf() {
 
       <footer className="container mx-auto px-6 pb-20">
 
-         <div className="bg-accent rounded-[100px] p-24 text-center shadow-2xl relative overflow-hidden group">
+         <div className="bg-accent rounded-[100px] p-8 md:p-24 text-center shadow-2xl relative overflow-hidden group">
 
             <div className="absolute inset-0 bg-[#071B34] opacity-0 group-hover:opacity-10 transition-opacity duration-1000"></div>
 
             <div className="relative z-10">
 
-               <h2 className="text-7xl md:text-9xl font-black font-display text-white mb-12 tracking-tighter uppercase leading-[0.8] italic">Support the <br/> <span className="text-primary not-italic">Future</span></h2>
+               <h2 className="text-7xl md:text-9xl font-black font-display text-white mb-12 tracking-tighter uppercase leading-[0.8] break-words italic">Support the <br/> <span className="text-primary not-italic">Future</span></h2>
 
                <p className="text-white/80 mb-16 max-w-xl mx-auto text-xl font-medium leading-relaxed italic pr-6 border-r-4 border-white/20">Master the practices that keep the world's most complex digital environments running at peak performance.</p>
 
-               <Link to="/contact" className="inline-block bg-primary hover:bg-white hover:!text-primary text-white font-black py-9 px-24 rounded-[45px] transition-all shadow-xl active:scale-95 text-[18px] uppercase tracking-[8px] ring-[24px] ring-white/5">
+               <Link to="/contact" className="inline-block bg-primary hover:bg-white hover:!text-primary text-white font-black py-9 px-6 md:px-24 rounded-[45px] transition-all shadow-xl active:scale-95 text-[18px] uppercase tracking-widest md:tracking-[8px] ring-[24px] ring-white/5">
 
                   Book Seat
 

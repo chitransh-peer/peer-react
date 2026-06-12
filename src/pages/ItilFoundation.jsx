@@ -104,7 +104,7 @@ export default function ItilFoundation() {
 
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-black font-display mb-6 tracking-tight">ITIL® <span className="text-accent underline decoration-white/10 underline-offset-8">Foundation</span></h1>
+          <h1 className="text-3xl md:text-4xl md:text-6xl font-black font-display mb-6 tracking-tight">ITIL® <span className="text-accent underline decoration-white/10 underline-offset-8">Foundation</span></h1>
 
           <p className="text-xl text-blue-100/70 max-w-2xl mx-auto mb-12 font-body leading-relaxed">
 
@@ -188,11 +188,11 @@ export default function ItilFoundation() {
 
         {/* Content Section */}
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-16 mb-24 items-center">
 
           <div className="lg:col-span-8">
 
-            <h2 className="text-3xl md:text-5xl font-black font-display text-primary dark:text-white mb-8 tracking-tight leading-[1.1]">
+            <h2 className="text-[26px] sm:text-4xl md:text-5xl font-black font-display text-primary dark:text-white mb-8 tracking-tight leading-[1.1]">
 
               {activeTab === 'v5' 
 
@@ -308,7 +308,7 @@ export default function ItilFoundation() {
 
             ].map((item, i) => (
 
-              <div key={i} className="bg-white dark:bg-surface-dark border border-gray-100 dark:border-white/5 rounded-3xl p-8 text-center shadow-subtle hover:-translate-y-2 transition-all group">
+              <div key={i} className="bg-white dark:bg-surface-dark border border-gray-100 dark:border-white/5 rounded-3xl p-8 text-center shadow-subtle hover:-translate-y-2 transition-all group flex flex-col h-full">
 
                 <span className="material-icons text-[#071B34] dark:text-blue-400 mb-4 text-3xl opacity-50 group-hover:opacity-100 group-hover:text-accent transition-all">{item.icon}</span>
 
@@ -334,7 +334,7 @@ export default function ItilFoundation() {
 
             <p className="text-accent font-black uppercase tracking-[0.3em] text-[10px] mb-3">Course Curriculum</p>
 
-            <h2 className="text-3xl md:text-5xl font-black font-display text-primary dark:text-white tracking-tight">What You Will <span className="text-gray-400">Master</span></h2>
+            <h2 className="text-[26px] sm:text-4xl md:text-5xl font-black font-display text-primary dark:text-white tracking-tight">What You Will <span className="text-gray-400">Master</span></h2>
 
           </div>
 
@@ -366,11 +366,11 @@ export default function ItilFoundation() {
 
         {/* Skills & Career */}
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-16 mb-24">
 
-          <div className="bg-[#071B34] text-white p-12 rounded-[40px] shadow-2xl relative overflow-hidden group">
+          <div className="bg-[#071B34] text-white p-6 md:p-12 rounded-[40px] shadow-2xl relative overflow-hidden group">
 
-            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-[100px] group-hover:bg-accent/20 transition-all duration-700"></div>
+            <div className="relative sm:absolute sm:top-0 sm:right-0 flex justify-center mt-4 sm:mt-0 w-64 h-64 bg-accent/10 rounded-full blur-[100px] group-hover:bg-accent/20 transition-all duration-700"></div>
 
             <h3 className="text-sm font-black uppercase tracking-[0.3em] text-accent-blue mb-8 relative z-10">Skills To Be Acquired</h3>
 
@@ -408,7 +408,7 @@ export default function ItilFoundation() {
 
           
 
-          <div className="bg-white dark:bg-surface-dark p-12 rounded-[40px] shadow-subtle border border-gray-100 dark:border-white/5">
+          <div className="bg-white dark:bg-surface-dark p-6 md:p-12 rounded-[40px] shadow-subtle border border-gray-100 dark:border-white/5">
 
             <h3 className="text-sm font-black uppercase tracking-[0.3em] text-accent mb-8">Career Opportunities</h3>
 
@@ -462,13 +462,13 @@ export default function ItilFoundation() {
 
         {/* CTA */}
 
-        <div className="bg-accent text-white rounded-[50px] p-16 text-center shadow-2xl relative overflow-hidden group">
+        <div className="bg-accent text-white rounded-2xl p-6 md:p-16 text-center shadow-2xl relative overflow-hidden group">
 
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.1)_1px,_transparent_1px)] bg-[length:30px_30px] opacity-20"></div>
 
           <div className="relative z-10">
 
-            <h2 className="text-4xl md:text-6xl font-black font-display mb-6 tracking-tighter">Ready to master <span className="text-primary italic">ITIL</span>?</h2>
+            <h2 className="text-3xl md:text-4xl md:text-6xl font-black font-display mb-6 tracking-tighter">Ready to master <span className="text-primary italic">ITIL</span>?</h2>
 
             <p className="text-lg text-white/80 mb-10 max-w-2xl mx-auto font-medium">Join our next AI-enhanced training cohort and secure your globally recognized certification.</p>
 

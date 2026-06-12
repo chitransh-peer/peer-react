@@ -74,7 +74,7 @@ export default function ItilExperienceV5() {
 
         <div className="container mx-auto px-6 relative z-10">
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-start">
 
             <div className="lg:col-span-8">
 
@@ -86,7 +86,7 @@ export default function ItilExperienceV5() {
 
               </div>
 
-              <h1 className="text-4xl md:text-6xl font-black font-display mb-6 tracking-tight leading-tight">
+              <h1 className="text-3xl md:text-4xl md:text-6xl font-black font-display mb-6 tracking-tight leading-tight">
 
                 ITIL® Experience <br />
 
@@ -206,7 +206,7 @@ export default function ItilExperienceV5() {
 
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
 
             {[
 
@@ -220,7 +220,7 @@ export default function ItilExperienceV5() {
 
             ].map((item, i) => (
 
-              <div key={i} className="bg-white dark:bg-surface-dark p-8 rounded-2xl shadow-subtle border border-gray-100 dark:border-white/5 hover:-translate-y-1 transition-all group">
+              <div key={i} className="bg-white dark:bg-surface-dark p-8 rounded-2xl shadow-subtle border border-gray-100 dark:border-white/5 hover:-translate-y-1 transition-all group flex flex-col h-full">
 
                 <div className="w-12 h-12 bg-gray-50 dark:bg-white/5 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:bg-accent/10 transition-colors">{item.icon}</div>
 
@@ -254,7 +254,7 @@ export default function ItilExperienceV5() {
 
             {LEARN_POINTS.map((item, i) => (
 
-              <div key={i} className="relative group p-8 bg-white dark:bg-surface-dark rounded-3xl shadow-subtle border border-gray-100 dark:border-white/5 hover:border-accent/30 transition-all overflow-hidden">
+              <div key={i} className="relative group p-8 bg-white dark:bg-surface-dark rounded-3xl shadow-subtle border border-gray-100 dark:border-white/5 hover:border-accent/30 transition-all overflow-hidden flex flex-col h-full">
 
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
@@ -276,9 +276,9 @@ export default function ItilExperienceV5() {
 
         {/* Skills Section */}
 
-        <section className="mb-32 bg-primary dark:bg-surface-dark dark:border dark:border-white/5 rounded-[40px] p-12 text-white relative overflow-hidden group">
+        <section className="mb-32 bg-primary dark:bg-surface-dark dark:border dark:border-white/5 rounded-[40px] p-6 md:p-12 text-white relative overflow-hidden group">
 
-          <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-[100px] group-hover:bg-accent/20 transition-all duration-700"></div>
+          <div className="relative sm:absolute sm:top-0 sm:right-0 flex justify-center mt-4 sm:mt-0 w-96 h-96 bg-accent/10 rounded-full blur-[100px] group-hover:bg-accent/20 transition-all duration-700"></div>
 
           <div className="flex items-center gap-4 mb-12 relative z-10">
 
@@ -410,13 +410,13 @@ export default function ItilExperienceV5() {
 
       <footer className="container mx-auto px-6 pb-20">
 
-        <div className="bg-accent text-white rounded-[50px] p-16 text-center shadow-2xl relative overflow-hidden group">
+        <div className="bg-accent text-white rounded-2xl p-6 md:p-16 text-center shadow-2xl relative overflow-hidden group">
 
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.1)_1px,_transparent_1px)] bg-[length:30px_30px] opacity-20"></div>
 
           <div className="relative z-10">
 
-            <h2 className="text-4xl md:text-5xl font-black font-display mb-6 tracking-tighter">Ready to Certify in <span className="text-primary italic">Experience</span>?</h2>
+            <h2 className="text-3xl md:text-4xl md:text-5xl font-black font-display mb-6 tracking-tighter">Ready to Certify in <span className="text-primary italic">Experience</span>?</h2>
 
             <p className="text-lg text-white/80 mb-10 max-w-2xl mx-auto font-medium">Join our next ITIL V5 Experience cohort. High pass rates guaranteed with Peer's ecosystem.</p>
 

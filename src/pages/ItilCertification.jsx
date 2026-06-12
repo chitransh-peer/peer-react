@@ -444,7 +444,7 @@ export default function ItilCertification() {
 
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-black font-display mb-4 tracking-tight">ITIL® <span className="text-accent">Certifications</span></h1>
+          <h1 className="text-3xl md:text-4xl md:text-5xl font-black font-display mb-4 tracking-tight">ITIL® <span className="text-accent">Certifications</span></h1>
 
           <p className="text-blue-100/70 max-w-2xl mx-auto font-body leading-relaxed">
 
@@ -464,7 +464,7 @@ export default function ItilCertification() {
 
       <div className="container mx-auto px-6 lg:px-12 py-16">
 
-        <div className="flex flex-col lg:flex-row gap-12">
+        <div className="flex flex-col lg:flex-row gap-6 md:gap-12">
 
           {/* Sidebar */}
 
@@ -596,7 +596,7 @@ export default function ItilCertification() {
 
                 return (
 
-                  <div key={group.key} className="relative">
+                  <div key={group.key} className="relative flex flex-col h-full">
 
                     <div className="flex items-center gap-4 mb-8">
 
