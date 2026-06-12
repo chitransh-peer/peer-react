@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import logo from '../assets/logos/Peer-header-full.png';
+import logo from '../assets/logos/Peer-header-full-transparent.png';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,9 +28,8 @@ export default function Header() {
     <div className="fixed top-0 left-0 right-0 w-full z-50">
       {/* Top info bar — collapses on scroll */}
       <div
-        className={`hidden sm:block bg-[#071B34] text-white text-sm border-b border-[#0B2242] overflow-hidden transition-all duration-300 ${
-          isScrolled ? 'max-h-0 py-0 opacity-0' : 'max-h-12 py-2 opacity-100'
-        }`}
+        className={`hidden sm:block bg-[#071B34] text-white text-sm border-b border-[#0B2242] overflow-hidden transition-all duration-300 ${isScrolled ? 'max-h-0 py-0 opacity-0' : 'max-h-12 py-2 opacity-100'
+          }`}
       >
         <div className="container mx-auto px-6 lg:px-12 flex flex-col sm:flex-row justify-between items-center gap-2">
           <div className="flex items-center space-x-6">
@@ -44,7 +43,7 @@ export default function Header() {
           <div className="flex items-center space-x-4">
             <a className="hover:text-gray-300 transition-colors" href="https://www.linkedin.com/company/peer-consulting/posts/?feedView=all">
               <span className="sr-only">LinkedIn</span>
-              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
             </a>
           </div>
         </div>
