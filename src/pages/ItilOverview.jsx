@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 import { Link } from 'react-router-dom';
 
@@ -344,7 +344,7 @@ export default function ItilOverview() {
 
                 <div className="p-8 flex flex-col flex-grow">
 
-                  <ul className="space-y-4 mb-8 text-sm font-medium text-gray-700 dark:text-gray-300">
+                  <ul className="space-y-4 mb-8 text-sm font-medium text-gray-700 dark:text-gray-300 flex-grow">
 
                     {fam.courses.map((course, i) => (
 
@@ -360,7 +360,7 @@ export default function ItilOverview() {
 
                   </ul>
 
-                  <Link to={fam.btnLink} className={`w-full text-center inline-block py-3 rounded-lg font-bold transition-all ${fam.bg} ${fam.text} hover:opacity-80 active:scale-95`}>
+                  <Link to={fam.btnLink} className={`w-full text-center inline-block py-3 rounded-lg font-bold transition-all ${fam.bg} ${fam.text} hover:opacity-80 active:scale-95 mt-auto`}>
 
                     {fam.btnLabel} →
 

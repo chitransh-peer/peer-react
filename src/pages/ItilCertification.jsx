@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
@@ -320,7 +320,7 @@ function CourseCard({ course, mode, setMode }) {
 
   return (
 
-    <div className={`bg-white dark:bg-surface-dark border border-gray-100 dark:border-white/5 rounded-2xl p-6 transition-all duration-300 shadow-subtle ${categoryHover} hover:-translate-y-1 relative overflow-hidden group`}>
+    <div className={`flex flex-col h-full bg-white dark:bg-surface-dark border border-gray-100 dark:border-white/5 rounded-2xl p-6 transition-all duration-300 shadow-subtle ${categoryHover} hover:-translate-y-1 relative overflow-hidden group`}>
 
       {badge && (
 
