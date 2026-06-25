@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import useScrollReveal from '../hooks/useScrollReveal';
+import PageTransition from './PageTransition';
 
 export default function Layout() {
   useScrollReveal();
@@ -13,7 +14,9 @@ export default function Layout() {
       <div className="h-20 sm:h-[148px] flex-shrink-0" />
       <div className="overflow-x-hidden flex flex-col flex-grow">
         <main className="flex-grow">
-          <Outlet />
+          <PageTransition>
+            <Outlet />
+          </PageTransition>
         </main>
         <Footer />
       </div>

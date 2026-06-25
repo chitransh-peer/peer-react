@@ -93,19 +93,19 @@ export default function ContactUs() {
 
               <div className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg border border-slate-100 dark:border-slate-700">
                 <form className="space-y-6" onSubmit={handleSubmit}>
-                {/* Honeypot — hidden from real users, catches bots */}
-                <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }}>
-                  <label htmlFor="_honeypot">Leave this field empty</label>
-                  <input
-                    type="text"
-                    id="_honeypot"
-                    name="_honeypot"
-                    value={formData._honeypot}
-                    onChange={handleChange}
-                    tabIndex={-1}
-                    autoComplete="off"
-                  />
-                </div>
+                  {/* Honeypot — hidden from real users, catches bots */}
+                  <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }}>
+                    <label htmlFor="_honeypot">Leave this field empty</label>
+                    <input
+                      type="text"
+                      id="_honeypot"
+                      name="_honeypot"
+                      value={formData._honeypot}
+                      onChange={handleChange}
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
+                  </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="firstName" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
