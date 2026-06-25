@@ -71,17 +71,17 @@ const TEAM_MEMBERS = [
     email: 'misha@peer-consulting.com',
     linkedin: 'https://www.linkedin.com/in/misha7/',
   },
-  {
-    key: 'vineela-mandava',
-    name: 'Vineela Mandava',
-    role: 'Co-Founder',
-    category: 'executive',
-    bio: `As Co-Founder and Chief Operating Officer of Peer Consulting Resources, Vineela brings more than 15 years of operational and procurement leadership to the firm she joined as Co-Founder in 2014. Her career spans strategic sourcing, contract management, and vendor governance across healthcare, pharmaceutical, and New York City public-sector environments — including NYU Langone Health, Hackensack Meridian Health, Tower Health, and Health and Wellness Partners.\n\nAt PCR, Vineela leads day-to-day operations across human resources, recruitment, finance, vendor management, and the firm's US-India delivery model. Her B.Sc. from Rutgers University, paired with more than a decade building procurement and contracting infrastructure in regulated environments — MSAs, SOWs, governance frameworks, and pricing strategy — directly shapes how PCR scales across four business verticals while sustaining the discipline that complex client engagements demand.\n\nVineela believes great consulting firms are built on operational backbone — the systems, processes, and discipline that turn strategy into consistent execution. She is the steady operating force ensuring every PCR commitment is matched by the infrastructure behind it.`,
-    quote: "Great strategy succeeds when supported by strong operations, scalable processes, and consistent delivery",
-    skills: ['Technical Operations', 'Enterprise Systems Architecture', 'Delivery Excellence', 'Agile Engineering'],
-    email: 'vineela@peer-consulting.com',
-    linkedin: 'https://www.linkedin.com/in/vineela-mandava-9391a3127/',
-  },
+  // {
+  //   key: 'vineela-mandava',
+  //   name: 'Vineela Mandava',
+  //   role: 'Co-Founder',
+  //   category: 'executive',
+  //   bio: `As Co-Founder and Chief Operating Officer of Peer Consulting Resources, Vineela brings more than 15 years of operational and procurement leadership to the firm she joined as Co-Founder in 2014. Her career spans strategic sourcing, contract management, and vendor governance across healthcare, pharmaceutical, and New York City public-sector environments — including NYU Langone Health, Hackensack Meridian Health, Tower Health, and Health and Wellness Partners.\n\nAt PCR, Vineela leads day-to-day operations across human resources, recruitment, finance, vendor management, and the firm's US-India delivery model. Her B.Sc. from Rutgers University, paired with more than a decade building procurement and contracting infrastructure in regulated environments — MSAs, SOWs, governance frameworks, and pricing strategy — directly shapes how PCR scales across four business verticals while sustaining the discipline that complex client engagements demand.\n\nVineela believes great consulting firms are built on operational backbone — the systems, processes, and discipline that turn strategy into consistent execution. She is the steady operating force ensuring every PCR commitment is matched by the infrastructure behind it.`,
+  //   quote: "Great strategy succeeds when supported by strong operations, scalable processes, and consistent delivery",
+  //   skills: ['Technical Operations', 'Enterprise Systems Architecture', 'Delivery Excellence', 'Agile Engineering'],
+  //   email: 'vineela@peer-consulting.com',
+  //   linkedin: 'https://www.linkedin.com/in/vineela-mandava-9391a3127/',
+  // },
   {
     key: 'vivek-philar',
     name: 'Vivek Philar',
@@ -412,7 +412,7 @@ export default function Team() {
             <p className="text-slate-600 dark:text-slate-400 mt-2 text-sm">Guiding the corporate vision and global operations of Peer Consulting Resources.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
             {executives.map((m) => (
               <MemberCard
                 key={m.key}
@@ -425,7 +425,7 @@ export default function Team() {
           </div>
 
           {/* Bio panel slides in below the exec grid */}
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-2xl mx-auto">
             <BioPanel
               member={execSelected}
               isOpen={!!execSelected}

@@ -153,8 +153,8 @@ export default function AboutUs() {
                         <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#071B34] dark:text-white mb-4">The Team Behind PEER</h2>
                         <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Meet the dedicated experts driving innovation and delivering exceptional results for our clients every single day.</p>
                     </div>
-                    {/* Primary Row: 3 Vertical Cards */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+                    {/* Primary Row: 2 Vertical Cards */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto mb-12">
 
                         {/* Misha Edara - Founder */}
                         <div
@@ -172,8 +172,8 @@ export default function AboutUs() {
                             <p className="text-[#3b82f6] dark:text-blue-400 font-extrabold text-xs uppercase tracking-widest">Founder</p>
                         </div>
 
-                        {/* Vineela Mandava - Co-Founder */}
-                        <div
+                        {/* Vineela Mandava - Co-Founder — hidden, uncomment to restore */}
+                        {/* <div
                             onClick={() => navigate('/team?member=vineela-mandava')}
                             className="relative overflow-hidden bg-white dark:bg-[#071B34] pt-10 pb-12 px-10 rounded-[28px] shadow-none border border-gray-100 dark:border-white/10 flex flex-col items-center hover:bg-blue-50/70 dark:hover:bg-[#0a2340] hover:border-blue-100 dark:hover:border-blue-900/50 hover:shadow-[0_16px_40px_rgba(59,130,246,0.16)] hover:-translate-y-2 transition-all duration-300 group cursor-pointer"
                         >
@@ -186,7 +186,7 @@ export default function AboutUs() {
                             </div>
                             <h3 className="text-xl font-bold font-display text-[#071B34] dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-300 mb-1 transition-colors duration-300">Vineela Mandava</h3>
                             <p className="text-[#3b82f6] dark:text-blue-400 font-extrabold text-xs uppercase tracking-widest">Co-Founder</p>
-                        </div>
+                        </div> */}
 
                         {/* Vivek Philar - CEO */}
                         <div
