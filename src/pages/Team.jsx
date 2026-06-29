@@ -425,7 +425,7 @@ export default function Team() {
           </div>
 
           {/* Bio panel slides in below the exec grid */}
-          <div className="max-w-2xl mx-auto">
+          <div>
             <BioPanel
               member={execSelected}
               isOpen={!!execSelected}
