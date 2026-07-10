@@ -20,7 +20,7 @@ const COURSES = [
 
     skills: ['Digital product & service management', 'ITIL Value System & guiding principles', 'Responsible AI practice', 'Value stream mapping basics'],
 
-    spPrice: 535, olPrice: 750,
+    spPrice: 550, olPrice: 750,
 
     link: '/itil-foundation-v5',
 
@@ -38,7 +38,7 @@ const COURSES = [
 
     skills: ['Service value system & chain', 'Four dimensions of service management', 'Continual improvement model', 'Key ITIL 4 practices'],
 
-    spPrice: 535, olPrice: 750,
+    spPrice: 550, olPrice: 750,
 
     link: '/itil-foundation-4',
 
@@ -56,7 +56,7 @@ const COURSES = [
 
     skills: ['ITIL V5 key concept updates', 'New guiding principles & value system changes', 'AI-native practice overview'],
 
-    spPrice: 225, olPrice: 375,
+    spPrice: 240, olPrice: 375,
 
     link: '/itil-foundation-bridge-v5',
 
@@ -74,7 +74,7 @@ const COURSES = [
 
     skills: ['AI risk assessment', 'Ethical AI frameworks', 'AI policy design & implementation'],
 
-    spPrice: 535, olPrice: 750,
+    spPrice: 550, olPrice: 750,
 
     link: '#',
 
