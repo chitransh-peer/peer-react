@@ -208,27 +208,33 @@ function ModuleCard({ module }) {
 
     <div className={`bg-white dark:bg-surface-dark border rounded-2xl mb-4 overflow-hidden transition-all duration-300 shadow-sm ${open ? 'border-accent ring-1 ring-accent/20 translate-x-1' : 'border-gray-200 dark:border-white/5 hover:border-accent/40'}`}>
 
-      <div 
+      <div
 
-        className="p-6 cursor-pointer flex items-center gap-6 select-none"
+        className="p-6 cursor-pointer flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 select-none"
 
         onClick={() => setOpen(!open)}
 
       >
 
-        <div className={`w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center font-black text-lg transition-colors ${open ? 'bg-accent text-white' : 'bg-primary-light text-accent opacity-70'}`}>
+        <div className="flex items-center justify-between sm:contents">
 
-          {module.num}
+          <div className={`w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center font-black text-lg transition-colors ${open ? 'bg-accent text-white' : 'bg-primary-light text-accent opacity-70'}`}>
+
+            {module.num}
+
+          </div>
+
+          <span className={`sm:hidden material-icons text-xl transition-transform duration-300 ${open ? 'rotate-180 text-accent' : 'text-gray-300'}`}>expand_more</span>
 
         </div>
 
-        <div className="flex-grow">
+        <div className="flex-grow min-w-0">
 
-          <div className="flex items-center gap-3 mb-1">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mb-1">
 
-             <span className="text-[10px] font-black uppercase tracking-widest text-accent">{module.duration}</span>
+             <span className="text-[10px] font-black uppercase tracking-widest text-accent whitespace-nowrap">{module.duration}</span>
 
-             <span className="w-1 h-1 bg-gray-300 rounded-full"></span>
+             <span className="hidden sm:inline-block w-1 h-1 bg-gray-300 rounded-full"></span>
 
              <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">{module.tag}</span>
 
@@ -238,7 +244,7 @@ function ModuleCard({ module }) {
 
         </div>
 
-        <span className={`material-icons text-xl transition-transform duration-300 ${open ? 'rotate-180 text-accent' : 'text-gray-300'}`}>expand_more</span>
+        <span className={`hidden sm:inline material-icons text-xl transition-transform duration-300 ${open ? 'rotate-180 text-accent' : 'text-gray-300'}`}>expand_more</span>
 
       </div>
 
@@ -300,7 +306,7 @@ export default function PPMAgile() {
 
         <div className="absolute inset-0">
 
-          <div className="relative sm:absolute sm:top-0 sm:right-0 flex justify-center mt-4 sm:mt-0 w-1/2 h-full bg-gradient-to-l from-accent/10 to-transparent"></div>
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-accent/10 to-transparent"></div>
 
         </div>
 
@@ -536,7 +542,7 @@ export default function PPMAgile() {
 
                <div className="p-12 rounded-[40px] bg-[#0a1120] text-white relative overflow-hidden group">
 
-                  <div className="relative sm:absolute sm:top-0 sm:right-0 flex justify-center mt-4 sm:mt-0 w-64 h-64 bg-accent/20 rounded-full blur-[100px] group-hover:bg-accent/30 transition-all duration-700"></div>
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-[100px] group-hover:bg-accent/30 transition-all duration-700"></div>
 
                   <div className="relative z-10 flex flex-col md:flex-row gap-6 md:gap-12 items-center">
 
@@ -616,7 +622,7 @@ export default function PPMAgile() {
 
                   {DETAILS.map((row, i) => (
 
-                    <div key={i} className="flex items-center justify-between py-4 border-b border-gray-50 dark:border-white/10 last:border-0 group flex flex-col h-full">
+                    <div key={i} className="flex items-center justify-between py-4 border-b border-gray-50 dark:border-white/10 last:border-0 group">
 
                       <div className="flex items-center gap-3">
 
@@ -654,7 +660,7 @@ export default function PPMAgile() {
 
               <div className="bg-[#071B34] p-8 rounded-[32px] text-white overflow-hidden relative group">
 
-                <div className="relative sm:absolute sm:top-0 sm:right-0 flex justify-center mt-4 sm:mt-0 w-32 h-32 bg-accent/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-accent/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
 
                 <h4 className="text-sm font-black uppercase tracking-widest mb-6 relative z-10">Industry Recognition</h4>
 
