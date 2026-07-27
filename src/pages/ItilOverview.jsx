@@ -148,7 +148,7 @@ const ACC_CARDS = [
 
   {
 
-    title: 'DevOps Institute Accreditations',
+    title: 'ITIL5 Accreditations',
 
     desc: 'Authorized by the DevOps Institute to deliver official DevOps Foundation programmes.',
 
@@ -156,9 +156,9 @@ const ACC_CARDS = [
 
     validUntil: '19/02/2029',
 
-    pdfHref: '/docs/DevOps_Peer_Consulting.pdf',
+    pdfHref: '/docs/[9550] - Peer Consulting Resources ITIL5.pdf',
 
-    pdfLabel: 'View Official DevOps Accreditation Letter',
+    pdfLabel: 'View Official ITIL5 Accreditation Letter',
 
   },
 
@@ -224,9 +224,9 @@ export default function ItilOverview() {
 
         {/* Premium hero decoration — corner light leaks + scan lines */}
 
-        <div className="absolute inset-0 pointer-events-none" style={{background: "radial-gradient(ellipse 65% 55% at 100% 0%, rgba(124,58,237,0.20) 0%, transparent 70%)"}} />
+        <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 65% 55% at 100% 0%, rgba(124,58,237,0.20) 0%, transparent 70%)" }} />
 
-        <div className="absolute inset-0 pointer-events-none" style={{background: "radial-gradient(ellipse 50% 45% at 0% 100%, rgba(37,99,235,0.14) 0%, transparent 70%)"}} />
+        <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 50% 45% at 0% 100%, rgba(37,99,235,0.14) 0%, transparent 70%)" }} />
 
         <div className="container mx-auto px-6 lg:px-12 relative z-10 w-full">
 

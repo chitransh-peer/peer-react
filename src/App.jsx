@@ -37,6 +37,7 @@ const AiTraining              = lazy(() => import('./pages/AiTraining'));
 const PPMAgile                = lazy(() => import('./pages/PPMAgile'));
 const BlogAdmin               = lazy(() => import('./pages/BlogAdmin'));
 const BlogPost                = lazy(() => import('./pages/BlogPost'));
+const TrainingInfoRequest     = lazy(() => import('./pages/TrainingInfoRequest'));
 
 // ── MetaManager — updates <title> and <meta description> on every navigation ──
 // Sits inside <Router> so it can access useLocation.
@@ -84,6 +85,7 @@ function App() {
             <Route path="ai-certification" element={<AiTraining />} />
             <Route path="ppm-agile-certification" element={<PPMAgile />} />
             <Route path="blog/:id" element={<BlogPost />} />
+            <Route path="training-info-request" element={<TrainingInfoRequest />} />
           </Route>
           {/* Hidden admin route — not linked in nav */}
           <Route path="/peer-admin" element={<BlogAdmin />} />

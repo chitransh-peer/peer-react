@@ -65,7 +65,7 @@ const teamImages = {
 const servicesList = [
     {
         category: "CERTIFICATION",
-        title: "ITIL Training & Certifications",
+        title: "IT Training & Certification",
         description: "Comprehensive training for ITIL (Information Technology Infrastructure Library) with flexible learning models.",
         image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80",
         features: [

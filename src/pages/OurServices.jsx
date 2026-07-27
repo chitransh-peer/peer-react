@@ -5,7 +5,7 @@ export default function OurServices() {
   const navigate = useNavigate();
 
   const SERVICES_TAGS = [
-    { label: "ITIL Training", id: "itil-training" },
+    { label: "IT Training & Certification", id: "itil-training" },
     { label: "Software Services", id: "software-services" },
     { label: "Enterprise ERP", id: "enterprise-erp" },
     { label: "Cloud & Digital", id: "cloud-digital" },
@@ -46,13 +46,23 @@ export default function OurServices() {
           {/* Service tags */}
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {SERVICES_TAGS.map(tag => (
-              <button
-                key={tag.id}
-                onClick={() => scrollToService(tag.id)}
-                className="px-6 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-300 border border-white/20 text-white/70 bg-white/5 hover:bg-white hover:text-[#071B34] hover:border-white hover:shadow-[0_4px_15px_rgba(255,255,255,0.15)] active:scale-95"
-              >
-                {tag.label}
-              </button>
+              tag.id === 'itil-training' ? (
+                <button
+                  key={tag.id}
+                  onClick={() => navigate('/itil-certification')}
+                  className="px-6 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-300 border border-white/20 text-white/70 bg-white/5 hover:bg-white hover:text-[#071B34] hover:border-white hover:shadow-[0_4px_15px_rgba(255,255,255,0.15)] active:scale-95"
+                >
+                  {tag.label}
+                </button>
+              ) : (
+                <button
+                  key={tag.id}
+                  onClick={() => scrollToService(tag.id)}
+                  className="px-6 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-300 border border-white/20 text-white/70 bg-white/5 hover:bg-white hover:text-[#071B34] hover:border-white hover:shadow-[0_4px_15px_rgba(255,255,255,0.15)] active:scale-95"
+                >
+                  {tag.label}
+                </button>
+              )
             ))}
           </div>
         </div>
@@ -90,7 +100,7 @@ export default function OurServices() {
               <div className="w-14 h-14 bg-accent-blue/10 rounded-lg flex items-center justify-center mb-6 text-accent-blue group-hover:bg-[#071B34] group-hover:text-white transition-colors duration-300 relative z-10">
                 <span className="material-icons-outlined text-3xl">menu_book</span>
               </div>
-              <h3 className="text-xl font-bold text-white mb-4 transition-colors duration-300 group-hover:text-[#071B34] relative z-10">ITIL Training & Certifications</h3>
+              <h3 className="text-xl font-bold text-white mb-4 transition-colors duration-300 group-hover:text-[#071B34] relative z-10">IT Training & Certification</h3>
               <p className="text-slate-300 mb-6 flex-grow leading-relaxed group-hover:text-slate-600 transition-colors duration-300 relative z-10">
                 Comprehensive training for ITIL (Information Technology Infrastructure Library) with flexible learning models.
               </p>

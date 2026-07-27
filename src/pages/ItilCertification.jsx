@@ -358,35 +358,17 @@ function CourseCard({ course, mode, setMode }) {
 
       <div className="pt-6 border-t border-gray-100 dark:border-white/10 mt-auto">
 
-        <div className="grid grid-cols-2 gap-3 mb-4">
+        <div className="mb-4">
 
-          <button 
-
-            onClick={() => setMode('sp')}
-
-            className={`p-3 rounded-xl text-center border-2 transition-all ${mode === 'sp' ? 'bg-[#e0f2fe]/50 border-[#bae6fd] scale-105 shadow-sm' : 'bg-gray-50/50 dark:bg-white/5 border-transparent opacity-50 hover:opacity-100'}`}
-
-          >
-
-            <span className="block text-[8px] font-black uppercase tracking-tighter text-[#0284c7]">Self-Paced</span>
-
-            <span className="text-sm font-bold text-[#071B34] dark:text-white">US${spPrice}</span>
-
-          </button>
-
-          <button 
-
-            onClick={() => setMode('ol')}
-
-            className={`p-3 rounded-xl text-center border-2 transition-all ${mode === 'ol' ? 'bg-[#dbeafe]/50 border-[#bfdbfe] scale-105 shadow-sm' : 'bg-gray-50/50 dark:bg-white/5 border-transparent opacity-50 hover:opacity-100'}`}
-
+          <div
+            className="p-3 rounded-xl text-center border-2 bg-[#dbeafe]/50 border-[#bfdbfe] shadow-sm"
           >
 
             <span className="block text-[8px] font-black uppercase tracking-tighter text-[#1e40af]">Online Live</span>
 
             <span className="text-sm font-bold text-[#071B34] dark:text-white">US${olPrice}</span>
 
-          </button>
+          </div>
 
         </div>
 
@@ -408,7 +390,7 @@ function CourseCard({ course, mode, setMode }) {
 
 export default function ItilCertification() {
 
-  const [mode, setMode] = useState('sp');
+  const [mode, setMode] = useState('ol');
 
   const [filter, setFilter] = useState('all');
 
@@ -425,6 +407,16 @@ export default function ItilCertification() {
   return (
 
     <div className="bg-[#f8fafc] dark:bg-background-dark min-h-screen">
+
+      {/* Fixed floating Chat with Expert button */}
+      <a
+        href="mailto:info@peercr.com?subject=ITIL%20Certification%20Inquiry"
+        className="fixed bottom-8 right-8 z-50 flex items-center gap-3 bg-accent hover:bg-white hover:!text-primary text-white py-3.5 px-6 rounded-2xl font-black uppercase tracking-widest text-[11px] transition-all shadow-2xl active:scale-95 border-2 border-accent hover:border-primary group"
+        title="Chat with an ITIL Expert"
+      >
+        <span className="material-icons text-xl">chat</span>
+        Chat with Expert
+      </a>
 
       {/* Page Header */}
 
@@ -450,7 +442,7 @@ export default function ItilCertification() {
 
             Three qualification tracks — Foundation & AI Governance, Specialist, and Practice Manager.
 
-            Choose your learning path below and switch between Self-Paced or Online Live delivery modes directly on the module cards.
+            Choose your learning path below and explore our Online Live delivery modules.
 
           </p>
 
@@ -572,9 +564,9 @@ export default function ItilCertification() {
 
                  <div className="text-right">
 
-                    <div className={`text-sm font-black py-1 px-4 rounded-full border transition-all ${mode === 'sp' ? 'text-[#0284c7] border-[#bae6fd] bg-[#e0f2fe]' : 'text-[#1e40af] border-[#bfdbfe] bg-[#dbeafe]'}`}>
+                    <div className="text-sm font-black py-1 px-4 rounded-full border transition-all text-[#1e40af] border-[#bfdbfe] bg-[#dbeafe]">
 
-                      {mode === 'sp' ? 'Self-Paced Enabled' : 'Online Live Enabled'}
+                      Online Live Enabled
 
                     </div>
 

@@ -151,6 +151,11 @@ export const PAGE_META = {
     title: 'Sandbox | Peer Consulting Resources',
     description: 'Internal component sandbox for Peer Consulting Resources development.',
   },
+  '/training-info-request': {
+    title: 'Request Training Info | Peer Consulting Resources',
+    description:
+      'Submit a training inquiry for ITIL®, AI & Machine Learning, or PPM & Agile programs. Our team responds within one business day with pricing, schedules, and enrollment details.',
+  },
 };
 
 /** Fallback for any route not listed above */
