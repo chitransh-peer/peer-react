@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
@@ -314,9 +314,7 @@ export default function PPMAgile() {
 
         <div className="container mx-auto px-6 lg:px-12 relative z-10 w-full">
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-16 items-center">
-
-            <div className="lg:col-span-7">
+          <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
 
               <div className="inline-block bg-accent/20 backdrop-blur-md px-4 py-1.5 rounded-lg text-accent-blue text-[10px] font-black uppercase tracking-[0.25em] mb-6 border border-accent/20">
 
@@ -326,7 +324,7 @@ export default function PPMAgile() {
 
               <h1 className="text-[26px] sm:text-4xl md:text-7xl font-black font-display mb-8 leading-[0.9] tracking-tighter">
 
-                PPM & <span className="text-accent underline decoration-white/20 underline-offset-8">Agile</span><br />
+                PPM &amp; <span className="text-accent underline decoration-white/20 underline-offset-8">Agile</span><br />
 
                 <span className="text-blue-200">Expert Bootcamp</span>
 
@@ -338,9 +336,7 @@ export default function PPMAgile() {
 
               </p>
 
-              
-
-              <div className="flex flex-wrap gap-4 mb-10">
+              <div className="flex flex-wrap justify-center gap-4 mb-10">
 
                  <div className="flex items-center gap-3 bg-white/5 border border-white/10 px-4 py-2 rounded-xl backdrop-blur-md">
 
@@ -368,9 +364,7 @@ export default function PPMAgile() {
 
               </div>
 
-
-
-              <div className="flex flex-wrap gap-4">
+              <div className="flex justify-center">
 
                 <a href="#curriculum" className="bg-accent hover:bg-accent/90 text-white px-10 py-4 rounded-xl font-black uppercase tracking-widest text-xs transition-all shadow-2xl active:scale-95">
 
@@ -378,87 +372,7 @@ export default function PPMAgile() {
 
                 </a>
 
-                <a href="#syllabus" className="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-10 py-4 rounded-xl font-black uppercase tracking-widest text-xs transition-all backdrop-blur-md active:scale-95">
-
-                  Download Syllabus
-
-                </a>
-
               </div>
-
-            </div>
-
-
-
-            <div className="lg:col-span-5">
-
-              <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-8 rounded-[40px] shadow-2xl relative">
-
-                <div className="absolute -top-6 -right-6 w-20 h-20 bg-accent rounded-full flex items-center justify-center shadow-xl rotate-12 group hover:rotate-0 transition-transform cursor-pointer">
-
-                   <span className="material-icons text-white text-3xl">local_offer</span>
-
-                </div>
-
-                <div className="text-center mb-8">
-
-                  <p className="text-[10px] font-black uppercase tracking-[0.3em] text-accent mb-2">Program Investment</p>
-
-                  <h3 className="text-6xl font-black font-display tracking-tighter mb-2">TBD</h3>
-
-                  <p className="text-blue-200/50 text-xs font-medium">Includes formal certification exam fees</p>
-
-                </div>
-
-                
-
-                <hr className="border-white/10 mb-8" />
-
-                
-
-                <div className="space-y-6">
-
-                  <div className="flex items-center gap-5">
-
-                     <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center">
-
-                        <span className="material-icons text-white text-xl">record_voice_over</span>
-
-                     </div>
-
-                     <div>
-
-                        <p className="text-[10px] font-black text-blue-200/50 uppercase tracking-widest">Instructor-Led Live</p>
-
-                        <p className="text-sm font-bold text-white">Enrolling Now for Q3</p>
-
-                     </div>
-
-                  </div>
-
-                  <div className="flex items-center gap-5">
-
-                     <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center opacity-50">
-
-                        <span className="material-icons text-white text-xl">devices</span>
-
-                     </div>
-
-                     <div className="opacity-50">
-
-                        <p className="text-[10px] font-black text-blue-200/50 uppercase tracking-widest">Flexible Self-Paced</p>
-
-                        <p className="text-sm font-bold text-white">Launching Soon</p>
-
-                     </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
 
           </div>
 
@@ -642,9 +556,9 @@ export default function PPMAgile() {
 
                 
 
-                <a href="#enroll" className="block w-full text-center bg-accent hover:bg-primary text-white py-4 rounded-2xl font-black uppercase tracking-widest text-xs transition-all shadow-xl active:scale-95 mb-4">
+                <a href="/training-info-request" className="block w-full text-center bg-accent hover:bg-primary text-white py-4 rounded-2xl font-black uppercase tracking-widest text-xs transition-all shadow-xl active:scale-95 mb-4">
 
-                  Reserve My Seat
+                  Request Info
 
                 </a>
 

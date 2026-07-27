@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
@@ -370,9 +370,7 @@ export default function AiTraining() {
 
         <div className="container mx-auto px-6 lg:px-12 relative z-10 w-full">
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-16 items-center">
-
-            <div className="lg:col-span-8">
+          <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
 
               <div className="inline-block bg-[#6a1b9a]/30 backdrop-blur-md px-4 py-1.5 rounded-full text-white text-[10px] font-black uppercase tracking-[0.25em] mb-6 border border-white/10">
 
@@ -394,11 +392,9 @@ export default function AiTraining() {
 
               </p>
 
-              
+              <div className="flex flex-wrap justify-center gap-3 mb-12">
 
-              <div className="flex flex-wrap gap-3 mb-12">
-
-                 {['16 hours total', '8 modules', 'Self-Paced / Live', 'No coding required*'].map(tag => (
+                 {['16 hours total', '8 modules', 'Live Instructor-Led', 'No coding required*'].map(tag => (
 
                    <span key={tag} className="bg-white/5 border border-white/10 px-4 py-2 rounded-xl text-xs font-bold text-gray-300">
 
@@ -410,15 +406,7 @@ export default function AiTraining() {
 
               </div>
 
-
-
-              <div className="flex flex-wrap gap-4">
-
-                <a href="#register" className="bg-[#6a1b9a] hover:bg-[#4a148c] text-white px-10 py-4 rounded-xl font-black uppercase tracking-widest text-xs transition-all shadow-2xl active:scale-95">
-
-                  Register Interest
-
-                </a>
+              <div className="flex justify-center">
 
                 <a href="#curriculum" className="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-10 py-4 rounded-xl font-black uppercase tracking-widest text-xs transition-all backdrop-blur-md active:scale-95">
 
@@ -427,56 +415,6 @@ export default function AiTraining() {
                 </a>
 
               </div>
-
-            </div>
-
-
-
-            <div className="lg:col-span-4">
-
-               <div className="bg-white/5 backdrop-blur-3xl border border-white/10 p-10 rounded-[40px] shadow-2xl relative group">
-
-                  <div className="absolute -top-6 -left-6 w-20 h-20 bg-[#6a1b9a] rounded-3xl flex items-center justify-center shadow-xl rotate-12 group-hover:rotate-0 transition-all duration-500">
-
-                     <span className="material-icons text-white text-3xl">auto_awesome</span>
-
-                  </div>
-
-                  <div className="text-center mb-10">
-
-                    <p className="text-[10px] font-black uppercase tracking-[0.3em] text-[#ce93d8] mb-2">Total Investment</p>
-
-                    <h3 className="text-6xl font-black font-display tracking-tighter mb-2">TBD</h3>
-
-                    <p className="text-blue-200/50 text-xs font-medium uppercase tracking-widest">Waitlist Open</p>
-
-                  </div>
-
-                  <hr className="border-white/10 mb-8" />
-
-                  <div className="space-y-4">
-
-                     <div className="bg-white/5 p-4 rounded-2xl border border-white/5">
-
-                        <p className="text-[9px] font-black text-gray-400 uppercase mb-1">AI-Enabled Self-Paced</p>
-
-                        <p className="text-xs font-bold text-gray-300">Launching Soon</p>
-
-                     </div>
-
-                     <div className="bg-white/5 p-4 rounded-2xl border border-white/5">
-
-                        <p className="text-[9px] font-black text-gray-400 uppercase mb-1">Live Online Cohort</p>
-
-                        <p className="text-xs font-bold text-gray-300">Waitlist Active</p>
-
-                     </div>
-
-                  </div>
-
-               </div>
-
-            </div>
 
           </div>
 
@@ -626,17 +564,11 @@ export default function AiTraining() {
 
                 
 
-                <a href="#register" id="register" className="block w-full text-center bg-[#6a1b9a] hover:bg-[#4a148c] text-white py-4 rounded-xl font-black uppercase tracking-widest text-[10px] transition-all shadow-xl active:scale-95 mb-4">
-
-                  Join the Waitlist
-
-                </a>
-
-                <button className="block w-full text-center border-2 border-[#6a1b9a] text-[#6a1b9a] py-3.5 rounded-xl font-black uppercase tracking-widest text-[10px] transition-all hover:bg-[#6a1b9a] hover:text-white active:scale-95">
+                <Link to="/training-info-request" className="block w-full text-center bg-[#6a1b9a] hover:bg-[#4a148c] text-white py-4 rounded-xl font-black uppercase tracking-widest text-[10px] transition-all shadow-xl active:scale-95 mb-4">
 
                   Request Info
 
-                </button>
+                </Link>
 
               </div>
 
