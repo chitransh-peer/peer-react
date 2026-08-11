@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // ✅ Use the /exec URL from Deploy → Manage Deployments (NOT /dev)
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyi84MJjjlAfM-hHH0V7QbuZUpebgBFYnejXISluHRxBm9QpHMad8IXDXEL1v70iW9ccQ/exec';
@@ -13,10 +14,16 @@ export default function ContactUs() {
     _honeypot: '', // hidden anti-spam field — must stay empty
   });
   const [status, setStatus] = useState('idle'); // 'idle' | 'loading' | 'success' | 'error'
+  const navigate = useNavigate();
 
   // ✅ FIX: Use e.target.name as primary key (more robust), fallback to id
+  // When ITIL Training is selected, redirect to the dedicated training info request form
   const handleChange = (e) => {
     const { id, name, value } = e.target;
+    if ((name || id) === 'subject' && value === 'ITIL Training') {
+      navigate('/training-info-request');
+      return;
+    }
     setFormData((prev) => ({ ...prev, [name || id]: value }));
   };
 
@@ -172,6 +179,7 @@ export default function ContactUs() {
                       <option value="Software Services Consultation">Software Services Consultation</option>
                       <option value="General Inquiry">General Inquiry</option>
                       <option value="Careers">Careers</option>
+                      <option value="ITIL Training">ITIL Training</option>
                     </select>
                   </div>
 

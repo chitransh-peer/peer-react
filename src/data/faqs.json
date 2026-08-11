@@ -1,0 +1,58 @@
+{
+  "faqs": [
+    {
+      "id": 1,
+      "category": "General Tracks",
+      "question": "What training tracks does Peer Consulting offer?",
+      "answer": "Peer Consulting offers specialized qualification tracks in three main areas: ITIL® Certifications (Foundation & AI Governance, Specialist, Practice Manager), AI & Machine Learning, and PPM & Agile."
+    },
+    {
+      "id": 2,
+      "category": "AI & Machine Learning",
+      "question": "What is the 'AI for Business Professionals' program?",
+      "answer": "It is a comprehensive, hands-on 16-hour training program (comprising 8 modules of 2 hours each) designed to take you from understanding AI to deploying it in a business context without requiring coding skills."
+    },
+    {
+      "id": 3,
+      "category": "AI & Machine Learning",
+      "question": "Are there any technical prerequisites for 'AI for Business Professionals'?",
+      "answer": "No technical background or coding experience is required. The course is suitable for beginner to intermediate levels."
+    },
+    {
+      "id": 4,
+      "category": "AI & Machine Learning",
+      "question": "Who is the 'AI for Business Professionals' course designed for?",
+      "answer": "It is designed for business managers, team leads, IT professionals, project managers, operations & process owners, analysts, finance professionals, executives, and digital leaders."
+    },
+    {
+      "id": 5,
+      "category": "PPM & Agile",
+      "question": "What is the duration and format of the PPM & Agile Expert Bootcamp?",
+      "answer": "The bootcamp consists of 24 hours of intensive expert training divided into 6 modules (4 hours each). It offers flexible schedules including weekend and weeknight options."
+    },
+    {
+      "id": 6,
+      "category": "PPM & Agile",
+      "question": "What are the prerequisites and certification details for the PPM & Agile Bootcamp?",
+      "answer": "The prerequisite is Foundational PM knowledge. The program awards the 'PPM & Agile Expert' certification, includes exams in the program fee, and carries industry recognition aligned with PMI, Agile Alliance, and Scrum.org."
+    },
+    {
+      "id": 7,
+      "category": "ITIL Pricing",
+      "question": "How much do the ITIL Foundation and ITIL AI Governance programs cost?",
+      "answer": "Both ITIL Foundation and ITIL AI Governance cost $550.00 USD for Self-Paced (On-demand) and $750.00 USD for Online-Live Instructor-led training."
+    },
+    {
+      "id": 8,
+      "category": "ITIL Pricing",
+      "question": "What are the prices for ITIL Specialist and ITIL Practitioner programs?",
+      "answer": "ITIL Specialist costs $750.00 (Self-Paced) and $950.00 (Online-Live). ITIL Practitioner (Single Module) costs $315.00 (Self-Paced). ITIL Practitioner (Pack Practice Manager) costs $750.00 (Self-Paced) and $950.00 (Online-Live). ITIL Foundation Bridge costs $240.00 (Self-Paced) and $375.00 (Online-Live)."
+    },
+    {
+      "id": 9,
+      "category": "ITIL Pricing",
+      "question": "Are there any additional fees for ITIL certification?",
+      "answer": "Yes, optional or additional fees include PeopleCert Membership at $50.00 USD and Take2 (exam retake option) at $50.00 USD."
+    }
+  ]
+}

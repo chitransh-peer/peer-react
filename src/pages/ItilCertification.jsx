@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
+import ChatbotWidget from '../components/ChatbotWidget';
 
 
 const COURSES = [
@@ -408,15 +409,8 @@ export default function ItilCertification() {
 
     <div className="bg-[#f8fafc] dark:bg-background-dark min-h-screen">
 
-      {/* Fixed floating Chat with Expert button */}
-      <a
-        href="mailto:info@peercr.com?subject=ITIL%20Certification%20Inquiry"
-        className="fixed bottom-8 right-8 z-50 flex items-center gap-3 bg-accent hover:bg-white hover:!text-primary text-white py-3.5 px-6 rounded-2xl font-black uppercase tracking-widest text-[11px] transition-all shadow-2xl active:scale-95 border-2 border-accent hover:border-primary group"
-        title="Chat with an ITIL Expert"
-      >
-        <span className="material-icons text-xl">chat</span>
-        Chat with Expert
-      </a>
+      {/* Chatbot Widget — fixed to viewport, floats while scrolling this page */}
+      <ChatbotWidget />
 
       {/* Page Header */}
 
@@ -536,7 +530,9 @@ export default function ItilCertification() {
 
                <p className="text-xs text-blue-100/70 mb-6 leading-relaxed relative z-10">Begin with ITIL Foundation V5, then choose a Specialist or Practice Manager track aligned to your role.</p>
 
-               <button className="w-full bg-accent hover:bg-white hover:!text-primary py-3 rounded-xl text-xs font-black uppercase tracking-widest transition-all relative z-10 active:scale-95 shadow-xl">
+               <button
+                 onClick={() => window.dispatchEvent(new Event('openChatbot'))}
+                 className="w-full bg-accent hover:bg-white hover:!text-primary py-3 rounded-xl text-xs font-black uppercase tracking-widest transition-all relative z-10 active:scale-95 shadow-xl">
 
                  Chat with Expert
 
