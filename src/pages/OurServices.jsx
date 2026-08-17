@@ -41,7 +41,7 @@ export default function OurServices() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">Our Expertise in Action</h1>
           <p className="text-lg md:text-xl text-[#8ba3bd] max-w-2xl mx-auto leading-relaxed">
-            End-to-end technology solutions designed to help organizations move with confidence and purpose.
+            End-to-end IT consulting and technology solutions designed to help organizations across <strong className="text-white/80">New Jersey</strong>, New York, and Connecticut move with confidence and purpose.
           </p>
           {/* Service tags */}
           <div className="mt-8 flex flex-wrap justify-center gap-3">
@@ -72,7 +72,7 @@ export default function OurServices() {
           <span className="inline-block px-3 py-1 bg-accent-blue/10 text-accent-blue rounded-full text-sm font-semibold mb-4 tracking-wide uppercase">Why Choose Us</span>
           <h2 className="text-3xl font-semibold text-primary-text dark:text-white mb-6">Built on Expertise</h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-            We are <strong className="text-primary-text dark:text-white font-bold">60+ professionals</strong> — software engineers, program and project managers, business analysts, designers, and quality analysts with more than <strong className="text-primary-text dark:text-white font-bold">15 years of experience</strong> in delivering superior services and products. We align strategy to implementation and apply the right mix of technology to add value to our clients. We provide the required visibility, planning, and agility for accelerating transformation.
+            We are <strong className="text-primary-text dark:text-white font-bold">60+ professionals</strong> — software engineers, program and project managers, business analysts, designers, and quality analysts with more than <strong className="text-primary-text dark:text-white font-bold">15 years of experience</strong> in delivering superior services and products. Based in <strong className="text-primary-text dark:text-white font-bold">Princeton, NJ</strong> and serving organizations across New Jersey, we align strategy to implementation and apply the right mix of technology to add value to our clients.
           </p>
         </div>
       </section>

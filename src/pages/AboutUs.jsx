@@ -49,7 +49,7 @@ export default function AboutUs() {
                         Business Impact
                     </h1>
                     <p className="mt-4 max-w-2xl text-xl text-[#8ba3bd] font-light">
-                        By delivering technology consulting, software solutions, and strategic expertise designed for long-term growth.
+                        A <strong className="text-white/80 font-medium">Princeton, NJ-based</strong> IT consulting firm delivering technology consulting, software solutions, and strategic expertise for long-term growth across New Jersey, New York, and Connecticut.
                     </p>
                     {/* Counter strip */}
                     <div className="mt-12 flex flex-wrap justify-center gap-x-12 gap-y-6">
@@ -83,9 +83,9 @@ export default function AboutUs() {
                             <h2 className="text-3xl font-heading font-bold text-primary-text dark:text-white mb-6">Who We Are</h2>
                             <div className="prose prose-lg text-slate-600 dark:text-slate-300 mb-8 font-display">
                                 <p className="mb-4">
-                                    Peer Consulting Resources is a women-owned technology company that combines technical expertise, strategic thinking, and delivery excellence to help organizations solve complex operational challenges.</p>
+                                    Peer Consulting Resources is a women-owned technology company <strong>headquartered in Princeton, NJ</strong>, combining technical expertise, strategic thinking, and delivery excellence to help organizations across New Jersey and beyond solve complex operational challenges.</p>
                                 <p>
-                                    With over 15 years of experience, we help organizations modernize systems, improve operational efficiency, and implement solutions designed to scale with evolving business needs. </p>
+                                    With over 15 years of experience serving public and private sector clients in <strong>New Jersey</strong>, New York, and Connecticut, we help organizations modernize systems, improve operational efficiency, and implement solutions designed to scale with evolving business needs. </p>
                             </div>
                             <div className="bg-background-light dark:bg-slate-800 border-l-4 border-primary p-6 rounded-r-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors duration-150">
                                 <h3 className="text-xl font-heading font-bold text-primary-text dark:text-blue-100 mb-2">Our Mission</h3>

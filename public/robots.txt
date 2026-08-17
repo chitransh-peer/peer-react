@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /peer-admin
+Disallow: /sandbox
+
+Sitemap: https://www.peerconsultingresources.com/sitemap.xml

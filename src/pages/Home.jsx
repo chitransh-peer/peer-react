@@ -263,13 +263,17 @@ export default function Home() {
                             Powering Digital Growth Through Trusted Technology
                         </h1>
                         <p className="text-[#8ba3bd] text-lg lg:text-[20px] font-body mb-10 max-w-2xl leading-relaxed">
-                            From strategy to execution, we help organizations build smarter, scale faster, and stay ahead.
+                            From strategy to execution, we help organizations across <strong className="text-white/80 font-semibold">New Jersey</strong>, New York, and Connecticut build smarter, scale faster, and stay ahead.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Link className="inline-flex justify-center items-center px-8 py-4 bg-[#4DA3FF] text-white font-bold rounded transition-all duration-300 shadow-[0_4px_15px_rgba(77,163,255,0.2)] transform hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(77,163,255,0.4)] hover:bg-[#3b82f6]" to="/services">
                                 Discover Our Solutions
                             </Link>
                         </div>
+                        {/* Hidden SEO address — readable by Googlebot, visually invisible */}
+                        <address className="not-italic" style={{ position: 'absolute', width: '1px', height: '1px', overflow: 'hidden', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap' }}>
+                            Peer Consulting Resources, 20 Jefferson Plaza, Princeton, NJ 08540. Phone: +1 (732) 444-4645.
+                        </address>
                         {/* Stats strip */}
                         <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3">
 
@@ -340,7 +344,7 @@ export default function Home() {
                                 Your Partner in Smart Transformation
                             </h2>
                             <p className="text-slate-600 font-body text-lg leading-relaxed mb-6">
-                                At Peer Consulting Resources, we don't just solve IT problems; we go beyond fixing problems — we build the technology foundation for long-term success. With over 15 years of industry experience, we bridge the gap between complex technology and business objectives. </p>
+                                At Peer Consulting Resources, we don't just solve IT problems; we go beyond fixing problems — we build the technology foundation for long-term success. <strong>Headquartered in Princeton, NJ</strong>, our team has over 15 years of experience bridging the gap between complex technology and business objectives across New Jersey and beyond.</p>
                             <p className="text-slate-600 font-body text-lg leading-relaxed mb-8">
                                 Our experts work as an extension of your team to deliver solutions that are efficient, secure, and built to scale.
                             </p>
