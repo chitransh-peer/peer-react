@@ -3,25 +3,25 @@
 
   <!-- ── Money Pages (Priority 1.0) ──────────────────────────────────── -->
   <url>
-    <loc>https://www.peerconsultingresources.com/</loc>
+    <loc>https://peer-consulting.com/</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.peerconsultingresources.com/services</loc>
+    <loc>https://peer-consulting.com/services</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.peerconsultingresources.com/contact</loc>
+    <loc>https://peer-consulting.com/contact</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.peerconsultingresources.com/about</loc>
+    <loc>https://peer-consulting.com/about</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -29,25 +29,25 @@
 
   <!-- ── Supporting Pages (Priority 0.8) ──────────────────────────────── -->
   <url>
-    <loc>https://www.peerconsultingresources.com/team</loc>
+    <loc>https://peer-consulting.com/team</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.peerconsultingresources.com/careers</loc>
+    <loc>https://peer-consulting.com/careers</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.peerconsultingresources.com/blogs</loc>
+    <loc>https://peer-consulting.com/blogs</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.peerconsultingresources.com/training-info-request</loc>
+    <loc>https://peer-consulting.com/training-info-request</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -55,13 +55,13 @@
 
   <!-- ── ITIL® Hub (Priority 0.8) ─────────────────────────────────────── -->
   <url>
-    <loc>https://www.peerconsultingresources.com/itil-overview</loc>
+    <loc>https://peer-consulting.com/itil-overview</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.peerconsultingresources.com/itil-certification</loc>
+    <loc>https://peer-consulting.com/itil-certification</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -69,25 +69,25 @@
 
   <!-- ── ITIL® Foundation Courses (Priority 0.8) ──────────────────────── -->
   <url>
-    <loc>https://www.peerconsultingresources.com/itil-foundation</loc>
+    <loc>https://peer-consulting.com/itil-foundation</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.peerconsultingresources.com/itil-foundation-v5</loc>
+    <loc>https://peer-consulting.com/itil-foundation-v5</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.peerconsultingresources.com/itil-foundation-4</loc>
+    <loc>https://peer-consulting.com/itil-foundation-4</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.peerconsultingresources.com/itil-foundation-bridge-v5</loc>
+    <loc>https://peer-consulting.com/itil-foundation-bridge-v5</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -95,37 +95,37 @@
 
   <!-- ── ITIL® Specialist Modules (Priority 0.7) ──────────────────────── -->
   <url>
-    <loc>https://www.peerconsultingresources.com/itil-specialist-product-v5</loc>
+    <loc>https://peer-consulting.com/itil-specialist-product-v5</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.peerconsultingresources.com/itil-specialist-service-v5</loc>
+    <loc>https://peer-consulting.com/itil-specialist-service-v5</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.peerconsultingresources.com/itil-specialist-experience-v5</loc>
+    <loc>https://peer-consulting.com/itil-specialist-experience-v5</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.peerconsultingresources.com/itil-specialist-strategy-v5</loc>
+    <loc>https://peer-consulting.com/itil-specialist-strategy-v5</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.peerconsultingresources.com/itil-specialist-transformation-v5</loc>
+    <loc>https://peer-consulting.com/itil-specialist-transformation-v5</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.peerconsultingresources.com/itil-specialist-msf</loc>
+    <loc>https://peer-consulting.com/itil-specialist-msf</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -133,13 +133,13 @@
 
   <!-- ── ITIL® Practice Modules (Priority 0.7) ────────────────────────── -->
   <url>
-    <loc>https://www.peerconsultingresources.com/itil-practice-pic</loc>
+    <loc>https://peer-consulting.com/itil-practice-pic</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.peerconsultingresources.com/itil-practice-cai</loc>
+    <loc>https://peer-consulting.com/itil-practice-cai</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -147,27 +147,75 @@
 
   <!-- ── AI & Agile Certifications (Priority 0.7) ─────────────────────── -->
   <url>
-    <loc>https://www.peerconsultingresources.com/ai-certification</loc>
+    <loc>https://peer-consulting.com/ai-certification</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.peerconsultingresources.com/ppm-agile-certification</loc>
+    <loc>https://peer-consulting.com/ppm-agile-certification</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
+  <!-- ── Service Landing Pages (Priority 0.9) ──────────────────────────
+       One page per commercial theme; source of truth is src/data/serviceLandings.js -->
+  <url>
+    <loc>https://peer-consulting.com/services/it-consulting-new-jersey</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://peer-consulting.com/services/it-staffing-new-jersey</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://peer-consulting.com/services/cloud-digital-transformation</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://peer-consulting.com/services/enterprise-erp-solutions</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://peer-consulting.com/services/cyber-security-solutions</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://peer-consulting.com/services/quality-assurance-testing</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ── Blog Posts (Priority 0.6) ─────────────────────────────────────
+       Add one <url> per published entry in src/data/blogs.js. -->
+  <url>
+    <loc>https://peer-consulting.com/blog/ai-not-strategy-people-are</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <!-- ── Legal / Policy Pages (Priority 0.3) ──────────────────────────── -->
   <url>
-    <loc>https://www.peerconsultingresources.com/terms-of-use</loc>
+    <loc>https://peer-consulting.com/terms-of-use</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.peerconsultingresources.com/privacy-policy</loc>
+    <loc>https://peer-consulting.com/privacy-policy</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

@@ -6,7 +6,21 @@
  * Brand suffix pattern: "<Page Topic> | Peer Consulting Resources"
  * Geo-enriched: key pages include "New Jersey / NJ / Princeton, NJ" naturally.
  */
+import { SERVICE_LANDINGS } from './serviceLandings';
+
+/**
+ * Per-service landing page meta, derived from the same source that renders the
+ * pages so the two can never drift apart. Spread into PAGE_META below.
+ */
+const SERVICE_LANDING_META = Object.fromEntries(
+  SERVICE_LANDINGS.map((s) => [
+    `/services/${s.slug}`,
+    { title: s.title, description: s.description },
+  ])
+);
+
 export const PAGE_META = {
+  ...SERVICE_LANDING_META,
   '/': {
     title: 'IT Consulting & Training in New Jersey | Peer Consulting Resources',
     description:
@@ -157,6 +171,27 @@ export const PAGE_META = {
     description:
       'Submit a training inquiry for ITIL®, AI & Machine Learning, or PPM & Agile programs in New Jersey. Our team responds within one business day with pricing, schedules, and enrollment details.',
   },
+};
+
+/**
+ * Routes with URL parameters, which therefore have no fixed key in PAGE_META.
+ * MetaManager treats a path matching one of these as a real page (DEFAULT_META,
+ * usually then overridden by the page itself) rather than as a 404.
+ */
+export const DYNAMIC_ROUTE_PATTERNS = [/^\/blog\/[^/]+$/];
+
+/**
+ * Meta for the catch-all 404 route.
+ *
+ * `noindex` matters here: the SPA rewrite in vercel.json serves index.html with
+ * a 200 for every unknown URL, so without this every stale/spam URL still in
+ * Google's index looks like a valid thin page (a soft 404) instead of one to drop.
+ */
+export const NOT_FOUND_META = {
+  title: 'Page Not Found | Peer Consulting Resources',
+  description:
+    'The page you requested could not be found. Explore Peer Consulting Resources — IT consulting, ITIL® certification training, and IT staffing in Princeton, New Jersey.',
+  robots: 'noindex, follow',
 };
 
 /** Fallback for any route not listed above */

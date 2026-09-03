@@ -3,4 +3,4 @@ Allow: /
 Disallow: /peer-admin
 Disallow: /sandbox
 
-Sitemap: https://www.peerconsultingresources.com/sitemap.xml
+Sitemap: https://peer-consulting.com/sitemap.xml

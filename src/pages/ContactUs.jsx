@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { NAP, ADDRESS_LINE } from '../data/nap';
 
 // ✅ Use the /exec URL from Deploy → Manage Deployments (NOT /dev)
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyi84MJjjlAfM-hHH0V7QbuZUpebgBFYnejXISluHRxBm9QpHMad8IXDXEL1v70iW9ccQ/exec';
@@ -244,7 +245,7 @@ export default function ContactUs() {
                     <h3 className="text-2xl font-bold text-white font-heading transition-transform duration-300 group-hover:-translate-y-1">Headquarters (New York)</h3>
                     <div className="text-slate-200 mt-2 text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 delay-75 space-y-1">
                       <p className="flex items-start"><span className="material-icons-outlined text-sm mr-2 mt-0.5">location_on</span> New York, NY</p>
-                      <p className="flex items-center"><span className="material-icons-outlined text-sm mr-2">phone</span> +1 (732) 444 4645</p>
+                      <p className="flex items-center"><span className="material-icons-outlined text-sm mr-2">phone</span> {NAP.phone}</p>
                       <p className="flex items-center"><span className="material-icons-outlined text-sm mr-2">email</span> contact@peer-consulting.com</p>
                     </div>
                   </div>
@@ -265,8 +266,8 @@ export default function ContactUs() {
                     </div>
                     <h3 className="text-2xl font-bold text-white font-heading transition-transform duration-300 group-hover:-translate-y-1">Corporate Office (Princeton)</h3>
                     <div className="text-slate-200 mt-2 text-sm transition-all duration-300 space-y-1">
-                      <p className="flex items-start"><span className="material-icons-outlined text-sm mr-2 mt-0.5">location_on</span> 20 Jefferson Plaza, Princeton, NJ 08540</p>
-                      <p className="flex items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75"><span className="material-icons-outlined text-sm mr-2">phone</span> +1 (732) 444 4645</p>
+                      <p className="flex items-start"><span className="material-icons-outlined text-sm mr-2 mt-0.5">location_on</span> {ADDRESS_LINE}</p>
+                      <p className="flex items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75"><span className="material-icons-outlined text-sm mr-2">phone</span> {NAP.phone}</p>
                       <p className="flex items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75"><span className="material-icons-outlined text-sm mr-2">email</span> contact@peer-consulting.com</p>
                     </div>
                   </div>

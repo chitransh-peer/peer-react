@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import logo from '../assets/logos/peer footer updated.png';
+import { NAP } from '../data/nap';
 
 export default function Footer() {
   const scrollToTop = (e) => {
@@ -75,7 +76,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-4 text-left">
                 <span className="material-icons text-white/50 text-[20px]">phone</span>
-                <a href="tel:+17324444645" className="text-white/70 text-sm hover:text-white transition-colors">732-444-4645</a>
+                <a href={NAP.phoneHref} className="text-white/70 text-sm hover:text-white transition-colors">{NAP.phone}</a>
               </li>
               <li className="flex items-center gap-4 text-left">
                 <span className="material-icons text-white/50 text-[20px]">mail</span>

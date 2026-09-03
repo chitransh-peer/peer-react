@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { SERVICE_LANDINGS } from '../data/serviceLandings';
 
 export default function OurServices() {
   const navigate = useNavigate();
@@ -412,6 +413,48 @@ export default function OurServices() {
       </section>
 
 
+
+      {/* ── Service deep-dives ──────────────────────────────────────────────
+          This hub links out to a dedicated page per commercial theme. Each of
+          those is its own indexable URL with its own <h1> and schema, which is
+          what lets an individual service compete in search rather than having
+          eleven themes share this one page. */}
+      <section className="py-20 bg-white dark:bg-background-dark">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl font-bold text-primary-text dark:text-white">Explore Our Services in Depth</h2>
+            <p className="mt-4 text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+              Detailed guides to how each engagement works, who it is for, and what it delivers.
+            </p>
+            <div className="w-20 h-1 bg-accent-blue mx-auto mt-6 rounded-full"></div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {SERVICE_LANDINGS.map((service) => (
+              <Link
+                key={service.slug}
+                to={`/services/${service.slug}`}
+                className="group flex flex-col p-7 rounded-lg border border-border-light dark:border-border-dark bg-[#f8fafc] dark:bg-surface-dark hover:border-accent-blue hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-accent-blue/10 rounded-lg flex items-center justify-center mb-5 text-accent-blue group-hover:bg-accent-blue group-hover:text-white transition-colors duration-300">
+                  <span className="material-icons-outlined text-2xl">{service.icon}</span>
+                </div>
+                <h3 className="text-lg font-bold text-primary-text dark:text-white mb-3 group-hover:text-accent-blue transition-colors duration-300">
+                  {service.h1}
+                </h3>
+                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed flex-grow">
+                  {service.description}
+                </p>
+                <span className="mt-5 text-accent-blue text-sm font-semibold flex items-center">
+                  Read more
+                  <span className="material-icons-outlined text-sm ml-1 group-hover:translate-x-1 transition-transform duration-300">
+                    arrow_forward
+                  </span>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="py-20 bg-[#f0f4f8] dark:bg-surface-dark border-y border-border-light dark:border-border-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

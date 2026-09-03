@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import organisationsImg from '../assets/logos/Organisations_we_Serve.webp';
 import alliancesImg from '../assets/logos/Technology_alliances.webp';
+import { NAP, ADDRESS_LINE } from '../data/nap';
 
 const cert1Img = new URL('../assets/certifications/1.png', import.meta.url).href;
 const cert2Img = new URL('../assets/certifications/2.png', import.meta.url).href;
@@ -270,9 +271,12 @@ export default function Home() {
                                 Discover Our Solutions
                             </Link>
                         </div>
-                        {/* Hidden SEO address — readable by Googlebot, visually invisible */}
-                        <address className="not-italic" style={{ position: 'absolute', width: '1px', height: '1px', overflow: 'hidden', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap' }}>
-                            Peer Consulting Resources, 20 Jefferson Plaza, Princeton, NJ 08540. Phone: +1 (732) 444-4645.
+                        {/* Visible NAP. This was previously hidden off-screen for crawlers only —
+                            text served to Googlebot but not to users is classified as hidden-text
+                            spam, so it is now rendered for everyone. */}
+                        <address className="not-italic mt-8 text-sm text-white/60">
+                            {NAP.name}, {ADDRESS_LINE} &middot;{' '}
+                            <a href={NAP.phoneHref} className="hover:text-white transition-colors">{NAP.phone}</a>
                         </address>
                         {/* Stats strip */}
                         <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3">

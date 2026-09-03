@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node scripts/check-spam-routes.mjs && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "check:routes": "node scripts/check-spam-routes.mjs"
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.11",

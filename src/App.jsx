@@ -1,11 +1,13 @@
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useMemo } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Layout from './components/Layout';
 import ScrollToTop from './components/ScrollToTop';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import PageLoader from './components/PageLoader';
 import usePageMeta from './hooks/usePageMeta';
-import { PAGE_META, DEFAULT_META } from './data/pageMeta';
+import useJsonLd from './hooks/useJsonLd';
+import { PAGE_META, DEFAULT_META, NOT_FOUND_META, DYNAMIC_ROUTE_PATTERNS } from './data/pageMeta';
+import { courseSchemaFor } from './data/courseSchema';
 
 // ── Lazy-loaded page components ──────────────────────────────────────────────
 // Each becomes a separate JS chunk: only downloaded when the user visits that route.
@@ -36,15 +38,36 @@ const Sandbox                 = lazy(() => import('./pages/Sandbox'));
 const AiTraining              = lazy(() => import('./pages/AiTraining'));
 const PPMAgile                = lazy(() => import('./pages/PPMAgile'));
 const BlogAdmin               = lazy(() => import('./pages/BlogAdmin'));
+const ItilPricingAdmin        = lazy(() => import('./pages/ItilPricingAdmin'));
 const BlogPost                = lazy(() => import('./pages/BlogPost'));
 const TrainingInfoRequest     = lazy(() => import('./pages/TrainingInfoRequest'));
+const NotFound                = lazy(() => import('./pages/NotFound'));
+const ServiceLanding          = lazy(() => import('./pages/ServiceLanding'));
 
 // ── MetaManager — updates <title> and <meta description> on every navigation ──
 // Sits inside <Router> so it can access useLocation.
+// An unknown path resolves to NOT_FOUND_META so it is served `noindex` — the SPA
+// rewrite returns 200 for everything, so this is the only way stale URLs get dropped
+// from the index instead of being kept as thin duplicate pages.
+function resolveMeta(pathname) {
+  if (PAGE_META[pathname]) return PAGE_META[pathname];
+  if (DYNAMIC_ROUTE_PATTERNS.some((re) => re.test(pathname))) return DEFAULT_META;
+  return NOT_FOUND_META;
+}
+
 function MetaManager() {
   const { pathname } = useLocation();
-  const meta = PAGE_META[pathname] ?? DEFAULT_META;
-  usePageMeta(meta.title, meta.description);
+  const meta = resolveMeta(pathname);
+  usePageMeta(meta.title, meta.description, { robots: meta.robots, image: meta.image });
+  return null;
+}
+
+// ── CourseSchemaManager — attaches Course JSON-LD on the training routes ──────
+// Centralised here rather than in each of the fourteen course pages.
+function CourseSchemaManager() {
+  const { pathname } = useLocation();
+  const schema = useMemo(() => courseSchemaFor(pathname), [pathname]);
+  useJsonLd(schema, 'course-jsonld');
   return null;
 }
 
@@ -55,6 +78,7 @@ function App() {
       <ScrollToTop />
       <ScrollToTopButton />
       <MetaManager />
+      <CourseSchemaManager />
       <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -62,6 +86,8 @@ function App() {
             <Route path="about" element={<AboutUs />} />
             <Route path="team" element={<Team />} />
             <Route path="services" element={<OurServices />} />
+            {/* One indexable page per commercial service theme — see src/data/serviceLandings.js */}
+            <Route path="services/:slug" element={<ServiceLanding />} />
             <Route path="blogs" element={<Blogs />} />
             <Route path="careers" element={<Careers />} />
             <Route path="contact" element={<ContactUs />} />
@@ -86,9 +112,13 @@ function App() {
             <Route path="ppm-agile-certification" element={<PPMAgile />} />
             <Route path="blog/:id" element={<BlogPost />} />
             <Route path="training-info-request" element={<TrainingInfoRequest />} />
+            {/* Catch-all — renders the 404 page (noindex) inside the normal layout */}
+            <Route path="*" element={<NotFound />} />
           </Route>
           {/* Hidden admin route — not linked in nav */}
           <Route path="/peer-admin" element={<BlogAdmin />} />
+          {/* Hidden ITIL pricing admin — not linked in nav */}
+          <Route path="/peer-itil-admin" element={<ItilPricingAdmin />} />
         </Routes>
       </Suspense>
     </Router>

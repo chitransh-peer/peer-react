@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { getBlogById, getPublishedBlogs, parseMarkdown } from '../utils/blogUtils';
+import usePageMeta from '../hooks/usePageMeta';
 
 export default function BlogPost() {
   const { id } = useParams();
@@ -21,6 +22,18 @@ export default function BlogPost() {
     }
     window.scrollTo(0, 0);
   }, [id]);
+
+  // Per-post meta. Without this every post inherits DEFAULT_META from MetaManager,
+  // giving the whole blog identical homepage titles and descriptions — which Google
+  // reads as duplicate content. Runs after MetaManager's effect, so it wins.
+  usePageMeta(
+    blog ? `${blog.title} | Peer Consulting Resources` : undefined,
+    blog?.excerpt,
+    {
+      robots: notFound ? 'noindex, follow' : undefined,
+      image: blog?.coverImage,
+    }
+  );
 
   if (notFound) {
     return (

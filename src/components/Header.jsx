@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../assets/logos/Peer-header-full-transparent.png';
+import { NAP } from '../data/nap';
 
 // Map each course route to its display name
 const COURSE_NAMES = {
@@ -56,8 +57,8 @@ export default function Header() {
       >
         <div className="container mx-auto px-6 lg:px-12 flex flex-col sm:flex-row justify-between items-center gap-2">
           <div className="flex items-center space-x-6">
-            <a href="tel:+17324444645" className="flex items-center gap-2 hover:text-[#4DA3FF] transition-colors">
-              <span className="material-icons text-sm">phone</span> +1 732 444 4645
+            <a href={NAP.phoneHref} className="flex items-center gap-2 hover:text-[#4DA3FF] transition-colors">
+              <span className="material-icons text-sm">phone</span> {NAP.phone}
             </a>
             <a href="mailto:contact@peer-consulting.com" className="flex items-center gap-2 hover:text-[#4DA3FF] transition-colors">
               <span className="material-icons text-sm">email</span> contact@peer-consulting.com

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { Link } from 'react-router-dom';
+import { getItilPricing } from '../utils/itilPricingUtils';
 
 import ChatbotWidget from '../components/ChatbotWidget';
 
@@ -21,7 +22,7 @@ const COURSES = [
 
     skills: ['Digital product & service management', 'ITIL Value System & guiding principles', 'Responsible AI practice', 'Value stream mapping basics'],
 
-    spPrice: 550, olPrice: 750,
+    priceId: 'itil-foundation-v5',
 
     link: '/itil-foundation-v5',
 
@@ -39,7 +40,7 @@ const COURSES = [
 
     skills: ['Service value system & chain', 'Four dimensions of service management', 'Continual improvement model', 'Key ITIL 4 practices'],
 
-    spPrice: 550, olPrice: 750,
+    priceId: 'itil-foundation-4',
 
     link: '/itil-foundation-4',
 
@@ -57,7 +58,7 @@ const COURSES = [
 
     skills: ['ITIL V5 key concept updates', 'New guiding principles & value system changes', 'AI-native practice overview'],
 
-    spPrice: 240, olPrice: 375,
+    priceId: 'itil-foundation-bridge-v5',
 
     link: '/itil-foundation-bridge-v5',
 
@@ -75,7 +76,7 @@ const COURSES = [
 
     skills: ['AI risk assessment', 'Ethical AI frameworks', 'AI policy design & implementation'],
 
-    spPrice: 550, olPrice: 750,
+    priceId: 'itil-ai-governance',
 
     link: '#',
 
@@ -95,7 +96,7 @@ const COURSES = [
 
     skills: ['Product lifecycle management', 'Value stream mapping', 'Agile integration'],
 
-    spPrice: 750, olPrice: 950,
+    priceId: 'itil-specialist-product-v5',
 
     link: '/itil-specialist-product-v5',
 
@@ -113,7 +114,7 @@ const COURSES = [
 
     skills: ['Service operation & digital transformation', 'Advanced Incident / Problem Management', 'Reliability engineering'],
 
-    spPrice: 750, olPrice: 950,
+    priceId: 'itil-specialist-service-v5',
 
     link: '/itil-specialist-service-v5',
 
@@ -131,7 +132,7 @@ const COURSES = [
 
     skills: ['UX/CX in IT services', 'Journey mapping', 'Experience level agreements (XLAs)'],
 
-    spPrice: 750, olPrice: 950,
+    priceId: 'itil-specialist-experience-v5',
 
     link: '/itil-specialist-experience-v5',
 
@@ -149,7 +150,7 @@ const COURSES = [
 
     skills: ['Strategic planning & digital leadership', 'IT investment alignment', 'Risk management'],
 
-    spPrice: 750, olPrice: 950,
+    priceId: 'itil-specialist-strategy-v5',
 
     link: '/itil-specialist-strategy-v5',
 
@@ -167,7 +168,7 @@ const COURSES = [
 
     skills: ['Organizational Change Management', 'Cultural transformation', 'Leadership at scale'],
 
-    spPrice: 750, olPrice: 950,
+    priceId: 'itil-specialist-transformation-v5',
 
     link: '/itil-specialist-transformation-v5',
 
@@ -187,7 +188,7 @@ const COURSES = [
 
     skills: ['Incident & Problem Management', 'Service Desk optimization', 'Monitoring & Event Management', 'Request fulfillment'],
 
-    spPrice: 750, olPrice: 950,
+    priceId: 'itil-specialist-msf',
 
     link: '/itil-specialist-msf',
 
@@ -205,7 +206,7 @@ const COURSES = [
 
     skills: ['Change Enablement', 'Release & Deployment Management', 'IT Asset Management', 'Configuration Management'],
 
-    spPrice: 750, olPrice: 950,
+    priceId: 'itil-practice-pic',
 
     link: '/itil-practice-pic',
 
@@ -223,7 +224,7 @@ const COURSES = [
 
     skills: ['Relationship & Supplier Management', 'Service Level Management', 'Continual Improvement practices', 'IT quality assurance'],
 
-    spPrice: 750, olPrice: 950,
+    priceId: 'itil-practice-cai',
 
     link: '/itil-practice-cai',
 
@@ -303,9 +304,13 @@ const FILTER_BUTTONS = [
 
 
 
-function CourseCard({ course, mode, setMode }) {
+/** Format a number with commas — e.g. 1000 → 1,000 */
+const fmt = (n) => (typeof n === 'number' ? n.toLocaleString('en-US') : n);
 
-  const { category, badge, badgeBg, title, description, skills, spPrice, olPrice, link } = course;
+function CourseCard({ course, pricing }) {
+
+  const { category, badge, badgeBg, title, description, skills, priceId, link } = course;
+  const { olPrice } = pricing[priceId] || { olPrice: '—' };
 
   
 
@@ -367,7 +372,7 @@ function CourseCard({ course, mode, setMode }) {
 
             <span className="block text-[8px] font-black uppercase tracking-tighter text-[#1e40af]">Online Live</span>
 
-            <span className="text-sm font-bold text-[#071B34] dark:text-white">US${olPrice}</span>
+            <span className="text-sm font-bold text-[#071B34] dark:text-white">US${fmt(olPrice)}</span>
 
           </div>
 
@@ -391,9 +396,17 @@ function CourseCard({ course, mode, setMode }) {
 
 export default function ItilCertification() {
 
-  const [mode, setMode] = useState('ol');
-
   const [filter, setFilter] = useState('all');
+
+  // Live pricing — reads from localStorage overrides, falls back to defaults.
+  // Re-reads whenever the admin panel saves changes (via a storage event).
+  const [pricing, setPricing] = useState(() => getItilPricing());
+
+  useEffect(() => {
+    const handler = () => setPricing(getItilPricing());
+    window.addEventListener('storage', handler);
+    return () => window.removeEventListener('storage', handler);
+  }, []);
 
 
 
@@ -424,11 +437,12 @@ export default function ItilCertification() {
 
         <div className="container mx-auto px-6 relative z-10 w-full">
 
-          <div className="inline-block bg-accent/20 backdrop-blur-md px-4 py-1 rounded-full text-accent-blue text-[10px] font-black uppercase tracking-[0.2em] mb-4 border border-accent/30">
-
+          <Link
+            to="/itil-overview#accreditation"
+            className="inline-block bg-accent/20 backdrop-blur-md px-4 py-1 rounded-full text-accent-blue text-[10px] font-black uppercase tracking-[0.2em] mb-4 border border-accent/30 hover:bg-accent/30 hover:border-accent/50 transition-all cursor-pointer"
+          >
             PeopleCert Accredited · Registry ID 9550
-
-          </div>
+          </Link>
 
           <h1 className="text-3xl md:text-4xl md:text-5xl font-black font-display mb-4 tracking-tight">ITIL® <span className="text-accent">Certifications</span></h1>
 
@@ -604,7 +618,7 @@ export default function ItilCertification() {
 
                       {groupCourses.map((course, i) => (
 
-                        <CourseCard key={i} course={course} mode={mode} setMode={setMode} />
+                        <CourseCard key={i} course={course} pricing={pricing} />
 
                       ))}
 

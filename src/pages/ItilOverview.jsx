@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+
+import ChatbotWidget from '../components/ChatbotWidget';
 
 
 
@@ -214,9 +216,25 @@ const WHY_ITEMS = [
 
 export default function ItilOverview() {
 
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      // Small delay to ensure the DOM has rendered
+      const timer = setTimeout(() => {
+        const el = document.querySelector(hash);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [hash]);
+
   return (
 
     <div className="bg-white dark:bg-background-dark min-h-screen">
+
+      {/* Chatbot Widget — fixed to viewport, floats while scrolling this page */}
+      <ChatbotWidget />
 
       {/* Hero */}
 
