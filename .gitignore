@@ -30,7 +30,6 @@ __pycache__/
 *.pyo
 main.py
 
-
 # GitHub
 .github/workflows/deploy.yml
 
